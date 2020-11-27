@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/config_dump.iml" filepath="$PROJECT_DIR$/.idea/config_dump.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/config-dump.iml" filepath="$PROJECT_DIR$/.idea/config-dump.iml" />
     </modules>
   </component>
 </project>
