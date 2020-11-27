@@ -1,0 +1,1591 @@
+Match,jurisdictions,issuingAgencies,docTypes
+ [8148884][cannot-be-empty],"","",Answer to Question [7997279][doctype]
+ [8148893][cannot-be-empty],"","",Enforcement Action [6609529][doctype]
+ [8148906][cannot-be-empty],"","",Letter [6609532][doctype]
+ [8148910][cannot-be-empty],"","",Press Release [8137141][doctype]
+ [8148915][cannot-be-empty],"","",News [7997258][doctype]
+ [8148940][cannot-be-empty],"","",Report [7997263][doctype]
+ [8148942][cannot-be-empty],"","",Speech [7997250][doctype]
+ [8148943][cannot-be-empty],"","",Statement [8016914][doctype]
+ABI | Blog [3532680][source],"","",News [7997258][doctype]
+ABI | News articles [3524218][source],"","",News [7997258][doctype]
+ABI | Publications [252869][source],"","",Publication [7997259][doctype]
+ABI | Speeches [3662869][source],"","",Speech [7997250][doctype]
+ACT Government [7626370][contributor],Australia [241][country],"",""
+AFM | Consumers | News [7920861][source],"","",News [7997258][doctype]
+AFM | Professionals | News [7920851][source],"","",News [7997258][doctype]
+AFM | Publications on Brexit [7895462][source],"","",Publication [7997259][doctype]
+Administración Gubernamental de Ingresos Públicos (AGIP) [7836002][contributor],Argentina [145][country],"",""
+Agencia Espanola de Medicamentos y Productos Sanitarios [277572][contributor],Spain [410][country],"",""
+Agencia Espanola de Proteccion de Datos [3685258][contributor],Spain [410][country],Agencia Espanola de Proteccion de Datos [3639943][govagency],""
+Agriculture and Agri-Food Canada (AAFC) [62272][contributor],Canada [31][country],"",""
+Agroasemex SA [6584941][contributor],Mexico [562][country],Agroasemex SA (Mexico) [6582581][govagency],""
+Alberta Securities Commission (ASC) [193335][contributor],Alberta [582][cadprov],Alberta Securities Commission [3704735][govagency],""
+Argentina Clearing [3515029][contributor],Argentina [145][country],Argentina Clearing SA [3488608][govagency],""
+Assemblée Nationale (France) [3192590][contributor],France [7][country],National Assembly (France) [6624407][govagency],""
+Association of British Insurers (ABI) [252870][contributor],United Kingdom [51][country],Association of British Insurers [8003327][intergovagency],""
+"Associação Nacional das Corretoras e Distribuidoras de Títulos e Valores Mobiliários, Câmbio e Mercadorias (ANCORD) [3681251][contributor]",Brazil [201][country],Associacao Nacional das Corretoras(Brazil) [4913244][associations],""
+AustLII [4935990][contributor],Australia [241][country],"",""
+Australian Border Force [3585248][contributor],Australia [241][country],Australian Border Force [3592185][govagency],""
+Australian Capital Territory Health Directorate [7817656][contributor],Australia [241][country],"",""
+Australian Capital Territory Independent Competition and Regulatory Commission [4979126][contributor],Australia [241][country],"",""
+Australian Capital Territory Revenue Office [5002463][contributor],Australia [241][country],ACT Revenue Office(AU) [7628280][govagency],""
+Australian Competition and Consumer Commission (ACCC) [158727][contributor],Australia [241][country],Australian Competition and Consumer Commission [7877606][govagency],""
+Australian Department of Communications and the Arts [3594641][contributor],Australia [241][country],Department of Communications and the Arts (Australia) [3626195][govagency],""
+Australian Department of Defence [3585673][contributor],Australia [241][country],Department of Defence (Australia) [3593038][govagency],""
+Australian Department of Education and Training [4945863][contributor],Australia [241][country],Department of Education and Training (AU) [6656723][govagency],""
+Australian Department of Environment and Energy [3588180][contributor],Australia [241][country],Department of the Environment and Energy [3636592][govagency],""
+Australian Department of Finance [3582830][contributor],Australia [241][country],Department of Finance (Australia) [3639271][govagency],""
+Australian Department of Foreign Affairs and Trade [3588468][contributor],Australia [241][country],Department of Foreign Affairs and Trade (Australia) [3593654][govagency],""
+Australian Department of Health [3587040][contributor],Australia [241][country],Department of Health (Australia) [3626734][govagency],""
+Australian Department of Human Services [3585314][contributor],Australia [241][country],Department of Human Services (Australia) [3592286][govagency],""
+"Australian Department of Industry, Innovation and Science [3641510][contributor]",Australia [241][country],"Department of Industry, Science, Energy and Resources (AU) [3637878][govagency]",""
+"Australian Department of Infrastructure, Regional Development and Cities [3629614][contributor]",Australia [241][country],"",""
+Australian Department of Jobs and Small Business [3696927][contributor],Australia [241][country],Department of Jobs and Small Business [3625826][govagency],""
+Australian Department of Prime Minister and Cabinet [3581290][contributor],Australia [241][country],Department of the Prime Minister and Cabinet (Australia) [3681980][govagency],""
+Australian Department of Social Services [6715189][contributor],Australia [241][country],"",""
+Australian Energy Market Commission [4942020][contributor],Australia [241][country],Australian Energy Market Commission [6641639][govagency],""
+Australian Energy Market Operator [4947042][contributor],Australia [241][country],Australian Energy Market Operator [4947044][govagency],""
+Australian Financial Complaints Authority (AFCA) [6650175][contributor],Australia [241][country],Australian Financial Complaints Authority [7879002][govagency],""
+Australian Government/The Treasury [3522253][contributor],Australia [241][country],Department of the Treasury (Australia) [3679959][govagency],""
+Australian Prudential Regulation Authority (APRA) [7607791][contributor],Australia [241][country],Australian Prudential Regulation Authority [8007143][govagency],""
+Australian Prudential Regulation Authority (APRA) | APRA's commitment [7607967][source],"","",News [7997258][doctype]
+Australian Prudential Regulation Authority (APRA) | Authorised Deposit-Taking Institutions Consultation Packages [7616623][source],"","",Consultation [7997262][doctype]
+"Australian Prudential Regulation Authority (APRA) | Letters, Notes and Advice Issued to Authorised Deposit-Taking Institutions [7607790][source]","","",Letter [6609532][doctype]
+Australian Prudential Regulation Authority (APRA) | Prudential Practice Guides [7609142][source],"","",Guidance [7997267][doctype]
+Australian Securities Exchange (ASX) [85153][contributor],Australia [241][country],Australian Securities Exchange [3692201][finexchanges],""
+Australian Securities and Investments Commission (ASIC) [2581762][contributor],Australia [241][country],Australian Securities and Investments Commission [3692408][govagency],""
+Australian Taxation Office [321225][contributor],Australia [241][country],Australian Taxation Office [7909313][govagency]; Department of Health (Australia) [3626734][govagency],""
+Austrian Financial Market Authority (FMA) [6572522][contributor],Austria [80][country],Austrian Financial Market Authority [6572521][govagency],""
+Austrian Financial Market Authority | News [6572523][source],"","",News [7997258][doctype]
+Austrian Ministry of Finance [7809798][contributor],Austria [80][country],Federal Ministry of Finance (Austria) [8002012][govagency],""
+Austrian Ministry of Finance | Coronavirus [8002013][source],"","",News [7997258][doctype]
+Austrian Ministry of Finance | Press Releases [7809797][source],"","",News [7997258][doctype]
+Autorité de Régulation des Communications Electroniques et des Postes [1699313][contributor],France [7][country],"",""
+Autorité de la concurrence (France) [6546938][contributor],France [7][country],"",""
+Autorregulador del Mercado de Valores de Colombia (AMV) [3425511][contributor],Colombia [747][country],Autorregulador del Mercado de Valores de Colombia [3516383][govagency],""
+B3 (Brasil Bolsa Balcao) [3418733][contributor],Brazil [201][country],B3 SA [3519006][finexchanges],""
+B3 S.A. - BM&FBovespa [3419252][contributor],Brazil [201][country],B3 SA [3519006][finexchanges],""
+BIBA | Blog [3624125][source],"","",News [7997258][doctype]
+BIBA | Consultations [3535538][source],"","",Consultation [7997262][doctype]
+BIBA | Latest News [3526052][source],"","",News [7997258][doctype]
+BIBA | Press Releases [3526053][source],"","",Development [7997099][doctype]
+BIBA | Regulation Updates [2106914][source],"","",News [7997258][doctype]
+BIBA | Technical Updates [3543222][source],"","",Development [7997099][doctype]
+BIS | BCBS | Committee  Speeches [6756971][source],"","",Speech [7997250][doctype]
+BIS | BCBS | Press Releases [6543489][source],"","",News [7997258][doctype]
+BIS | BCBS | Publications [6543492][source],"","",Publication [7997259][doctype]
+BIS | Basel Framework [7778306][source],"","",News [7997258][doctype]
+BIS | Central Bank Research Hub - Recent Additions [2851466][source],"","",Report [7997263][doctype]
+BIS | Central Bank Research Hub [4928311][source],"","",Publication [7997259][doctype]
+BIS | Management Speeches [351538][source],"","",News [7997258][doctype]
+BIS | Press Releases [362407][source],"","",News [7997258][doctype]
+BIS | Research Papers [260817][source],"","",Research [7997257][doctype]
+BIS | Speeches [2854945][source],"","",Speech [7997250][doctype]
+BIS | Statistical Releases [2881530][source],"","",Statistics [7997255][doctype]
+BIS | Updates [2830280][source],"","",News [7997258][doctype]
+BYMA [3417730][contributor],Argentina [145][country],Bolsas y Mercados Argentinos SA [7855139][finexchanges],""
+BaFin | All Publications [2593788][source],"","",Publication [7997259][doctype]
+BaFin | Alle Veröffentlichungen [3637135][source],"","",Publication [7997259][doctype]
+BaFin | Allgemeinverfügungen und Sammelverfügungen der BaFin [3683644][source],"","",Regulation [7997253][doctype]
+BaFin | Circulars [7377663][source],"","",Circular [6609527][doctype]
+BaFin | Maßnahmen [3671532][source],"","",Measures [8016917][doctype]
+BaFin | Meldungen [3671531][source],"","",Report [7997263][doctype]
+BaFin | News [6569716][source],"","",News [7997258][doctype]
+BaFin | Regulations [7548493][source],"","",Regulation [7997253][doctype]
+Banca d'Italia [3684632][contributor],Italy [10][country],Banca d'Italia [3704958][centralbanks],""
+Bancefi (Mexico) [6612091][contributor],Mexico [562][country],Banco del Ahorro Nacional y Servicios Financieros SNC (Mexico) [6583982][govagency],""
+Banco Central de Chile [3422508][contributor],Chile [202][country],Central Bank of Chile [3696914][centralbanks],""
+Banco Central de Reserva del Perú (BCRP) [3444164][contributor],Peru [947][country],Banco Central De Reserva Del Peru [6621003][centralbanks],""
+Banco Central de la Republica Argentina [3417328][contributor],Argentina [145][country],Central Bank of Argentina [3421248][centralbanks],""
+Banco Central de la República Argentina (BCRA) [3438133][contributor],Argentina [145][country],Central Bank of Argentina [3421248][centralbanks],""
+Banco Central do Brasil [3421138][contributor],Brazil [201][country],Central Bank of Brazil [3695911][centralbanks],""
+Banco Central do Brasil | Boletim Diário [4922326][source],"","",News [7997258][doctype]; Regulation [7997253][doctype]; Rule [6609539][doctype]
+Banco Central do Brasil | Busca de Normas | Ato de Diretor [4932791][source],"","",Development [7997099][doctype]
+Banco Central do Brasil | Busca de Normas | Ato do Presidente [4932790][source],"","",Development [7997099][doctype]
+Banco Central do Brasil | Busca de Normas | Carta Circular [4932772][source],"","",Circular [6609527][doctype]
+Banco Central do Brasil | Busca de Normas | Circular [4932773][source],"","",Circular [6609527][doctype]
+Banco Central do Brasil | Busca de Normas | Comunicado [4932765][source],"","",Development [7997099][doctype]
+Banco Central do Brasil | Busca de Normas | Resolução [4932770][source],"","",Resolution [7997256][doctype]
+Banco Central do Brasil | Busca de Normas | Resultado [6620991][source],"","",Development [7997099][doctype]
+Banco Central do Brasil | Busca de Normas | Todos [3682671][source],"","",Development [7997099][doctype]
+Banco Central do Brasil | Notas à imprensa [4921112][source],"","",News [7997258][doctype]
+Banco Central do Brasil | Notícias [3628050][source],"","",News [7997258][doctype]
+Banco Central do Brasil | Press Releases [7808010][source],"","",News [7997258][doctype]
+Banco Central do Brasil | Relatórios de Gestão do STR [3421137][source],"","",Development [7997099][doctype]
+Banco Central do Brasil | Resolução Nº 4.072 [7598936][source],"","",Resolution [7997256][doctype]
+Banco Nacional de Obras y Servicios Publicos SNC (Banobras) [6632339][contributor],Mexico [562][country],Banco Nacional de Obras y Servicios Publicos SNC (Mexico) [6581782][govagency],""
+Banco de España [1699646][contributor],Spain [410][country],Bank of Spain [6639448][centralbanks],""
+Banco de México [3424722][contributor],Mexico [562][country],Banco de Mexico [3701305][govagency],""
+Banco de México | Noticias [3424721][source],"",Banco de Mexico [3701305][govagency],""
+Banco de México | Publicaciones [3424749][source],"",Banco de Mexico [3701305][govagency],""
+Banco de México | Sistemas de Pago [3424734][source],"",Banco de Mexico [3701305][govagency],""
+Banco de la República Colombia [3423364][contributor],Colombia [747][country],Central Bank of Colombia [7868658][centralbanks],""
+Bank Negara Malaysia [4942188][contributor],Malaysia [224][country],Central Bank of Malaysia [4938207][centralbanks],""
+Bank Negara Malaysia | Latest Press Statements [4942187][source],"","",News [7997258][doctype]
+Bank Negara Malaysia | Notices and Announcements [4947212][source],"","",Notice [6609533][doctype]
+Bank for International Settlements (BIS) [7920309][contributor],European Union [5004410][intergovagency],Bank for International Settlements [6502747][intergovagency],""
+Bank of Canada (Banque Du Canada) [139795][contributor],Canada [31][country],Bank of Canada [6726581][centralbanks],""
+Bank of England [84359][contributor],United Kingdom [51][country],Bank of England [6567354][centralbanks],""
+Bank of England | Amendments to Financial Services Legislation under the European Union [7572208][source],"","",Amendment [7997249][doctype]
+Bank of England | Benchmark [7548870][source],"","",News [7997258][doctype]; Publication [7997259][doctype]; Speech [7997250][doctype]
+Bank of England | Consultation Paper 6/18 [3137799][source],"","",Consultation [7997262][doctype]
+Bank of England | EU Withdrawal [6568876][source],"","",News [7997258][doctype]; Regulation [7997253][doctype]; Speech [7997250][doctype]
+Bank of England | Events [2923658][source],"","",Event [8016915][doctype]
+Bank of England | LIBOR Transition | Working Group Updates [7780638][source],"","",Letter [6609532][doctype]; News [7997258][doctype]; Publication [7997259][doctype]
+Bank of England | LIBOR [7548868][source],"","",News [7997258][doctype]; Publication [7997259][doctype]; Regulation [7997253][doctype]
+Bank of England | Latest News [7603069][source],"","",News [7997258][doctype]
+Bank of England | Latest Publications [2924363][source],"","",Publication [7997259][doctype]
+Bank of England | News [2969501][source],"","",News [7997258][doctype]
+Bank of England | Prudential Regulation Authority Letters [1934111][source],"",Prudential Regulation Authority [3650454][govagency],Letter [6609532][doctype]
+Bank of England | Prudential Regulation Authority | Enforcement Notices [2820014][source],"",Prudential Regulation Authority [3650454][govagency],Notice [6609533][doctype]
+Bank of England | Prudential Regulation Authority | Solvency II News [2655526][source],"",Prudential Regulation Authority [3650454][govagency],News [7997258][doctype]
+Bank of England | Prudential Regulation Authority | Waivers and Modifications of Rules [7560994][source],"",Prudential Regulation Authority [3650454][govagency],Waiver [7997285][doctype]
+Bank of England | Prudential Regulation Publications [2854202][source],"",Prudential Regulation Authority [3650454][govagency],Publication [7997259][doctype]
+Bank of England | Prudential Regulation Publications | Statement of Policy [7582176][source],"",Prudential Regulation Authority [3650454][govagency],Policy [7936929][doctype]
+Bank of England | Prudential Regulation Publications | Supervisory Statement [7582172][source],"",Prudential Regulation Authority [3650454][govagency],Statement [8016914][doctype]
+Bank of England | Regulatory Action [7583478][source],"",Prudential Regulation Authority [3650454][govagency],News [7997258][doctype]; Publication [7997259][doctype]
+Bank of England | Speeches [130348][source],"","",Speech [7997250][doctype]
+Bank of England | Statistics [2923665][source],"","",Statistics [7997255][doctype]
+Bank of Japan [2849992][contributor],Japan [9][country],Bank of Japan [7887884][centralbanks],""
+Bank of Thailand [67892][contributor],Thailand [1448][country],Bank of Thailand [8003478][centralbanks],""
+Bank of Thailand | All Rates [3587771][source],"","",Statistics [7997255][doctype]
+Bank of Thailand | News [3670024][source],"","",News [7997258][doctype]
+Bank of Thailand | Press Releases [3592634][source],"","",News [7997258][doctype]
+BankforInternational Settlements [125534][contributor],European Union [5004410][intergovagency],Bank for International Settlements [6502747][intergovagency],""
+Banque centrale du Luxembourg (BCL) [3684941][contributor],Luxembourg [827][country],Central Bank of Luxembourg [4924560][centralbanks],""
+Banque de France [3192771][contributor],France [7][country],Bank of France [6567919][centralbanks],""
+Belgian Financial Services and Markets Authority [6611734][contributor],Belgium [105][country],Financial Services and Markets Authority (Belgium) [6567973][govagency],""
+Boletin Oficial Republica Argentina [7627415][contributor],Argentina [145][country],"",""
+Boletín Oficial de la Ciudad de Buenos Aires [7836427][contributor],Argentina [145][country],"",""
+Boletín Oficial del Estado [1713687][contributor],Spain [410][country],Parliament of Spain [6649082][govagency],""
+Bolsa Electrónica de Chile [3682343][contributor],Chile [202][country],Bolsa Electronica De Chile [4910693][finexchanges],""
+Bolsa Institucional de Valores (BIVA) [3440326][contributor],Mexico [562][country],Bolsa Institucional de Valores [3459837][finexchanges],""
+Bolsa Mexicana de Valores [51949][contributor],Mexico [562][country],Mexican Stock Exchange [3448218][finexchanges],""
+Bolsa de Santiago [4912960][contributor],Chile [202][country],Santiago Exchange [3696851][finexchanges],""
+Bolsa de Valores de Colombia [140799][contributor],Colombia [747][country],Colombia Stock Exchange [3443419][finexchanges],""
+Brazilian Association of Financial and Capital Market Entities (ANBIMA) [3681632][contributor],Brazil [201][country],Brazilian Financial and Capital Markets Association [3699417][associations],""
+British Columbia Securities Commission (BCSC) [490123][contributor],British Columbia [994][cadprov],British Columbia Securities Commission [3703808][govagency],""
+British Insurance Brokers' Association (BIBA) [2106915][contributor],United Kingdom [51][country],British Insurance Brokers' Association [8004350][intergovagency],""
+Bundesministerium der Finanzen [2360959][contributor],Germany [15][country],Federal Ministry of Finance (Germany) [3665838][govagency],""
+Bundesministerium der Justiz und für Verbraucherschutz (BMJV) [3640135][contributor],Germany [15][country],Federal Ministry of Justice (Germany) [3642944][govagency],""
+"Bundesministerium des Innern, für Bau und Heimat (BMI) [3639278][contributor]",Germany [15][country],"",""
+Bureau of Industry and Security (BIS) [3688235][contributor],United States of America [16][country],Bureau of Industry and Security [2448473][usfedagency]; Department of Commerce [243][usfedagency],""
+Bureau of Industry and Security (BIS) | Current Federal Register Notices [4941033][source],"","",Notice [6609533][doctype]
+Bureau of Industry and Security (BIS) | Publications [4936505][source],"","",Publication [7997259][doctype]
+CFPB | Blog [412135][source],"","",Publication [7997259][doctype]
+CFPB | Email Updates [3702586][source],"","",Email [7997270][doctype]
+CFPB | Enforcement Actions [4921026][source],"","",Enforcement Action [6609529][doctype]
+CFPB | Final Rules [5009793][source],"","",Rule [6609539][doctype]
+CFPB | Implementation and Guidance [3641552][source],"","",Guidance [7997267][doctype]
+CFPB | Newsroom [251987][source],"","",News [7997258][doctype]
+CFPB | Notice and Opportunities to Comment [3641556][source],"","",Notice [6609533][doctype]
+CFPB | Press Releases [3582703][source],"","",News [7997258][doctype]
+CFPB | Research & Reports [3559032][source],"","",Publication [7997259][doctype]; Report [7997263][doctype]; Research [7997257][doctype]
+CFPB | Rules under Development [5009773][source],"","",Proposed Rule [6609238][doctype]
+CFPB | Supervisory Highlights [5009758][source],"","",Report [7997263][doctype]
+CFTC | All Letters [373085][source],"","",Letter [6609532][doctype]
+CFTC | All Press Releases [1176207][source],"","",News [7997258][doctype]
+CFTC | Dispositions [3531008][source],"","",Order [8016919][doctype]
+CFTC | Dodd-Frank Act External Meetings [185595][source],"","",Meeting [8016916][doctype]
+CFTC | Email Updates [4925184][source],"","",Email [7997270][doctype]
+CFTC | Enforcement Press Releases [747523][source],"","",News [7997258][doctype]
+CFTC | Final Rules [327520][source],"","",Rule [6609539][doctype]
+CFTC | General Press Releases [747520][source],"","",News [7997258][doctype]
+CFTC | Proposed Rules [495737][source],"","",Proposed Rule [6609238][doctype]
+CFTC | Speeches and Testimony [200506][source],"","",Speech [7997250][doctype]
+CFTC | Staff Letters | Advisories [4924380][source],"","",Advisory [8158275][doctype]; Letter [6609532][doctype]
+CFTC | Staff Letters | Exemption [4924379][source],"","",Exemptive Letter [8158292][doctype]; Letter [6609532][doctype]
+CFTC | Staff Letters | Interpretive [4924393][source],"","",Letter [6609532][doctype]
+CFTC | Staff Letters | No-Action [4924401][source],"","",Letter [6609532][doctype]; No-Action Letter [6736229][doctype]
+CFTC | Staff Letters | Other Written Communications [4924400][source],"","",Letter [6609532][doctype]
+CFTC | Sunshine Act Announcements [282247][source],"","",Meeting [8016916][doctype]
+CFTC | Trading Organization Rules [3693231][source],"","",Rule [6609539][doctype]
+CMS | MLN Publications [7517498][source],"","",Publication [7997259][doctype]
+COFECE [7788556][contributor],Mexico [562][country],"",""
+CRP-Santé [1734644][contributor],Luxembourg [827][country],"",""
+CSRC | News Release [4979087][source],"","",News [7997258][doctype]
+CSRC | Press Conference [4979104][source],"","",News [7997258][doctype]
+CSRC | 反洗钱与跨境执法 [7605541][source],"","",Law [7997266][doctype]
+Caja De Valores [3515021][contributor],Argentina [145][country],Caja de Valores SA [3465215][govagency],""
+California Department of Insurance [6583978][contributor],United States of America [16][country],California Department of Insurance [8005106][usstateagencies],""
+"California Department of Insurance | Administrative Hearing Bureau, Hearing Calendar [6591057][source]","","",Hearings Calendar [7997278][doctype]
+California Department of Insurance | Bulletins [7965411][source],"","",Bulletin [6609524][doctype]
+California Department of Insurance | Notices [7965366][source],"","",Notice [6609533][doctype]
+California Department of Insurance | Opinions [7965414][source],"","",Opinion [7997283][doctype]
+California Department of Insurance | Press Releases [6583979][source],"","",News [7997258][doctype]
+Canada Energy Regulator [7377746][contributor],Canada [31][country],"",""
+Canada Gazette [187384][contributor],Canada [31][country],"",""
+Canada Revenue Agency [224872][contributor],Canada [31][country],Canada Revenue Agency [6613842][govagency],""
+Canadian Radio-television and Telecommunications Commission (CRTC) [171267][contributor],Canada [31][country],Canadian Radio-television and Telecommunications Commission [3703754][govagency],""
+Canadian Radio-television and Telecommunications Commission [137772][contributor],Canada [31][country],Canadian Radio-television and Telecommunications Commission [3703754][govagency],""
+Canadian Securities Administrators [460605][contributor],Canada [31][country],Canadian Securities Administrators [7835107][govagency],""
+Centers for Disease Control and Prevention (CDC) [28690][contributor],United States of America [16][country],Centers for Disease Control and Prevention [625][usfedagency],""
+Central Bank of Ireland [1564716][contributor],Ireland [94][country],Central Bank of Ireland [3697239][centralbanks],""
+Central Bank of Ireland | AIF Rulebook [7589918][source],"","",Rule [6609539][doctype]
+Central Bank of Ireland | AIFMD [1912299][source],"","",Report [7997263][doctype]
+Central Bank of Ireland | Brexit Task Force Reports [6636929][source],"","",Report [7997263][doctype]
+Central Bank of Ireland | Consultation Papers [3696290][source],"","",Consultation [7997262][doctype]
+Central Bank of Ireland | Cross Industry Guidance in respect of Information Technology and Cybersecurity Risks [7589916][source],"","",Guidance [7997267][doctype]
+Central Bank of Ireland | EMIR – FAQs [1746365][source],"","",Answer to Question [7997279][doctype]
+Central Bank of Ireland | European Union (Market Abuse) Regulations 2016 [7589922][source],"","",Regulation [7997253][doctype]
+Central Bank of Ireland | Fitness and Probity Standards [7589880][source],"","",Standard [7997254][doctype]
+Central Bank of Ireland | Guidance on Fitness and Probity Standarts [7589910][source],"","",Guidance [7997267][doctype]
+Central Bank of Ireland | Legislation Applicable to UCITS [7598686][source],"","",Regulation [7997253][doctype]
+Central Bank of Ireland | Markets Updates [3696278][source],"","","Pi Z, Stevanato P, Sun F, Yang Y, Sun X, Zhao H, Geng G, Yu L [1991258][author]"
+Central Bank of Ireland | News and Media [2586917][source],"","",News [7997258][doctype]
+Central Bank of the Republic of China (Taiwan) [3675520][contributor],Taiwan [22][country],Central Bank of the Republic of China (Taiwan) [3675518][centralbanks],""
+Central Provident Fund Board (CPFB) [3674830][contributor],Singapore [223][country],Central Provident Fund Board Singapore [3674711][govagency],""
+China Banking and Insurance Regulatory Commission [7603829][contributor],China [20][country],China Banking and Insurance Regulatory Commission [8000818][govagency],""
+China Securities Regulatory Commission (CSRC) [4979088][contributor],China [20][country],China Securities Regulatory Commission [8007142][govagency],""
+Chinese National Futures Association [3675775][contributor],Taiwan [22][country],Chinese National Futures Association [3698838][associations],""
+Citizenship and Immigration Canada [241864][contributor],Canada [31][country],"",""
+Colombia Compra Eficiente [7853375][contributor],Colombia [747][country],"",""
+Comisión Nacional Bancaria y de Valores (Mexico) [6588418][contributor],Mexico [562][country],Comision Nacional Bancaria y de Valores [3445799][govagency],""
+Comisión Nacional de Mercado de Valores (CNMV) [1698422][contributor],Spain [410][country],National Securities Market Commission [6567351][govagency],""
+Comisión Nacional de Seguros y Fianzas (Mexico) [6587177][contributor],Mexico [562][country],Comision Nacional de Seguros y Fianzas [3445797][govagency],""
+Comisión Nacional de Valores [1706169][contributor],Argentina [145][country],Comision Nacional de Valores (Arg) [3698575][govagency],""
+Comisión Nacional del Sistema de Ahorro para el Retiro (Mexico) [6587452][contributor],Mexico [562][country],Comision Nacional del Sistema de Ahorro para el Retiro [3445800][govagency],""
+Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros (Mexico) [6588551][contributor],Mexico [562][country],Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros [4986702][govagency],""
+Comisión para el Mercado Financiero (CMF) [3695370][contributor],Chile [202][country],Financial Market Commission (Chile) [3703345][govagency],""
+Comissao de Valores Mobiliarios [153666][contributor],Brazil [201][country],Comissao de Valores Mobiliarios(Brazil) [3695912][govagency],""
+Commissariat aux Assurances [2591066][contributor],Luxembourg [827][country],Commissariat aux Assurances (Luxembourg) [6646756][govagency],""
+Commissariat aux Assurances | Actualités [2591065][source],"","",News [7997258][doctype]
+Commissariat aux Assurances | Documentations | Circulaires [6646777][source],"","",Circular [6609527][doctype]
+Commissariat aux Assurances | Documentations | Excell Life International S.A. [6646765][source],"","",Publication [7997259][doctype]
+Commissariat aux Assurances | Documentations | Formulaires [6646760][source],"","",Law [7997266][doctype]
+Commissariat aux Assurances | Documentations | Lois [6646768][source],"","",News [7997258][doctype]
+Commissariat aux Assurances | Documentations | Notes d'information [6646769][source],"","",Development [7997099][doctype]
+Commissariat aux Assurances | Documentations | Rapports Annuels [6646781][source],"","",Report [7997263][doctype]
+Commissariat aux Assurances | Documentations | Règlements UE [6646767][source],"","",Regulation [7997253][doctype]
+Commissariat aux Assurances | Documentations | Règlements du CAA [6646757][source],"","",Regulation [7997253][doctype]
+Commissariat aux Assurances | Documentations | Règlements grand-ducaux [6646759][source],"","",Regulation [7997253][doctype]
+Commissariat aux Assurances | Documentations | Règles d'intérêt général [6646763][source],"","",Regulation [7997253][doctype]
+Commission de Surveillance du Secteur Financier (Luxembourg) [6569422][contributor],Luxembourg [827][country],Commission de Surveillance du Secteur Financier (Luxembourg) [6569421][govagency],""
+Commissione Nazionale per le Societa e la Borsa (Consob) [6634547][contributor],Italy [10][country],Commissione Nazionale per le Società e la Borsa [6569073][govagency],""
+Competition and Markets Authority (CMA) [3637788][contributor],United Kingdom [51][country],Competition and Markets Authority (UK) [6592934][govagency],""
+Congreso de la Republica del Peru [4915364][contributor],Peru [947][country],Congreso de la Republica del Peru [4910064][govagency],""
+Congreso de los Diputados [3637274][contributor],Spain [410][country],Congreso de los Diputados [3636665][govagency],""
+Congress.gov [253176][contributor],United States of America [16][country],Congress [3641038][usfedagency],""
+Congress.gov | Appropriations Tables [567586][source],"","",Bill [8158280][doctype]
+Congress.gov | Bills Presented to the President [426154][source],"","",Bill [8158280][doctype]
+Congress.gov | Legislation | 115 (2017-2018) [4905739][source],"","",Bill [8158280][doctype]
+Congress.gov | Legislation | 115 (2017-2018) | Introduced [4925599][source],"","",Bill [8158280][doctype]
+Congress.gov | Legislation | 115 (2017-2018) | To President/Became Law [4924643][source],"","",Bill [8158280][doctype]
+Congress.gov | Legislation | 116 (2019-2020) [5011238][source],"","",Bill [8158280][doctype]
+Congress.gov | Legislation | 116 (2019-2020) | Introduced [5011250][source],"","",Bill [8158280][doctype]
+Congress.gov | Legislation | 116 (2019-2020) | To President/Became Law [5011249][source],"","",Bill [8158280][doctype]
+Congress.gov | Public Laws [3677425][source],"","",Law [7997266][doctype]
+"Congress.gov | Public Laws, 115th Congress [3664943][source]","","",Law [7997266][doctype]
+"Congress.gov | Public Laws, 116th Congress [6505952][source]","","",Law [7997266][doctype]
+Connecticut's Official State Website [7821695][contributor],Connecticut [555][state],Connecticut Insurance Department [8003177][usstateagencies],""
+Connecticut's Official State Website | Insurance Department | Advisory Council Meeting on Regulation & Innovation Technology [8003896][source],"","",Meeting [8016916][doctype]
+Connecticut's Official State Website | Insurance Department | Bulletins [7967871][source],"","",Bulletin [6609524][doctype]
+Connecticut's Official State Website | Insurance Department | Commissioner's Orders [7966277][source],"","",Order [8016919][doctype]
+Connecticut's Official State Website | Insurance Department | Consumer Alerts and Notices [7967965][source],"","",News [7997258][doctype]; Notice [6609533][doctype]
+Connecticut's Official State Website | Insurance Department | Department Notices [7967948][source],"","",Notice [6609533][doctype]
+Connecticut's Official State Website | Insurance Department | Enforcement Actions [7968060][source],"","",Enforcement Action [6609529][doctype]
+Connecticut's Official State Website | Insurance Department | In the News [7968052][source],"","",News [7997258][doctype]
+Connecticut's Official State Website | Insurance Department | List of Proposed Regulations | Tracking Number: TA2019-026 [7976600][source],"","",Proposed Regulation Summary and Status [7997280][doctype]
+Connecticut's Official State Website | Insurance Department | List of Regulations Recently Adopted [7968337][source],"","",Regulation [7997253][doctype]
+Connecticut's Official State Website | Press Releases [7845083][source],"","",News [7997258][doctype]
+Conselho Administrativo de Defesa Econômica (CADE) [1870734][contributor],Brazil [201][country],"",""
+Consumer Financial Protection Bureau (CFPB) [251988][contributor],United States of America [16][country],Consumer Financial Protection Bureau [1720][usfedagency],""
+Contraparte Central (CCLV) [3422669][contributor],Chile [202][country],Contraparte Central SA(Chile) [3515378][govagency],""
+Council of the European Union [3653745][contributor],European Union [5004410][intergovagency],Council of the European Union [5004500][intergovagency],""
+Courts and Tribunals Judiciary [59597][contributor],United Kingdom [51][country],Her Majesty's Courts and Tribunals Service (UK) [7904708][govagency],""
+DHS | Fact Sheets [3640812][source],"","",Publication [7997259][doctype]
+DHS | Speeches [3640811][source],"","",Speech [7997250][doctype]
+DHS | Testimony [221624][source],"","",Testimony [8016918][doctype]
+DNB | Nieuws [7935174][source],"","",News [7997258][doctype]
+Danish Financial Supervisory Authority (Finanstilsynet) [3250828][contributor],Denmark [221][country],Finanstilsynet Denmark [3435841][govagency],""
+Das Bundesgesetzblatt (BGBl.) [3640568][contributor],Germany [15][country],"",""
+Data Protection Commissioner (Ireland) [3656478][contributor],Ireland [94][country],Data Protection Commission Ireland [3697155][govagency],""
+De Nederlandsche Bank (DNB) [7935175][contributor],Netherlands [42][country],De Nederlandsche Bank [6568690][centralbanks],""
+De Nederlandsche Bank | DNBulletin [3336981][source],"","",Bulletin [6609524][doctype]
+De Nederlandsche Bank | Dossier Brexit [6622514][source],"","",Answer to Question [7997279][doctype]; Question [7997276][doctype]; Report [7997263][doctype]
+De Nederlandsche Bank | Jaarverslag [3228289][source],"","",Report [7997263][doctype]
+De Nederlandsche Bank | Nieuws [3215012][source],"","",News [7997258][doctype]
+De Nederlandsche Bank | Nieuwsbrief Banken [7945032][source],"","",News [7997258][doctype]
+De Nederlandsche Bank | Nieuwsbrief Banken juni 2019 [7939735][source],"","",News [7997258][doctype]
+De Nederlandsche Bank | Nieuwsbrief Banken | Einzelne Dokumente [7945035][source],"","",Development [7997099][doctype]; News [7997258][doctype]
+De Nederlandsche Bank | Nieuwsbrief Betaalinstellingen [7945026][source],"","",Development [7997099][doctype]; News [7997258][doctype]
+De Nederlandsche Bank | Nieuwsbrief Betaalinstellingen | Einzelne Dokumente [7945034][source],"","",News [7997258][doctype]
+De Nederlandsche Bank | Nieuwsbrief Betalingsverkeer [7945021][source],"","",News [7997258][doctype]
+De Nederlandsche Bank | Nieuwsbrief Betalingsverkeer | Einzelne Dokumente [7945030][source],"","",News [7997258][doctype]
+De Nederlandsche Bank | Nieuwsbrief Pensioenen [7945031][source],"","",News [7997258][doctype]
+De Nederlandsche Bank | Nieuwsbrief Pensioenen | Einzelne Dokumente [7945036][source],"","",News [7997258][doctype]
+De Nederlandsche Bank | Nieuwsbrief Trustkantoren [7945028][source],"","",News [7997258][doctype]
+De Nederlandsche Bank | Nieuwsbrief Trustkantoren | Einzelne Dokumente [7945023][source],"","",News [7997258][doctype]
+De Nederlandsche Bank | Nieuwsbrief Vermogensbeheerders [7945022][source],"","",News [7997258][doctype]
+De Nederlandsche Bank | Nieuwsbrief Vermogensbeheerders | Einzelne Dokumente [7945025][source],"","",News [7997258][doctype]
+De Nederlandsche Bank | Nieuwsbrief Verzekeren [7945029][source],"","",News [7997258][doctype]
+De Nederlandsche Bank | Nieuwsbrief Verzekeren | Einzelne Dokumente [7945033][source],"","",News [7997258][doctype]
+De Nederlandsche Bank | Occasional Studies [3542799][source],"","",Development [7997099][doctype]; Research [7997257][doctype]
+De Nederlandsche Bank | Statistisch Nieuwsbericht [3215020][source],"","",Statistics [7997255][doctype]
+De Nederlandsche Bank | Working Papers [3370522][source],"","",Development [7997099][doctype]; Research [7997257][doctype]
+Delaware General Assembly [4952828][contributor],Delaware [362][state],Delaware General Assembly [4907917][usstateagencies],""
+Delaware General Assembly | DE General Corporation Law (Title 8) and DE LLC Act (Title 6) [4952827][source],"","",Law [7997266][doctype]
+Department of Agriculture Rural Development | Unnumbered Letters [3690283][source],"","",Letter [6609532][doctype]
+Department of Defense Office of Inspector General [4992655][contributor],United States of America [16][country],Department of Defense [979][usfedagency],""
+Department of Finance Canada [161003][contributor],Canada [31][country],Department of Finance (Canada) [3703827][govagency],""
+"Department of Health, Hong-Kong [106164][contributor]",Hong Kong [254][country],Centre for Health Protection (Hong Kong) [7887193][govagency],""
+Department of Homeland Security [221625][contributor],United States of America [16][country],Department of Homeland Security [2341][usfedagency],""
+Department of Justice (Canada) [573895][contributor],Canada [31][country],Department of Justice (Canada) [3704150][govagency],""
+Der Bayerische Landesbeauftragte für den Datenschutz (BayLfD) [3636407][contributor],Germany [15][country],"",""
+Der Bundesbeauftragten für den Datenschutz und die Informationsfreiheit [7816299][contributor],Germany [15][country],"",""
+Der Landesbeauftragte für Datenschutz und Informationsfreiheit Mecklenburg-Vorpommern [3649794][contributor],Germany [15][country],"",""
+Deutsche Bundesbank [1480958][contributor],Germany [15][country],Deutsche Bundesbank [3665946][centralbanks],""
+Deutsche Bundesbank | Baseler Rahmenwerk [3665735][source],"",Deutsche Bundesbank [3665946][centralbanks],""
+Deutsche Bundesbank | Presse | Aktuelle Pressenotizen der Bundesbank und Pressemitteilungen der Europäischen Zentralbank [4984617][source],"",Deutsche Bundesbank [3665946][centralbanks],""
+Deutsche Bundesbank | Pressenotizen [3675219][source],"",Deutsche Bundesbank [3665946][centralbanks],""
+Deutsche Bundesbank | Publications [6719258][source],"",Deutsche Bundesbank [3665946][centralbanks],""
+Deutsche Bundesbank | Topics [3637782][source],"",Deutsche Bundesbank [3665946][centralbanks],""
+Deutsche Bundesbank | Veröffentlichungen [3665716][source],"",Deutsche Bundesbank [3665946][centralbanks],""
+Deutscher Bundestag [91573][contributor],Germany [15][country],Bundestag [3691149][govagency],""
+Diario Oficial [3682117][contributor],Chile [202][country],"",""
+Diario Oficial de Colombia [7600847][contributor],Colombia [747][country],"",""
+Diario Oficial de la Federacion (Mexico) [4974748][contributor],Mexico [562][country],"",""
+Die Bundesregierung [7601809][contributor],Germany [15][country],"",""
+Die Landesbeauftragte für Datenschutz (Bremen) [3701395][contributor],Germany [15][country],"",""
+Die Landesbeauftragte für Datenschutz (Bremen) | Aktuellen Mitteilungen [3701394][source],"",European Data Protection Board [3663316][govagency],""
+Die Landesbeauftragte für den Datenschutz Niedersachsen [3636278][contributor],Germany [15][country],"",""
+Dirección de Impuestos y Aduanas Nacionales (DIAN) [3683557][contributor],Colombia [747][country],Direccion de Impuestos y Aduanas Nacionales [3445707][govagency],""
+Direction Générale du Trésor [3192622][contributor],France [7][country],"",""
+Direction générale des Finances publiques [3665852][contributor],France [7][country],"",""
+Dutch Authority for the Financial Markets (AFM) [3143288][contributor],Netherlands [42][country],Netherlands Authority for the Financial Markets [6568467][govagency],""
+E-Gazette Singapore [6748246][contributor],Singapore [223][country],Parliament of Singapore [6681016][govagency],""
+EFRAG | All Publications [8002720][source],"","",Publication [7997259][doctype]
+EFRAG | Decisions [8001999][source],"","",Decision [8016921][doctype]
+EFRAG | Endorsement Status Report [8002149][source],"","",Report [7997263][doctype]
+EFRAG | News Feed [8001997][source],"","",News [7997258][doctype]
+EFRAG | Publications | Research Project on Better Information on Intangibles [8002035][source],"","",Research [7997257][doctype]
+EFRAG | Publications | Research Project on Pension Plans with an Asset-return Promise [8002032][source],"","",Research [7997257][doctype]
+EFRAG | Upcoming Meetings [8002009][source],"","",Meeting [8016916][doctype]
+EIOPA | Events [8016475][source],"","",Event [8016915][doctype]
+EIOPA | Interviews & Contributions [8016476][source],"","",Development [7997099][doctype]
+EIOPA | Press Room [6568497][source],"","",News [7997258][doctype]
+ESMA | AIFMD Reporting Guidelines [138103][source],"","",News [7997258][doctype]
+ESMA | Consultations [131863][source],"","",Publication [7997259][doctype]
+ESMA | EMIR [159431][source],"","",News [7997258][doctype]
+ESMA | ESMA Library | Documents [159469][source],"","",News [7997258][doctype]
+ESMA | Hearings [1173406][source],"","",News [7997258][doctype]
+ESMA | News [132370][source],"","",News [7997258][doctype]
+ESMA | Press Releases [342646][source],"","",News [7997258][doctype]
+ESMA | Vacancy [424010][source],"","",Vacancy [7997269][doctype]
+ESRB | ESRB Policy [3636507][source],"","",Policy [7936929][doctype]
+ESRB | National Policy [3636506][source],"","",Policy [7936929][doctype]
+ESRB | Schedule of Events [3636528][source],"","",Event [8016915][doctype]
+EUR-Lex [37291][contributor],European Union [5004410][intergovagency],"",""
+Eidgenössische Steuerverwaltung (ESTV) [3698880][contributor],Switzerland [63][country],Federal Tax Administration(Switzerland) [4906949][govagency],""
+Eidgenössisches Finanzdepartement (EFD) [3702955][contributor],Switzerland [63][country],Federal Department of Finance Switzerland [3699424][govagency],""
+Empresa Peruana de Servicios Editoriales S.A. [16367][contributor],Peru [947][country],Congreso de la Republica del Peru [4910064][govagency],""
+Equal Opportunities Commission (EOC) [3668709][contributor],Hong Kong [254][country],Equal Opportunities Commission (Hong Kong) [3685620][govagency],""
+Estatuto Tributario Nacional [7627405][contributor],Colombia [747][country],"",""
+Eurex Group | Börsenordnung [3675695][source],"",Eurex Exchange [6591770][finexchanges],""
+Eurex Group | Circulars & Mailings [7921529][source],"",Eurex Exchange [6591770][finexchanges],""
+Eurex Group | Events [3675655][source],"",Eurex Exchange [6591770][finexchanges],""
+Eurex Group | Exchange Rules [3675702][source],"",Eurex Exchange [6591770][finexchanges],""
+Eurex Group | News [3675652][source],"",Eurex Exchange [6591770][finexchanges],""
+Eurex Group | Newsroom | Exchange [3675650][source],"",Eurex Exchange [6591770][finexchanges],""
+Eurex Group | Newsroom | Group [3675651][source],"",Eurex Exchange [6591770][finexchanges],""
+Eurex Group | Press Releases [324345][source],"",Eurex Exchange [6591770][finexchanges],""
+Eurex Group | Pressemitteilungen [3675653][source],"",Eurex Exchange [6591770][finexchanges],""
+Eurex Group | Publications [3675660][source],"",Eurex Exchange [6591770][finexchanges],""
+Eurex Group | Regelwerke | Börsenordnung (Änderungshistorie) [4984579][source],"",Eurex Exchange [6591770][finexchanges],""
+Eurex Group | Rundschreiben [3673958][source],"",Eurex Exchange [6591770][finexchanges],""
+Eurex Group | Veranstaltungen [3675672][source],"",Eurex Exchange [6591770][finexchanges],""
+Eurex [91198][contributor],Germany [15][country],Eurex Exchange [6591770][finexchanges],""
+Europa.eu (European Union) [3176028][contributor],European Union [5004410][intergovagency],"",""
+European Banking Authority (EBA) [277535][contributor],European Union [5004410][intergovagency],European Banking Authority [6567378][intergovagency],""
+European Banking Authority (EBA) | Press Releases [277534][source],"","",News [7997258][doctype]
+European Central Bank (ECB) [356910][contributor],European Union [5004410][intergovagency],European Central Bank [3639533][centralbanks],""
+European Central Bank (ECB) | Banking Supervision | Press Releases [3637064][source],"","",News [7997258][doctype]
+European Central Bank (ECB) | Banking Supervision | Publications [3637067][source],"","","Pi Z, Stevanato P, Sun F, Yang Y, Sun X, Zhao H, Geng G, Yu L [1991258][author]"
+European Central Bank | Eurosystem | News [7529976][source],"","",News [7997258][doctype]
+European Central Bank | Eurosystem | Past meetings [7783614][source],"","",Meeting [8016916][doctype]
+European Central Bank | Media | Press Releases [6634355][source],"","",News [7997258][doctype]
+European Central Bank | Media | Publications [6634356][source],"","","Pi Z, Stevanato P, Sun F, Yang Y, Sun X, Zhao H, Geng G, Yu L [1991258][author]"
+European Central Bank | Press Releases [175745][source],"","",News [7997258][doctype]
+European Central Bank | Press [177502][source],"","",News [7997258][doctype]
+European Central Bank | Publications [188394][source],"","","Pi Z, Stevanato P, Sun F, Yang Y, Sun X, Zhao H, Geng G, Yu L [1991258][author]"
+European Central Bank | Statistical Press Releases [4971317][source],"","",Statistics [7997255][doctype]
+European Commission  | Climate Action News [83479][source],"","",News [7997258][doctype]
+European Commission [24350][contributor],European Union [5004410][intergovagency],European Commission [4958769][intergovagency],""
+European Commission |  Latest Medical devices [1485279][source],"","",News [7997258][doctype]
+European Commission | 5G | Consultations [4963885][source],"","",Consultation [7997262][doctype]
+European Commission | 5G | Events [4937920][source],"","",Event [8016915][doctype]
+European Commission | 5G | Laws [6550667][source],"","",Law [7997266][doctype]
+European Commission | 5G | News [4970099][source],"","",News [7997258][doctype]
+European Commission | Access and connectivity | Consultations [4994224][source],"","",Consultation [7997262][doctype]
+European Commission | Access and connectivity | Events [4957699][source],"","",Event [8016915][doctype]
+European Commission | Access and connectivity | Laws [6587575][source],"","",Law [7997266][doctype]
+European Commission | Access and connectivity | News [4929303][source],"","",News [7997258][doctype]
+European Commission | Agendas of Commission Meetings [1736474][source],"","",Meeting [8016916][doctype]
+European Commission | Antitrust Press Releases [4937853][source],"","",News [7997258][doctype]
+European Commission | Antitrust/Cartel Cases [7421408][source],"","",News [7997258][doctype]
+European Commission | BULC Violeta [742982][source],"","",Development [7997099][doctype]; News [7997258][doctype]
+European Commission | Banking & Finance | News [4937631][source],"","",News [7997258][doctype]
+European Commission | Banking and Finance | Consultations [3655615][source],"","",Consultation [7997262][doctype]
+European Commission | Brexit Negotiating Documents [4961661][source],"","",Publication [7997259][doctype]
+European Commission | Brexit Negotiations | Press Releases [4940335][source],"","",News [7997258][doctype]
+European Commission | Brexit preparedness notices [6581700][source],"","",Notice [6609533][doctype]
+European Commission | Broadband Europe | Consultations [6635097][source],"","",Consultation [7997262][doctype]
+European Commission | Broadband Europe | Events [4957941][source],"","",Event [8016915][doctype]
+European Commission | Broadband Europe | News [4929403][source],"","",News [7997258][doctype]
+European Commission | Building Automation [4943150][source],"","",Report [7997263][doctype]
+European Commission | Capital Markets Union [1062403][source],"","",News [7997258][doctype]
+European Commission | Climate Action Consultations [868754][source],"","",Consultation [7997262][doctype]
+European Commission | Competition Policy Newsletter [6691489][source],"","",News [7997258][doctype]
+European Commission | Competition | Announcements by the Director-General [4968950][source],"","",News [7997258][doctype]
+European Commission | Competition | Antitrust | Publications [6702799][source],"","",Publication [7997259][doctype]
+European Commission | Competition | Headlines [7533936][source],"","",News [7997258][doctype]
+European Commission | Competition | Mergers | Updates of Cases [4967075][source],"","",News [7997258][doctype]
+European Commission | Competition | Mergers | What's New [4984806][source],"","",News [7997258][doctype]
+European Commission | Competition | Press Releases [7378065][source],"","",News [7997258][doctype]
+European Commission | Competition | Publications [4974132][source],"","",Publication [7997259][doctype]
+European Commission | Competition | Telecommunications | What's News [6706755][source],"","",News [7997258][doctype]
+European Commission | Consultations [1161747][source],"","",Consultation [7997262][doctype]
+European Commission | Cybersecurity | Consultations [6570255][source],"","",Consultation [7997262][doctype]
+European Commission | Cybersecurity | Events [4990985][source],"","",Event [8016915][doctype]
+European Commission | Cybersecurity | Laws [6550695][source],"","",Law [7997266][doctype]
+European Commission | Cybersecurity | News [4931902][source],"","",News [7997258][doctype]
+European Commission | DOMBROVSKIS Valdis [737188][source],"","",News [7997258][doctype]
+European Commission | Dawn Raid / Inspections  | Press Releases [7378080][source],"","",News [7997258][doctype]
+European Commission | Derivatives / EMIR [532634][source],"","",Financial Report [7997261][doctype]
+European Commission | Digibyte [4929447][source],"","",News [7997258][doctype]
+European Commission | Digital Agenda - Digital Single Market | RSS Feed [186053][source],"","",News [7997258][doctype]
+European Commission | Digital Economy & Society [4984808][source],"","",News [7997258][doctype]
+European Commission | Digital Single Market [339215][source],"","",News [7997258][doctype]
+European Commission | Digital Single Market | Digibyte [4929446][source],"","",News [7997258][doctype]
+European Commission | Digital Single Market | News [6560403][source],"","",News [7997258][doctype]
+European Commission | Director General | Health and Food Safety [4967694][source],"","",News [7997258][doctype]
+European Commission | Directorate-General | Competition [7502367][source],"","",News [7997258][doctype]
+European Commission | EC Competition | Cartels news [4942350][source],"","",News [7997258][doctype]
+European Commission | Elżbieta Bieńkowska Announcements [1712515][source],"","",News [7997258][doctype]
+European Commission | Energy News [6756567][source],"","",News [7997258][doctype]
+European Commission | Energy [200781][source],"","",News [7997258][doctype]
+European Commission | Energy and Environment Sub-Committee [4941597][source],"","",News [7997258][doctype]
+European Commission | Environment News [185653][source],"","",News [7997258][doctype]
+European Commission | Financial Crime [3122837][source],"","",News [7997258][doctype]
+European Commission | Financial Reforms [6772511][source],"","",News [7997258][doctype]
+European Commission | Food Safety Highlights [4982571][source],"","",News [7997258][doctype]
+European Commission | Georgieva Kristalina [738643][source],"","",News [7997258][doctype]
+European Commission | Germany Press Releases [2090614][source],"","",News [7997258][doctype]
+European Commission | Global internet and telecommunications | Consultations [6553538][source],"","",Consultation [7997262][doctype]
+European Commission | Global internet and telecommunications | Events [4935646][source],"","",News [7997258][doctype]
+European Commission | Global internet and telecommunications | Laws [4931930][source],"","",Law [7997266][doctype]
+European Commission | Global internet and telecommunications | News [4939022][source],"","",News [7997258][doctype]
+European Commission | HOGAN Phil [722693][source],"","",News [7997258][doctype]
+European Commission | Harmonised standards | General product safety [1338827][source],"","",News [7997258][doctype]
+European Commission | Health and Food Safety News [320940][source],"","",News [7997258][doctype]
+European Commission | Health and food safety | Newsletter [4979454][source],"","",News [7997258][doctype]
+European Commission | Health | EU Newsletter Archive (DE) [3439254][source],"","",News [7997258][doctype]
+European Commission | Health | EU Newsletter Archive [3439242][source],"","",News [7997258][doctype]
+"European Commission | Internal Market, Industry, Entrepreneurship and SMEs [131459][source]","","",News [7997258][doctype]
+"European Commission | Internal Market, Industry, Entrepreneurship and SMEs | All News [6567375][source]","","",News [7997258][doctype]
+"European Commission | Internal Market, Industry, Entrepreneurship and SMEs | Contracts and Grants [6711595][source]","","",Development [7997099][doctype]
+"European Commission | Internal Market, Industry, Entrepreneurship and SMEs | Events [6736266][source]","","",News [7997258][doctype]
+"European Commission | Internal Market, Industry, Entrepreneurship and SMEs | Industry News [6573722][source]","","",News [7997258][doctype]
+"European Commission | Internal Market, Industry, Entrepreneurship and SMEs | Latest Activity [6715296][source]","","",News [7997258][doctype]
+"European Commission | Internal Market, Industry, Entrepreneurship and SMEs | Notification system – Standardisation [7594703][source]","","",News [7997258][doctype]
+"European Commission | Internal Market, Industry, Entrepreneurship and SMEs | Publications [6758448][source]","","",Publication [7997259][doctype]
+European Commission | JOUROVÁ Vĕra [1732654][source],"","",News [7997258][doctype]
+European Commission | Justice Meetings Agenda [524356][source],"","",Meeting [8016916][doctype]
+European Commission | Justice and Consumers | Latest Activity [3358957][source],"","",News [7997258][doctype]
+European Commission | Justice | Other documents [868816][source],"","",News [7997258][doctype]
+European Commission | Liability of Defective Products [3394145][source],"","",News [7997258][doctype]
+European Commission | MIMICA Neven [743513][source],"","",News [7997258][doctype]
+European Commission | MOEDAS Carlos [722240][source],"","",News [7997258][doctype]
+European Commission | MOGHERINI Federica [729350][source],"","",News [7997258][doctype]
+European Commission | MOSCOVICI Pierre [710679][source],"","",News [7997258][doctype]
+European Commission | Managing risks to banks and financial institutions [7777168][source],"","",News [7997258][doctype]
+European Commission | Margrethe Vestager [7636827][source],"","",News [7997258][doctype]
+European Commission | Mariya Gabriel [2583242][source],"","",News [7997258][doctype]
+European Commission | Market Abuse [2267389][source],"","",News [7997258][doctype]
+European Commission | Medicinal Products | Latest Updates [6567038][source],"","",News [7997258][doctype]
+European Commission | NAVRACSICS Tibor [969735][source],"","",News [7997258][doctype]
+European Commission | News [3637744][source],"","",News [7997258][doctype]
+European Commission | Newsroom Agenda [1111517][source],"","",News [7997258][doctype]
+European Commission | Notification System [405887][source],"","",News [7997258][doctype]
+European Commission | OETTINGER Günther [1857923][source],"","",News [7997258][doctype]
+European Commission | Official Journal | Mergers [4968844][source],"","",News [7997258][doctype]
+European Commission | Open Internet | News [6581592][source],"","",News [7997258][doctype]
+European Commission | Preparedness Notices [6580451][source],"","",Notice [6609533][doctype]
+European Commission | Press Corner | Recent News [6800641][source],"","",News [7997258][doctype]
+European Commission | Public Health | Latest Updates [154581][source],"","",News [7997258][doctype]
+European Commission | Public Health | Tobacco Latest Updates [3273564][source],"","",News [7997258][doctype]
+European Commission | Published Initiatives [7570148][source],"","",Law [7997266][doctype]
+European Commission | Research and Innovation | Health [7505894][source],"","",News [7997258][doctype]
+European Commission | Research and Innovation | What's New [3638380][source],"","",News [7997258][doctype]
+European Commission | Revisions of Medical Device Directives [709832][source],"","",Law [7997266][doctype]
+European Commission | RoHS in Electrical and Electronic Equipment [6755484][source],"","",Consultation [7997262][doctype]
+European Commission | RoHS in Electrical and Electronic Equipment | RoHS 2 [7505133][source],"","",Development [7997099][doctype]
+European Commission | Roaming | News [4935416][source],"","",News [7997258][doctype]
+European Commission | Roaming | Reports and studies [4935417][source],"","",Report [7997263][doctype]
+European Commission | STYLIANIDES Christos [726745][source],"","",News [7997258][doctype]
+European Commission | Scientific Committees | All News [3390474][source],"","",News [7997258][doctype]
+European Commission | State Aid Cases [4935261][source],"","",Development [7997099][doctype]
+European Commission | THYSSEN Marianne [743252][source],"","",News [7997258][doctype]
+European Commission | TIMMERMANS Frans [796949][source],"","",News [7997258][doctype]
+European Commission | Tax Consultations [7856535][source],"","",Consultation [7997262][doctype]
+European Commission | Taxation and Customs Union |  Latest News [3521728][source],"","",News [7997258][doctype]
+European Commission | Telecom Rules | Consultations [4935789][source],"","",Consultation [7997262][doctype]
+European Commission | Telecom Rules | Events [4957515][source],"","",Event [8016915][doctype]
+European Commission | Telecom Rules | Laws [7534117][source],"","",Law [7997266][doctype]
+European Commission | Telecom Rules | News [4937911][source],"","",News [7997258][doctype]
+European Commission | Telecom Rules | Reports and studies [4935645][source],"","",Report [7997263][doctype]
+European Commission | Toy Safety Guidance [7777114][source],"","",Guidance [7997267][doctype]
+European Commission | Trade Policy Events [167688][source],"","",Event [8016915][doctype]
+European Commission | Trade | Press Releases [7414924][source],"","",News [7997258][doctype]
+European Commission | Trade | What's New [277016][source],"","",News [7997258][doctype]
+European Commission | Union Register of Medicinal Products | EC Decisions concerning medicinal products [6752789][source],"","",Decision [8016921][doctype]
+European Commission | Union Register of Medicinal Products | EC Decisions concerning nationally authorised medicinal products [6758637][source],"","",Decision [8016921][doctype]
+European Commission | Union Register of Medicinal Products | EC Decisions concerning orphan medicinal products [6757034][source],"","",Decision [8016921][doctype]
+European Commission | Union Register of Medicinal Products | EC procedures on the change of status of human medicinal products [6757030][source],"","",Instruction [7997268][doctype]
+European Commission | Union Register of Medicinal Products | EC procedures on the change of status of veterinary medicinal products [7496408][source],"","",Instruction [7997268][doctype]
+European Commission | Wireless Europe | Consultations [4964071][source],"","",Consultation [7997262][doctype]
+European Commission | Wireless Europe | News [4970098][source],"","",News [7997258][doctype]
+European Economic and Social Committee [200027][contributor],European Union [5004410][intergovagency],"",""
+European External Action Service [582596][contributor],European Union [5004410][intergovagency],"",""
+European Financial Reporting Advisory Group (EFRAG) [8001998][contributor],European Union [5004410][intergovagency],"",""
+European Food Safety Authority (EFSA) [107538][contributor],European Union [5004410][intergovagency],"",""
+European Insurance and Occupational Pensions Authority (EIOPA) [2582665][contributor],European Union [5004410][intergovagency],European Insurance and Occupational Pensions Authority [8007532][intergovagency],""
+European Medicines Agency (EMA) [23709][contributor],European Union [5004410][intergovagency],"",""
+European Parliament [60955][contributor],European Union [5004410][intergovagency],European Parliament [4929557][intergovagency],""
+European Payments Council (EPC) [3637187][contributor],European Union [5004410][intergovagency],European Payments Council [3644700][intergovagency],""
+European Securities and Markets Authority [131864][contributor],European Union [5004410][intergovagency],European Securities and Markets Authority [6502586][intergovagency],""
+European Systemic Risk Board (ESRB) [357159][contributor],European Union [5004410][intergovagency],European Systemic Risk Board [3639994][intergovagency],""
+Executive Yuan [3703162][contributor],Taiwan [22][country],Executive Yuan (Taiwan) [4918891][govagency],""
+FCA Handbook [3644705][contributor],United Kingdom [51][country],Financial Conduct Authority (UK) [6567353][govagency],""
+FDIC | Advisory Committee on Community Banking [1234054][source],"","",Notice [6609533][doctype]
+FDIC | Board Meetings [4939620][source],"","",Meeting [8016916][doctype]
+FDIC | Consumer Alerts [1057882][source],"","",News [7997258][doctype]
+FDIC | Consumers [279090][source],"","",News [7997258][doctype]
+FDIC | Consumers | Community Affairs [385514][source],"","",News [7997258][doctype]
+FDIC | Consumers | Consumer News [929138][source],"","",News [7997258][doctype]
+FDIC | Diversity [1898409][source],"","",Report [7997263][doctype]
+FDIC | Editorials/Letters [990315][source],"","",Letter [6609532][doctype]
+FDIC | Email Updates [3698825][source],"","",Email [7997270][doctype]
+FDIC | FDIC Board Meetings [558515][source],"","",Meeting [8016916][doctype]
+FDIC | FDIC Consumer News [931231][source],"","",News [7997258][doctype]
+FDIC | FDIC Federal Register Citations [994294][source],"","",Notice [6609533][doctype]; Proposed Rule [6609238][doctype]
+FDIC | FDIC Quarterly [1499211][source],"","",Report [7997263][doctype]
+FDIC | FDIC State Profiles [476220][source],"","",Research [7997257][doctype]
+FDIC | Failed Bank List [918751][source],"","",News [7997258][doctype]
+FDIC | Financial Institution Letters [299862][source],"","",Letter [6609532][doctype]
+FDIC | Financial Reform [663954][source],"","",Bulletin [6609524][doctype]
+FDIC | Industry Analysis [243010][source],"","",Letter [6609532][doctype]
+FDIC | Industry Analysis | Center for Financial Research [868287][source],"","",Research [7997257][doctype]
+FDIC | Industry Analysis | Current Calculator [474472][source],"","",Policy [7936929][doctype]
+FDIC | Institution & Asset Sales [453513][source],"","",Letter [6609532][doctype]
+FDIC | Institution & Asset Sales | Loan Sales [6649851][source],"","",Report [7997263][doctype]
+FDIC | Materials from Past Events [583915][source],"","",Event [8016915][doctype]
+FDIC | Money Smart News [827114][source],"","",News [7997258][doctype]
+FDIC | News&Events | Conferences & Events [350610][source],"","",Event [8016915][doctype]
+FDIC | Office of Inspector General Reports [181501][source],"","",Report [7997263][doctype]
+FDIC | Press Releases [60067][source],"","",News [7997258][doctype]
+FDIC | Press Room [253231][source],"","",News [7997258][doctype]
+FDIC | Recent Updates [74038][source],"","",Bulletin [6609524][doctype]
+FDIC | Regulations & Examinations | Examiner Training Programs [1624673][source],"","",Report [7997263][doctype]
+FDIC | Speeches and Testimony [416614][source],"","",Speech [7997250][doctype]
+FDIC | Strategic [2185652][source],"","",Report [7997263][doctype]
+FDIC | Summary of Deposits [1205730][source],"","",Bulletin [6609524][doctype]
+FDIC | Systemic Resolution Advisory Committee [4925847][source],"","",Meeting [8016916][doctype]
+FDIC | Weekly National Rates and Rate Caps [1514899][source],"","",Bulletin [6609524][doctype]
+FEBRABAN [3681064][contributor],Brazil [201][country],Febraban - Brazilian Federation of Banks [7856177][associations],""
+FEC.gov [45058][contributor],United States of America [16][country],Federal Election Commission [3652953][usfedagency],""
+FFIEC | Guidance [4925210][source],"","",Guidance [7997267][doctype]
+FINMA [1138674][contributor],Switzerland [63][country],Swiss Financial Market Supervisory Authority [3698979][govagency],""
+FINMA | All News [3698723][source],"","",News [7997258][doctype]
+"FINMA | Authorised Institutions, Individuals and Products [1151227][source]","","",Development [7997099][doctype]
+FINMA | Enforcement Reports [1151230][source],"","",Report [7997263][doctype]
+FINMA | FINMA Mandataries [1151222][source],"","",Publication [7997259][doctype]
+FINMA | Federal Law on the Supervision of Insurance Companies [7589649][source],"","",Law [7997266][doctype]
+FINMA | Financial Reporting Transparency Report [1151225][source],"","",Report [7997263][doctype]
+FINMA | Financial Sanction [1151231][source],"","",Measures [8016917][doctype]
+FINMA | Home [7938114][source],"","",News [7997258][doctype]
+FINMA | International Sanction [1151226][source],"","",Measures [8016917][doctype]
+FINMA | Media Events [1151214][source],"","",Event [8016915][doctype]
+FINMA | News [1151210][source],"","",News [7997258][doctype]
+FINMA | Position Paper [7589638][source],"","",News [7997258][doctype]
+FINMA | Press Releases [3684627][source],"","",Report [7997263][doctype]
+FINMA | Public Warning [1138677][source],"","",Publication [7997259][doctype]
+FINRA | Actions Resulting from Referrals to Federal and State Authorities [5010073][source],"","",Enforcement Action [6609529][doctype]
+FINRA | Blog [5010071][source],"","",News [7997258][doctype]
+FINRA | By-Laws of the Corporation [6793692][source],"","",Law [7997266][doctype]
+FINRA | COVID-19 FAQs [7820524][source],"","",Answer to Question [7997279][doctype]
+FINRA | Cybersecurity Practices Report [6779501][source],"","",Report [7997263][doctype]
+FINRA | Disciplinary Actions [4925557][source],"","",Enforcement Action [6609529][doctype]
+FINRA | Email Updates [6498351][source],"","",Email [7997270][doctype]
+FINRA | Investor Alerts [5010046][source],"","",News [7997258][doctype]
+FINRA | Manual | Notices [4918466][source],"","",Notice [6609533][doctype]
+FINRA | Most Recent Rule Filings [3540400][source],"","",Rule [6609539][doctype]
+FINRA | News Releases [213091][source],"","",News [7997258][doctype]
+FINRA | Notices [181214][source],"","",Notice [6609533][doctype]
+FINRA | Requests for Comments [5010045][source],"","",Request for Comment [6609235][doctype]
+FINRA | Rule Filings [200864][source],"","",Rule [6609539][doctype]
+FINRA | Rules & Guidance | NASD Rules [7502787][source],"","",Rule [6609539][doctype]
+FINRA | Speeches & Testimony [4935534][source],"","",Speech [7997250][doctype]; Testimony [8016918][doctype]
+FINRA | What's New [5010081][source],"","",News [7997258][doctype]
+FRB | All Releases [179715][source],"","",News [7997258][doctype]
+FRB | All Speeches [300258][source],"","",Speech [7997250][doctype]
+FRB | Basel Coordination Committee Bulletins [3688528][source],"","",Bulletin [6609524][doctype]
+FRB | Board Meetings [145621][source],"","",Meeting [8016916][doctype]
+FRB | Commercial Paper Outstandings [271893][source],"","",Statistics [7997255][doctype]
+FRB | Commercial Paper Rates [71457][source],"","",Statistics [7997255][doctype]
+FRB | Current FAQs [918646][source],"","",Answer to Question [7997279][doctype]
+FRB | DDP | Financial Accounts of the United States (Z.1) [642959][source],"","",News [7997258][doctype]
+FRB | Data Download [301639][source],"","",Statistics [7997255][doctype]
+FRB | Email Updates [3698814][source],"","",Email [7997270][doctype]
+FRB | FEDS Notes [3545002][source],"","",Research [7997257][doctype]
+FRB | Finance and Economics Discussion Series Working Papers [45926][source],"","",Research [7997257][doctype]
+FRB | Governor Brainard | Speeches and Testimony [479063][source],"","",Speech [7997250][doctype]; Testimony [8016918][doctype]
+FRB | Governor Powell | Speeches and Testimony [300351][source],"","",Speech [7997250][doctype]; Testimony [8016918][doctype]
+FRB | IFDP Notes [1134494][source],"","",Research [7997257][doctype]
+FRB | Industrial Production and Capacity Utilization - Announcements [169821][source],"","",News [7997258][doctype]
+FRB | Industrial Production and Capacity Utilization - Current [6573825][source],"","",News [7997258][doctype]
+FRB | International Finance Discussion Papers [180361][source],"","",Discussion [7997264][doctype]
+FRB | Press  Releases | Monetary [264172][source],"","",News [7997258][doctype]
+FRB | Press Release | Enforcement Actions [246453][source],"","",Enforcement Action [6609529][doctype]
+FRB | Press Release | Other Announcements [268881][source],"","",News [7997258][doctype]
+FRB | Press Releases | Banking/Consumer Reg Policy [273755][source],"","",News [7997258][doctype]
+FRB | Press Releases | Orders on Banking Applications [221824][source],"","",News [7997258][doctype]
+FRB | Regulatory Reform [466111][source],"","",Development [7997099][doctype]
+FRB | Reporting Forms [455675][source],"","",Report [7997263][doctype]
+FRB | Speeches [1906789][source],"","",Speech [7997250][doctype]
+FRB | Speeches and Testimony [114150][source],"","",Speech [7997250][doctype]
+FRB | Testimony [624044][source],"","",Testimony [8016918][doctype]
+FRB | Testimony and Speeches | Testimony [1907717][source],"","",Testimony [8016918][doctype]
+FRB | Working Papers [176160][source],"","",Discussion [7997264][doctype]
+Fair Trade Commission (Taiwan) [3677118][contributor],Taiwan [22][country],Fair Trade Commission (Taiwan) [3695922][govagency],""
+Fair Work Commission [3695382][contributor],Australia [241][country],Fair Work Commission (Australia) [3703228][govagency],""
+Fannie Mae [3679455][contributor],United States of America [16][country],Fannie Mae [6579904][usfedagency],""
+Fannie Mae | Selling Policy Updates [3688498][source],"","",Regulation [7997253][doctype]
+Fannie Mae | Servicing Policy Updates [3688507][source],"","",Regulation [7997253][doctype]
+Farm Credit Administration [240771][contributor],United States of America [16][country],Farm Credit Administration [3652955][usfedagency],""
+Federal Communications Commission [1046976][contributor],United States of America [16][country],Federal Communications Commission [961][usfedagency],""
+Federal Department of Finance (FDF) [3684650][contributor],Switzerland [63][country],Federal Department of Finance Switzerland [3699424][govagency],""
+Federal Deposit Insurance Corporation (FDIC) [28896][contributor],United States of America [16][country],Federal Deposit Insurance Corporation [723][usfedagency],""
+Federal Financial Institutions Examination Council (FFIEC) [1038310][contributor],United States of America [16][country],Federal Financial Institutions Examination Council [3653836][usfedagency],""
+Federal Housing Finance Agency (FHFA) [253192][contributor],United States of America [16][country],Federal Housing Finance Agency [2500][usfedagency],""
+Federal Ministry of Labour and Social Affairs (Germany) [7833801][contributor],Germany [15][country],"",""
+Federal Register [34959][contributor],United States of America [16][country],"",""
+Federal Register | Documents from Education Department [192088][source],"",Department of Education [556][usfedagency],""
+Federal Register | Documents | Employee Benefits Security Administration [3677471][source],"",Bon-Ton Stores Inc [2103][company]; Employee Benefits Security Administration [3677472][usfedagency],""
+Federal Register | Documents | Executive Office of the President [3677513][source],"",Executive Office of the President [2279557][usfedagency],""
+Federal Register | Documents | Wage and Hour Division [3677486][source],"",Bon-Ton Stores Inc [2103][company]; Wage and Hour Division [3675357][usfedagency],""
+Federal Register | FDA [215783][source],"",Food and Drug Administration [4][usfedagency],""
+Federal Register | Proposed Rules [6550385][source],"","",Proposed Rule [6609238][doctype]
+Federal Register | Rules [6550372][source],"","",Final Rule [6609236][doctype]
+Federal Tax Administration (FTA) [3684789][contributor],Switzerland [63][country],Federal Tax Administration(Switzerland) [4906949][govagency],""
+FinCEN | Bulletins and Fact Sheets [4925253][source],"","",Bulletin [6609524][doctype]
+FinCEN | Enforcement Actions [1562750][source],"","",Enforcement Action [6609529][doctype]
+FinCEN | Recent Advisories [4925250][source],"","",Advisory [8158275][doctype]
+FinCEN | Speeches [648152][source],"","",Speech [7997250][doctype]
+Financial Action Task Force | Latest News [6638467][source],"","",News [7997258][doctype]
+Financial Action Task Force | Publications [945491][source],"","","Pi Z, Stevanato P, Sun F, Yang Y, Sun X, Zhao H, Geng G, Yu L [1991258][author]"
+Financial Conduct Authority (FCA) [535998][contributor],United Kingdom [51][country],Financial Conduct Authority (UK) [6567353][govagency],""
+Financial Conduct Authority | AIFMD Updates [1526009][source],"","",News [7997258][doctype]
+Financial Conduct Authority | All Latest Updates [3644689][source],"","",News [7997258][doctype]
+Financial Conduct Authority | Emir News [1158771][source],"","",News [7997258][doctype]
+Financial Conduct Authority | Events [535997][source],"","",Event [8016915][doctype]
+Financial Conduct Authority | Insight Articles [2266616][source],"","",Report [7997263][doctype]
+Financial Conduct Authority | News Storie s| Press Releases | Statements [2485632][source],"","",News [7997258][doctype]
+Financial Conduct Authority | News Stories [3644629][source],"","",News [7997258][doctype]
+Financial Conduct Authority | News [113575][source],"","",News [7997258][doctype]
+Financial Conduct Authority | Newsletters [3644640][source],"","",News [7997258][doctype]
+Financial Conduct Authority | Policy & Guidance [2496990][source],"","",Guidance [7997267][doctype]; Policy [7936929][doctype]
+Financial Conduct Authority | Press Releases [3644679][source],"","",News [7997258][doctype]
+Financial Conduct Authority | Primary Market Bulletins [6630443][source],"","",Bulletin [6609524][doctype]
+Financial Conduct Authority | Publications [2106963][source],"","",Publication [7997259][doctype]
+Financial Conduct Authority | Speeches [3644678][source],"","",Speech [7997250][doctype]
+Financial Conduct Authority | Statements [3644677][source],"","",Statement [8016914][doctype]
+Financial Conduct Authority | Updates [1026886][source],"","",News [7997258][doctype]
+Financial Conduct Authority | Warnings [3644681][source],"","",News [7997258][doctype]
+Financial Consumer Agency of Canada [3688232][contributor],Canada [31][country],Financial Consumer Agency of Canada [4908750][govagency],""
+Financial Crimes Enforcement Network (FinCEN) [6496948][contributor],United States of America [16][country],Department of the Treasury [2066][usfedagency]; Financial Crimes Enforcement Network [3675283][usfedagency],""
+Financial Industry Regulatory Authority (FINRA) [79381][contributor],United States of America [16][country],"Financial Industry Regulatory Authority, Inc. [4925367][usfedagency]",""
+Financial Ombudsman Service (FOS) Australia [3524024][contributor],Australia [241][country],"",""
+Financial Reporting Council - Welcome [133037][source],"","",News [7997258][doctype]
+Financial Reporting Council [133038][contributor],United Kingdom [51][country],Financial Reporting Council (UK) [6634004][intergovagency],""
+Financial Reporting Council | Developments in Corporate Governance and Stewardship [7580918][source],"","",Report [7997263][doctype]
+Financial Reporting Council | Press Releases [6665540][source],"","",News [7997258][doctype]
+Financial Reporting Council | eNews [969214][source],"","",News [7997258][doctype]
+Financial Services Agency [159848][contributor],Japan [9][country],Financial Services Agency (Japan) [3673892][govagency],""
+Financial Services Agency | News [159847][source],"","",News [7997258][doctype]
+Financial Services Agency | Official Statements [1999572][source],"","",Statement [8016914][doctype]
+Financial Services Agency | Press Conferences [231630][source],"","",News [7997258][doctype]
+Financial Services Agency | Press Releases [3671996][source],"","",News [7997258][doctype]
+Financial Services Agency | Speeches & Material [3032971][source],"","",Speech [7997250][doctype]
+Financial Services Agency | 新着情報 [3671960][source],"","",News [7997258][doctype]
+Financial Services Agency | 金融分野における個人情報保護について [3671972][source],"","",Law [7997266][doctype]
+Financial Services Authority (OJK) | Info Terkini [6720632][source],"","",News [7997258][doctype]
+Financial Services Authority (OJK) | Pencarian Regulasi [7802722][source],"","",Regulation [7997253][doctype]
+Financial Services Authority (OJK) | Pengumuman [6719365][source],"","",News [7997258][doctype]
+Financial Services Authority (OJK) | Publikasi [6734819][source],"","",Publication [7997259][doctype]
+Financial Services Commission (FSC) [3677085][contributor],South Korea [21][country],Financial Services Commission (Korea) [3691987][govagency],""
+Financial Services Council (FSC) [3669584][contributor],Australia [241][country],Financial Services Council (Australia) [3698878][govagency],""
+Financial Stability Board [3636455][contributor],European Union [5004410][intergovagency],Financial Stability Board [3641073][intergovagency],""
+Financial Stability Board | Compendium of Standards [3636465][source],"","",Standard [7997254][doctype]
+Financial Stability Board | Compensation Practices [6633158][source],"","","Pi Z, Stevanato P, Sun F, Yang Y, Sun X, Zhao H, Geng G, Yu L [1991258][author]"
+Financial Stability Board | Consultation Documents [3636456][source],"","",Consultation [7997262][doctype]
+Financial Stability Board | Crypto [4932186][source],"","",News [7997258][doctype]
+Financial Stability Board | FinTech [4932179][source],"","",News [7997258][doctype]
+Financial Stability Board | Financial Benchmarks [7632962][source],"","","Pi Z, Stevanato P, Sun F, Yang Y, Sun X, Zhao H, Geng G, Yu L [1991258][author]"
+Financial Stability Board | News [7503523][source],"","",News [7997258][doctype]
+Financial Stability Board | Peer Review Reports [3636464][source],"","",Report [7997263][doctype]
+Financial Stability Board | Policy Documents [3636463][source],"","",Policy [7936929][doctype]
+Financial Stability Board | Press Releases [3636454][source],"","",News [7997258][doctype]
+Financial Stability Board | Press [3636472][source],"","",News [7997258][doctype]
+Financial Stability Board | Progress Reports [3636461][source],"","",Report [7997263][doctype]
+Financial Stability Board | Publications [3636471][source],"","","Pi Z, Stevanato P, Sun F, Yang Y, Sun X, Zhao H, Geng G, Yu L [1991258][author]"
+Financial Stability Board | Reports to the G20 [3636459][source],"","",Report [7997263][doctype]
+Financial Stability Board | Speeches [3636457][source],"","",Speech [7997250][doctype]
+Financial Supervisory Authority (FIN-FSA) | Annual Reports [3408845][source],"","",Report [7997263][doctype]
+Financial Supervisory Authority (FIN-FSA) | News Releases [3418042][source],"","",News [7997258][doctype]
+Financial Supervisory Authority (FIN-FSA) | Press Releases [3465317][source],"","",News [7997258][doctype]
+Financial Supervisory Authority (FIN-FSA) | Public Notices [3418041][source],"","",Notice [6609533][doctype]
+Financial Supervisory Authority (FIN-FSA) | Supervision Releases [3418039][source],"","",Publication [7997259][doctype]
+Financial Supervisory Commission (FSC) [3676875][contributor],Taiwan [22][country],Financial Supervisory Commission (Taiwan) [3695146][govagency],""
+Financial Supervisory Service (South Korea) [3677417][contributor],South Korea [21][country],Financial Supervisory Service (Korea) [3695049][govagency],""
+Financial Transaction and Reports Analysis Centre of Canada (FINTRAC) [406721][contributor],Canada [31][country],"",""
+Financial and Consumer Affairs Authority [3687952][contributor],Saskatchewan [1282][cadprov],Financial and Consumer Affairs Authority(Saskatchewan) [4909451][govagency],""
+Financial and Consumer Services Commission (FCNB) [3224083][contributor],Canada [31][country],New Brunswick Financial and Consumer Securities Commission [4917883][govagency],""
+Financiera Rural (Mexico) [6584938][contributor],Mexico [562][country],Financiera Rural (Mexico) [6582582][govagency],""
+Finanstilsynet | Denmark | Presse Releases [3408795][source],"",Finanstilsynet Denmark [3435841][govagency],News [7997258][doctype]
+Finanstilsynet | Denmark | Presse [3436608][source],"",Finanstilsynet Denmark [3435841][govagency],News [7997258][doctype]
+Finanstilsynet | Norway | News [3408971][source],"",Finanstilsynet Denmark [3435841][govagency],News [7997258][doctype]
+Finland Financial Supervisory Authority (FIN-FSA) [3408846][contributor],Finland [1240][country],Financial Supervisory Authority (Finland) [8004509][govagency],""
+Fondo de Capitalizacion e Inversion del Sector Rural (Mexico) [6592105][contributor],Mexico [562][country],Fondo de Capitalizacion e Inversion del Sector Rural [6582583][funds],""
+Fondo de Garantías de Instituciones Financieras (Fogafín) [3682402][contributor],Colombia [747][country],Guarantee Fund for Financial Institutions FOGAFIN (Colombia) [7874739][govagency],""
+Foreign Investment Review Board (FIRB) [3522408][contributor],Australia [241][country],Foreign Investment Review Board(AU) [6655835][govagency],""
+France Diplomatie [6505900][contributor],France [7][country],"",""
+France Prudential Resolution and Control Authority | News [6613840][source],"",French Prudential Supervision and Resolution Authority [6568093][govagency],""
+Freddie Mac [3533311][contributor],United States of America [16][country],Federal Home Loan Mortgage Corporation [213][usfedagency],""
+Freddie Mac | Reports [6580360][source],"","",Publication [7997259][doctype]
+GOB.MX | Banco de México [3683776][source],"",Banco de Mexico [3701305][govagency],""
+GOB.MX | Banco de México | Circular [6558299][source],"",Banco de Mexico [3701305][govagency],""
+GOB.MX | Comisión Nacional Bancaria y de Valores (National Banking and Securities Commission) [4974755][source],"",Comision Nacional Bancaria y de Valores [3445799][govagency],""
+GOB.MX | Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros [3683794][source],"",Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros [4986702][govagency],""
+GOB.MX | Honorable Congreso de la Unión [3683796][source],"",Congreso de la Union [3701314][govagency],""
+GOB.MX | Secretaria de Hacienda y Credito Publico P2 [7786622][source],"",Secretaria de Hacienda y Credito Publico [3493134][govagency],""
+GOB.MX | Secretaria de Hacienda y Credito Publico [3683805][source],"",Secretaria de Hacienda y Credito Publico [3493134][govagency],""
+GOB.MX | Servicio de Administración Tributaria (Tax Service Administration) (MX.SAT) [4974747][source],"",Servicio de Administracion Tributaria [4986313][govagency],""
+GOB.PE [3418412][contributor],Peru [947][country],"",""
+GOV.CO/Cancillería [7848871][contributor],Colombia [747][country],"",""
+GOV.CO/MinAgricultura [7848467][contributor],Colombia [747][country],"",""
+GOV.CO/MinAmbiente [7854260][contributor],Colombia [747][country],"",""
+GOV.CO/MinCiencias [7850924][contributor],Colombia [747][country],"",""
+GOV.CO/MinComercio [7849933][contributor],Colombia [747][country],"",""
+GOV.CO/MinDefensa [7856695][contributor],Colombia [747][country],"",""
+GOV.CO/MinEducación [7851851][contributor],Colombia [747][country],"",""
+GOV.CO/MinEnergía [7848498][contributor],Colombia [747][country],"",""
+GOV.CO/MinInterior [7849172][contributor],Colombia [747][country],"",""
+GOV.CO/MinJusticia [7851335][contributor],Colombia [747][country],"",""
+GOV.CO/MinTIC [7848521][contributor],Colombia [747][country],"",""
+GOV.CO/MinTransporte [7848757][contributor],Colombia [747][country],"",""
+GOV.CO/MinVivienda [7849875][contributor],Colombia [747][country],"",""
+GOV.CO/Presidencia [7848764][contributor],Colombia [747][country],Presidencia de la Republica de Colombia [7869186][govagency],""
+"GOV.UK  | Policy Papers and Consultations from Department for Business, Energy and Industrial Strategy (BEIS) [7502074][source]","","Department for Business, Energy and Industrial Strategy [7846163][govagency]",""
+GOV.UK  | Policy Papers and Consultations from Office for Product Safety and Standards [7497648][source],"","Department for Business, Energy and Industrial Strategy [7846163][govagency]; Office for Product Safety & Standards (UK) [7909639][govagency]",""
+"GOV.UK  | Search from Department for Business, Energy and Industrial Strategy (BEIS) [7497634][source]","","Department for Business, Energy and Industrial Strategy [7846163][govagency]",""
+GOV.UK  | Search from Office for Product Safety and Standards [7497653][source],"","Department for Business, Energy and Industrial Strategy [7846163][govagency]; Office for Product Safety & Standards (UK) [7909639][govagency]",""
+GOV.UK [30078][contributor],United Kingdom [51][country],"",""
+GOV.UK |  Competition and Markets Authority | Announcements [4972086][source],"",Competition and Markets Authority (UK) [6592934][govagency],""
+GOV.UK | Competition and Markets Authority (CMA) | Publications [7557896][source],"",Competition and Markets Authority (UK) [6592934][govagency],""
+GOV.UK | Competition and Markets Authority cases [210881][source],"",Competition and Markets Authority (UK) [6592934][govagency],""
+"GOV.UK | Competition and Markets Authority | Bottomline Technologies (de), Inc / Experian Limited merger inquiry | Content [7502082][source]","",Competition and Markets Authority (UK) [6592934][govagency],""
+GOV.UK | Competition and Markets Authority | Cases about Pharmaceuticals [6639323][source],"",Competition and Markets Authority (UK) [6592934][govagency],""
+GOV.UK | Competition and Markets Authority | Consultations [4975491][source],"",Competition and Markets Authority (UK) [6592934][govagency],""
+GOV.UK | Competition and Markets Authority | Latest Documents [6630468][source],"",Competition and Markets Authority (UK) [6592934][govagency],""
+GOV.UK | Competition and Markets Authority | Latest Documents by Organisation [4972094][source],"",Competition and Markets Authority (UK) [6592934][govagency],""
+GOV.UK | Competition and Markets Authority | Latest Updates [4971176][source],"",Competition and Markets Authority (UK) [6592934][govagency],""
+GOV.UK | Competition and Markets Authority | News and Communications [6623043][source],"",Competition and Markets Authority (UK) [6592934][govagency],""
+GOV.UK | Competition and Markets Authority | Publications [4972488][source],"",Competition and Markets Authority (UK) [6592934][govagency],""
+GOV.UK | Competition and Markets Authority | Transparency and Freedom of Information Releases [6624298][source],"",Competition and Markets Authority (UK) [6592934][govagency],""
+"GOV.UK | Department for Business, Energy & Industrial Strategy [7634302][source]","","Department for Business, Energy and Industrial Strategy [7846163][govagency]",""
+"GOV.UK | Department for Business, Energy & Industrial Strategy | Announcements [4971632][source]","","Department for Business, Energy and Industrial Strategy [7846163][govagency]",""
+"GOV.UK | Department for Business, Energy & Industrial Strategy | Beneficial Ownership Consultation Updates [4971510][source]","","Department for Business, Energy and Industrial Strategy [7846163][govagency]",""
+"GOV.UK | Department for Business, Energy & Industrial Strategy | Beneficial Ownership Consultation [4971966][source]","","Department for Business, Energy and Industrial Strategy [7846163][govagency]",""
+"GOV.UK | Department for Business, Energy & Industrial Strategy | Consultations [4971877][source]","","Department for Business, Energy and Industrial Strategy [7846163][govagency]",""
+"GOV.UK | Department for Business, Energy & Industrial Strategy | Latest Updates [4971578][source]","","Department for Business, Energy and Industrial Strategy [7846163][govagency]",""
+"GOV.UK | Department for Business, Energy & Industrial Strategy | Nuclear Energy Announcements [4972500][source]","","Department for Business, Energy and Industrial Strategy [7846163][govagency]",""
+"GOV.UK | Department for Business, Energy & Industrial Strategy | Nuclear Energy Publications [4975101][source]","","Department for Business, Energy and Industrial Strategy [7846163][govagency]",""
+"GOV.UK | Department for Business, Energy & Industrial Strategy | Publications [4971884][source]","","Department for Business, Energy and Industrial Strategy [7846163][govagency]",""
+"GOV.UK | Department for Business, Energy & Industrial Strategy | Statistics [4971680][source]","","Department for Business, Energy and Industrial Strategy [7846163][govagency]",""
+"GOV.UK | Department for Business, Innovation & Skills | Announcements [6647689][source]","","Department for Business, Energy and Industrial Strategy [7846163][govagency]",""
+"GOV.UK | Department for Business, Innovation & Skills | Consultations [6654797][source]","","Department for Business, Energy and Industrial Strategy [7846163][govagency]",""
+"GOV.UK | Department for Business, Innovation & Skills | Publications [5006941][source]","","Department for Business, Energy and Industrial Strategy [7846163][govagency]",""
+"GOV.UK | Department for Digital, Culture, Media & Sport | Announcements [4973693][source]","","Department for Digital, Culture, Media and Sport [3536453][govagency]",""
+"GOV.UK | Department for Digital, Culture, Media & Sport | Consultations [4978740][source]","","Department for Digital, Culture, Media and Sport [3536453][govagency]",""
+"GOV.UK | Department for Digital, Culture, Media & Sport | Latest Documents [4971702][source]","","Department for Digital, Culture, Media and Sport [3536453][govagency]",""
+"GOV.UK | Department for Digital, Culture, Media & Sport | Publications [4971677][source]","","Department for Digital, Culture, Media and Sport [3536453][govagency]",""
+GOV.UK | Department for Education [6663498][source],"",Department for Education (UK) [7847101][govagency],""
+"GOV.UK | Department for Environment, Food & Rural Affairs | Announcements [4972335][source]","","Department for Environment, Food and Rural Affairs [7847724][govagency]",""
+"GOV.UK | Department for Environment, Food & Rural Affairs | Consultations [4971905][source]","","Department for Environment, Food and Rural Affairs [7847724][govagency]",""
+"GOV.UK | Department for Environment, Food & Rural Affairs | Publications [4971512][source]","","Department for Environment, Food and Rural Affairs [7847724][govagency]",""
+GOV.UK | Department for Exiting the European Union | Latest Updates [4975474][source],"",Department for Exiting the European Union [7852764][govagency],""
+GOV.UK | Department for International Development | Announcements [4972622][source],"",Department for International Development [7847721][govagency],""
+GOV.UK | Department for International Trade | Notices to Exporters [4979108][source],"",Department for International Trade [7847778][govagency],""
+GOV.UK | Department for Transport | Consultations [4973951][source],"",Department for Transport UK [4911491][govagency],""
+GOV.UK | Department for Transport | Latest Updates [4971514][source],"",Department for Transport UK [4911491][govagency],""
+GOV.UK | Department for Transport | Publications [4974018][source],"",Department for Transport UK [4911491][govagency],""
+GOV.UK | Department for Work and Pensions | Announcements [4978102][source],"",Department for Work and Pensions [7847783][govagency],""
+GOV.UK | Department for Work and Pensions | Consultations [4983404][source],"",Department for Work and Pensions [7847783][govagency],""
+GOV.UK | Department for Work and Pensions | Publications [4972453][source],"",Department for Work and Pensions [7847783][govagency],""
+GOV.UK | Department of Energy & Climate Change [7634284][source],"","Department for Business, Energy and Industrial Strategy [7846163][govagency]",""
+GOV.UK | Department of Energy & Climate Change | Latest Updates [7592793][source],"","Department for Business, Energy and Industrial Strategy [7846163][govagency]",""
+GOV.UK | HM Revenue & Customs | Announcements [4975221][source],"",HM Revenue and Customs (UK) [6630579][govagency],""
+GOV.UK | HM Revenue & Customs | Consultations [4977852][source],"",HM Revenue and Customs (UK) [6630579][govagency],""
+GOV.UK | HM Revenue & Customs | Guidance and Regulation [6632112][source],"",HM Revenue and Customs (UK) [6630579][govagency],""
+GOV.UK | HM Revenue & Customs | HMRC manuals [4996850][source],"",HM Revenue and Customs (UK) [6630579][govagency],""
+GOV.UK | HM Revenue & Customs | News and Communications [7837107][source],"",HM Revenue and Customs (UK) [6630579][govagency],""
+GOV.UK | HM Revenue & Customs | Policy Papers and Consultations [6632113][source],"",HM Revenue and Customs (UK) [6630579][govagency],""
+GOV.UK | HM Revenue & Customs | Publications [4971346][source],"",HM Revenue and Customs (UK) [6630579][govagency],""
+GOV.UK | HM Revenue & Customs | Research and statistics [6632115][source],"",HM Revenue and Customs (UK) [6630579][govagency],""
+GOV.UK | HM Revenue & Customs | Services [7837128][source],"",HM Revenue and Customs (UK) [6630579][govagency],""
+GOV.UK | HM Revenue & Customs | Transparency and Freedom of Information Releases [6632114][source],"",HM Revenue and Customs (UK) [6630579][govagency],""
+GOV.UK | HM Revenue & Customs | What's New [4971990][source],"",HM Revenue and Customs (UK) [6630579][govagency],""
+GOV.UK | HM Treasury | Consultations [4987330][source],"",HM Treasury (UK) [5006314][govagency],Consultation [7997262][doctype]
+GOV.UK | HM Treasury | Guidance and Regulation [7786918][source],"",HM Treasury (UK) [5006314][govagency],""
+GOV.UK | HM Treasury | Latest Documents by Organisation [5009828][source],"",HM Treasury (UK) [5006314][govagency],""
+GOV.UK | HM Treasury | Latest activity [4971868][source],"",HM Treasury (UK) [5006314][govagency],News [7997258][doctype]
+GOV.UK | HM Treasury | Publications [4973155][source],"",HM Treasury (UK) [5006314][govagency],Publication [7997259][doctype]
+GOV.UK | HM Treasury | Research and Statistics [7786917][source],"",HM Treasury (UK) [5006314][govagency],""
+GOV.UK | Intellectual Property Office | Latest Updates [6588019][source],"",Intellectual Property Office (UK) [6588482][govagency],""
+GOV.UK | Intellectual Property Office | News and Communications [6588018][source],"",Intellectual Property Office (UK) [6588482][govagency],""
+GOV.UK | Intellectual Property Office | Policy Papers and Consultations [6588021][source],"",Intellectual Property Office (UK) [6588482][govagency],""
+GOV.UK | Intellectual Property Office | Statistics [6588017][source],"",Intellectual Property Office (UK) [6588482][govagency],""
+GOV.UK | Intellectual Property Office | Transparency and Freedom of Information Releases [6588020][source],"",Intellectual Property Office (UK) [6588482][govagency],""
+GOV.UK | Medicines & Healthcare products Regulatory Agency | Announcements [4975450][source],"",UK Medicines and Healthcare products Regulatory Agency [4924546][govagency],""
+GOV.UK | Medicines & Healthcare products Regulatory Agency | Consultations [6556622][source],"",UK Medicines and Healthcare products Regulatory Agency [4924546][govagency],""
+GOV.UK | Medicines & Healthcare products Regulatory Agency | Drug Safety Update [4995901][source],"",UK Medicines and Healthcare products Regulatory Agency [4924546][govagency],""
+GOV.UK | Medicines & Healthcare products Regulatory Agency | Drugs Device Alerts [4975511][source],"",UK Medicines and Healthcare products Regulatory Agency [4924546][govagency],""
+GOV.UK | Medicines & Healthcare products Regulatory Agency | News [4972409][source],"",UK Medicines and Healthcare products Regulatory Agency [4924546][govagency],""
+GOV.UK | Medicines & Healthcare products Regulatory Agency | Publications [4976476][source],"",UK Medicines and Healthcare products Regulatory Agency [4924546][govagency],""
+GOV.UK | Medicines & Healthcare products Regulatory Agency | Statistics [6698841][source],"",UK Medicines and Healthcare products Regulatory Agency [4924546][govagency],""
+GOV.UK | Ministry of Defence | Latest Updates [4971389][source],"",Ministry of Defence (UK) [6633435][govagency],""
+GOV.UK | Ministry of Justice | Announcements [4971132][source],"",Ministry of Justice(UK) [6655636][govagency],""
+GOV.UK | Ministry of Justice | Consultations [2439720][source],"",Ministry of Justice(UK) [6655636][govagency],""
+GOV.UK | Ministry of Justice | Digital & Technology Blog [4994703][source],"",Ministry of Justice(UK) [6655636][govagency],""
+GOV.UK | Ministry of Justice | Latest Updates [4971094][source],"",Ministry of Justice(UK) [6655636][govagency],""
+GOV.UK | Ministry of Justice | Publications [4971131][source],"",Ministry of Justice(UK) [6655636][govagency],""
+"GOV.UK | OFSI | Financial Sanctions, Burundi [7552257][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial Sanctions, Turkey [7552288][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial Sanctions, UK freezing orders [7552280][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Afghanistan [7552286][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Belarus [7552272][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Central African Republic [7552276][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Chemical Weapons [7552255][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Cyber-Attacks [7552289][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Democratic Republic of the Congo [7552259][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Egypt [7552258][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, ISIL (Da'esh) and Al-Qaida organisations [7552275][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Iran (human rights) [7552266][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Iran (nuclear proliferation) [7552268][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Iraq [7552283][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Libya [7552264][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Mali [7552279][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Myanmar (Burma) [7552265][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Nicaragua [7552267][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, North Korea (Democratic People’s Republic of Korea) [7552273][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Republic of Guinea [7552250][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Republic of Guinea-Bissau [7552253][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Somalia [7552270][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, South Sudan [7552277][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Sudan [7552281][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Syria [7552269][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Tunisia [7552278][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Ukraine (Misappropriation and Human Rights) [7552252][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Ukraine (Sovereignty and Territorial Integrity) [7552262][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Venezuela [7552263][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Yemen [7552285][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | Financial sanctions, Zimbabwe [7552284][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+"GOV.UK | OFSI | List of designated persons, terrorism and terrorist financing [7552261][source]","",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+GOV.UK | Office for Artificial Intelligence | Latest Documents [6776800][source],"",Office for Artificial Intelligence (UK) [7907334][govagency],""
+GOV.UK | Office for Artificial Intelligence | Latest Updates [6759845][source],"",Office for Artificial Intelligence (UK) [7907334][govagency],""
+GOV.UK | Office for Life Sciences | Announcements [6647643][source],"",Office for Life Sciences (UK) [7911572][govagency],""
+GOV.UK | Office for Life Sciences | Latest Updates [6588905][source],"",Office for Life Sciences (UK) [7911572][govagency],""
+GOV.UK | Office for Life Sciences | Publications [6588915][source],"",Office for Life Sciences (UK) [7911572][govagency],""
+GOV.UK | Office for Product Safety and Standards | Latest Updates [4971331][source],"","Department for Business, Energy and Industrial Strategy [7846163][govagency]; Office for Product Safety & Standards (UK) [7909639][govagency]",""
+GOV.UK | Office of Financial Sanctions Implementation | News and Communications [5007148][source],"",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+GOV.UK | Office of Financial Sanctions Implementation | Publications [5007150][source],"",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+GOV.UK | Office of Financial Sanctions Implementation | Publications: All Consultations [5007151][source],"",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+GOV.UK | Pension Scheme Administration [7636954][source],"",Pensions Ombudsman(UK) [6635126][govagency],""
+GOV.UK | Pensions Tax Manual [7557961][source],"",Pensions Ombudsman(UK) [6635126][govagency],""
+GOV.UK | Social Mobility Commission | Announcements [4974539][source],"",Social Mobility Commission (UK) [7909484][govagency],""
+GOV.UK | Social Mobility Commission | Latest Updates [7588770][source],"",Social Mobility Commission (UK) [7909484][govagency],""
+GOV.UK | Social Mobility Commission | Publications [4972470][source],"",Social Mobility Commission (UK) [7909484][govagency],""
+GOV.UK | UK Intellectual Property Office [6611594][source],"",Intellectual Property Office (UK) [6588482][govagency],""
+GOV.UK | UK Intellectual Property Office | Patents Journal [7534793][source],"",Intellectual Property Office (UK) [6588482][govagency],""
+GOV.UK |Department for Transport |  Announcements [4971347][source],"",Department for Transport UK [4911491][govagency],""
+GOVUK | HM Treasury | Announcements [4971572][source],"",HM Treasury (UK) [5006314][govagency],News [7997258][doctype]
+GOVUK | HM Treasury | Consultations (PDF Reports) [6712774][source],"",HM Treasury (UK) [5006314][govagency],""
+GOVUK | HM Treasury | News and Communications [5009829][source],"",HM Treasury (UK) [5006314][govagency],News [7997258][doctype]
+GOVUK | HM Treasury | Policy Papers and Consultations [6625702][source],"",HM Treasury (UK) [5006314][govagency],""
+GOVUK | HM Treasury | Statistics (PDF Reports) [6711976][source],"",HM Treasury (UK) [5006314][govagency],Statistics [7997255][doctype]
+GOVUK | HM Treasury | Statistics [4983484][source],"",HM Treasury (UK) [5006314][govagency],Statistics [7997255][doctype]
+GOVUK | Office of Financial Sanctions Implementation | Latest Updates [5007137][source],"",HM Treasury (UK) [5006314][govagency]; Office of Financial Sanctions Implementation (UK) [5006930][govagency],""
+Garante Per la Protezione dei Dati Personali [3685045][contributor],Italy [10][country],Italian Data Protection Authority [4907500][govagency],""
+Gazzetta Ufficiale della Repubblica Italiana [3684736][contributor],Italy [10][country],Italian Parliament [4911045][govagency],""
+Giustizia Amministrativa [6569764][contributor],Italy [10][country],"",""
+Gob.pe | MINJUSDH | Campañas y Eventos [7813030][source],"",Ministry of Justice and Human Rights (Peru) [7873638][govagency],""
+Gob.pe | MINJUSDH | Informes y Publicaciones [7831348][source],"",Ministry of Justice and Human Rights (Peru) [7873638][govagency],""
+Gob.pe | MINJUSDH | Normas Legales [7808228][source],"",Ministry of Justice and Human Rights (Peru) [7873638][govagency],""
+Gob.pe | MINJUSDH | Noticias [7808227][source],"",Ministry of Justice and Human Rights (Peru) [7873638][govagency],""
+Gob.pe | MINJUSDH | Orientación de Trámites y Servicios [7875723][source],"",Ministry of Justice and Human Rights (Peru) [7873638][govagency],""
+Gobierno de la Provincia de Buenos Aires [7835085][contributor],Argentina [145][country],"",""
+Gobierno del estado de Chihuahua [7827428][contributor],Mexico [562][country],"",""
+Government National Mortgage Association [3571827][contributor],United States of America [16][country],Government National Mortgage Association [3675576][usfedagency],""
+Government of Alberta [1139217][contributor],Alberta [582][cadprov],"",""
+Government of Canada [138367][contributor],Canada [31][country],"",""
+Government of Japan [6674215][contributor],Japan [9][country],Government of Japan [6674214][govagency],""
+Government of Manitoba [159570][contributor],Manitoba [703][cadprov],"",""
+Government of Newfoundland and Labrador [134897][contributor],Newfoundland and Labrador [1421][cadprov],"",""
+Government of Northwest Territories [3687956][contributor],Northwest Territories [2663][cadprov],"",""
+Government of Northwest Territories | Securities Regulatory Instruments and Orders [7580469][source],"",Government of Northwest Territories | Office of the Superintendent of Securities [3687955][source],""
+Government of Ontario [112991][contributor],Ontario [137][cadprov],"",""
+Government of Ontario | Consolidated Laws [4914851][source],"",Legislative Assembly of Ontario [4908136][govagency],""
+Government of Ontario | Consolidated Laws | Commodity Futures Act [7586740][source],"",Legislative Assembly of Ontario [4908136][govagency],""
+Government of Ontario | Consolidated Laws | Securities Act [7586743][source],"",Legislative Assembly of Ontario [4908136][govagency],""
+Government of Ontario | Ministry of Finance: News [281489][source],"",Ministry of Finance (Ontario) [7844239][govagency],""
+Government of Prince Edward Island [67803][contributor],Prince Edward Island [197][cadprov],"",""
+Government of Singapore [6720070][contributor],Singapore [223][country],"",""
+Government of Yukon [113513][contributor],Yukon [3570][cadprov],Government of Yukon [4923369][govagency],""
+Governo do Estado de São Paulo [7825352][contributor],Brazil [201][country],"",""
+Governo do Estado do Rio de Janeiro [7825298][contributor],Brazil [201][country],"",""
+HK Government [6713139][contributor],Hong Kong [254][country],"",""
+HM Courts & Tribunals Service [1878251][contributor],United Kingdom [51][country],Her Majesty's Courts and Tribunals Service (UK) [7904708][govagency],""
+HUD | Mortgagee Letters [4926900][source],"","",Letter [6609532][doctype]
+Haute Autorite de Santé [6740241][contributor],France [7][country],"",""
+Health Canada [32117][contributor],Canada [31][country],Public Health Agency of Canada [4919420][govagency],""
+Hong Kong Competition Commission [1057454][contributor],Hong Kong [254][country],Competition Commission(Hong Kong) [3703800][govagency],""
+Hong Kong Customs and Excise Department [143323][contributor],Hong Kong [254][country],"",""
+Hong Kong Deposit Protection Board [3670994][contributor],Hong Kong [254][country],Hong Kong Deposit Protection Board [3695504][associations],""
+Hong Kong Housing Authority [171999][contributor],Hong Kong [254][country],Hong Kong Housing Authority [7893243][govagency],""
+Hong Kong Insurance Authority [3446159][contributor],Hong Kong [254][country],Insurance Authority (Hong Kong) [8002704][govagency],""
+Hong Kong Insurance Authority | Circulars on Regulatory Matters [8002707][source],"","",Circular [6609527][doctype]
+Hong Kong Insurance Authority | Consultation Documents [8004587][source],"","",Consultation [7997262][doctype]
+Hong Kong Insurance Authority | Press Releases [3446158][source],"","",News [7997258][doctype]
+Hong Kong Stock Exchange [142660][contributor],Hong Kong [254][country],Stock Exchange of Hong Kong [4956902][finexchanges],""
+Hong Kong e-Legislation (HKeL) [3669789][contributor],Hong Kong [254][country],"",""
+House of Commons Library (UK) [7904574][contributor],United Kingdom [51][country],Parliament of United Kingdom [7843868][govagency],""
+Houses of the Oireachtas [3639334][contributor],Ireland [94][country],Houses of the Oireachtas [3639730][govagency],""
+Hungarian Competition Authority [4974183][contributor],Hungary [574][country],Hungarian Financial Supervisory Authority [8002476][govagency],""
+Hungarian Competition Authority | Actualities [5005864][source],"","",News [7997258][doctype]
+Hungarian Competition Authority | Recent Press Releases [4974182][source],"","",News [7997258][doctype]
+IAIS | Annual Reports [8004018][source],"","",Report [7997263][doctype]
+IAIS | Application Papers [8004011][source],"","",Publication [7997259][doctype]
+IAIS | Events Calendar [8004022][source],"","",Event [8016915][doctype]
+IAIS | Insurance Capital Standard (ICS) [8004020][source],"","",Development [7997099][doctype]
+IAIS | Insurance Core Principles and ComFrame [8004013][source],"","",Development [7997099][doctype]
+IAIS | Issues Papers [8004015][source],"","",Publication [7997259][doctype]
+IAIS | Latest News [8004012][source],"","",News [7997258][doctype]
+IAIS | Newsletter [8004016][source],"","",News [7997258][doctype]
+IAIS | Press Releases [8004014][source],"","",News [7997258][doctype]
+IAIS | Speeches and Podcasts [8004019][source],"","",Speech [7997250][doctype]
+IMF News | Afghanistan [3493032][source],"","",News [7997258][doctype]
+IMF News | Albania [3493031][source],"","",News [7997258][doctype]
+IMF News | Argentina [3493030][source],"","",News [7997258][doctype]
+IMF News | Australia [3493038][source],"","",News [7997258][doctype]
+IMF News | Belgium [3493065][source],"","",News [7997258][doctype]
+IMF News | Bolivia [3493061][source],"","",News [7997258][doctype]
+IMF News | Brazil [3493059][source],"","",News [7997258][doctype]
+IMF News | Burkina Faso [3493058][source],"","",News [7997258][doctype]
+IMF News | Cabo Verde [3493126][source],"","",News [7997258][doctype]
+IMF News | Central African Republic [3493116][source],"","",News [7997258][doctype]
+IMF News | Chad [3493112][source],"","",News [7997258][doctype]
+IMF News | Chile [3493132][source],"","",News [7997258][doctype]
+"IMF News | China, People's Republic of [3493120][source]","","",News [7997258][doctype]
+IMF News | Colombia [3493122][source],"","",News [7997258][doctype]
+"IMF News | Congo, Democratic Republic of the [3493131][source]","","",News [7997258][doctype]
+"IMF News | Congo, Republic of [3493121][source]","","",News [7997258][doctype]
+"IMF News | Curaçao, Kingdom of the Netherlands [3493125][source]","","",News [7997258][doctype]
+IMF News | Côte d'Ivoire [3493113][source],"","",News [7997258][doctype]
+IMF News | Djibouti [3493273][source],"","",News [7997258][doctype]
+IMF News | Dominica [3493344][source],"","",News [7997258][doctype]
+IMF News | Dominican Republic [3493266][source],"","",News [7997258][doctype]
+IMF News | Ecuador [3493253][source],"","",News [7997258][doctype]
+"IMF News | Egypt, Arab Republic of [3493321][source]","","",News [7997258][doctype]
+"IMF News | Ethiopia, The Federal Democratic Republic of [3493296][source]","","",News [7997258][doctype]
+"IMF News | Gambia, The [3493351][source]","","",News [7997258][doctype]
+IMF News | Georgia [3493294][source],"","",News [7997258][doctype]
+IMF News | Germany [3493309][source],"","",News [7997258][doctype]
+IMF News | Guatemala [3493250][source],"","",News [7997258][doctype]
+IMF News | Guinea [3493340][source],"","",News [7997258][doctype]
+IMF News | Haiti [3493389][source],"","",News [7997258][doctype]
+IMF News | India [3493289][source],"","",News [7997258][doctype]
+IMF News | Indonesia [3493261][source],"","",News [7997258][doctype]
+IMF News | Italy [3493293][source],"","",News [7997258][doctype]
+IMF News | Jamaica [3493259][source],"","",News [7997258][doctype]
+IMF News | Japan [3493306][source],"","",News [7997258][doctype]
+IMF News | Jordan [3493278][source],"","",News [7997258][doctype]
+IMF News | Kenya [3493335][source],"","",News [7997258][doctype]
+"IMF News | Korea, Republic of [3493275][source]","","",News [7997258][doctype]
+IMF News | Kuwait [3493263][source],"","",News [7997258][doctype]
+IMF News | Kyrgyz Republic [3493285][source],"","",News [7997258][doctype]
+IMF News | Lebanon [3493231][source],"","",News [7997258][doctype]
+IMF News | Liberia [3493280][source],"","",News [7997258][doctype]
+IMF News | Malawi [3493262][source],"","",News [7997258][doctype]
+IMF News | Maldives [3493247][source],"","",News [7997258][doctype]
+IMF News | Malta [3493388][source],"","",News [7997258][doctype]
+"IMF News | Mauritania, Islamic Republic of [3493299][source]","","",News [7997258][doctype]
+"IMF News | Moldova, Republic of [3493287][source]","","",News [7997258][doctype]
+IMF News | Mongolia [3493242][source],"","",News [7997258][doctype]
+IMF News | Morocco [3493271][source],"","",News [7997258][doctype]
+IMF News | Myanmar [3493254][source],"","",News [7997258][doctype]
+IMF News | Nepal [3493265][source],"","",News [7997258][doctype]
+IMF News | Nigeria [3493330][source],"","",News [7997258][doctype]
+IMF News | Pakistan [3493305][source],"","",News [7997258][doctype]
+IMF News | Panama [3493292][source],"","",News [7997258][doctype]
+IMF News | Paraguay [3493237][source],"","",News [7997258][doctype]
+IMF News | Peru [3493313][source],"","",News [7997258][doctype]
+IMF News | Republic of Armenia [3492992][source],"","",News [7997258][doctype]
+IMF News | Russian Federation [3492997][source],"","",News [7997258][doctype]
+IMF News | Rwanda [3492993][source],"","",News [7997258][doctype]
+IMF News | Samoa [3493369][source],"","",News [7997258][doctype]
+"IMF News | San Marino, Republic of [3493267][source]","","",News [7997258][doctype]
+IMF News | Senegal [3493272][source],"","",News [7997258][doctype]
+IMF News | Seychelles [3493339][source],"","",News [7997258][doctype]
+IMF News | Sierra Leone [3493363][source],"","",News [7997258][doctype]
+IMF News | Solomon Islands [3493349][source],"","",News [7997258][doctype]
+IMF News | Somalia [3493291][source],"","",News [7997258][doctype]
+IMF News | South Africa [3493246][source],"","",News [7997258][doctype]
+IMF News | Spain [3493241][source],"","",News [7997258][doctype]
+IMF News | St. Kitts and Nevis [3493279][source],"","",News [7997258][doctype]
+IMF News | St. Vincent and the Grenadines [3493348][source],"","",News [7997258][doctype]
+IMF News | Sudan [3493319][source],"","",News [7997258][doctype]
+"IMF News | Tajikistan, Republic of [3493256][source]","","",News [7997258][doctype]
+IMF News | Tanzania [3493347][source],"","",News [7997258][doctype]
+IMF News | Thailand [3493276][source],"","",News [7997258][doctype]
+IMF News | Togo [3493311][source],"","",News [7997258][doctype]
+IMF News | Tunisia [3493255][source],"","",News [7997258][doctype]
+IMF News | Ukraine [3493248][source],"","",News [7997258][doctype]
+IMF News | United States [3493235][source],"","",News [7997258][doctype]
+"IMF News | Yemen, Republic of [3493303][source]","","",News [7997258][doctype]
+IMF Publications | Finance & Development [3488974][source],"","",Publication [7997259][doctype]
+IMF Publications | Latest Publications [3488971][source],"","",Publication [7997259][doctype]
+IMF Publications | World Economic Outlook [3488958][source],"","",Publication [7997259][doctype]
+IMF | All News [62753][source],"","",News [7997258][doctype]
+IMF | Annual Meeting Speeches [3491234][source],"","",Speech [7997250][doctype]
+IMF | Annual Report of the Executive Board [3042145][source],"","",Report [7997263][doctype]
+IMF | Annual Report on Diversity [2763467][source],"","",Report [7997263][doctype]
+IMF | Country Focus [3491516][source],"","",News [7997258][doctype]
+IMF | Financial Statements [832902][source],"","",Financial Report [7997261][doctype]
+IMF | Fiscal Monitor [1972635][source],"","",Financial Report [7997261][doctype]
+IMF | Global Financial Stability Report [1142111][source],"","",Financial Report [7997261][doctype]
+IMF | Policy Responses to COVID-19 | Browse by Country [7878648][source],"","",Policy [7936929][doctype]
+IMF | Recent Publications [94266][source],"","",Publication [7997259][doctype]
+IMF | Regional Reports [561535][source],"","",Report [7997263][doctype]
+IMF | Resident Representative News | Bangladesh [3492880][source],"","",News [7997258][doctype]
+IMF | Resident Representative News | Bosnia and Herzegovina [3492906][source],"","",News [7997258][doctype]
+IMF | Resident Representative News | Tunisia [3492918][source],"","",News [7997258][doctype]
+IMF | Resident Representative News | Zimbabve [3492907][source],"","",News [7997258][doctype]
+IMF | What's New [106792][source],"","",News [7997258][doctype]
+IOSCO [399201][contributor],European Union [5004410][intergovagency],International Organization of Securities Commissions [3641138][intergovagency],""
+IOSCO | News & Publications [399200][source],"","",News [7997258][doctype]; Publication [7997259][doctype]
+IOSCO | News [7503705][source],"","",News [7997258][doctype]
+IOSCO | Public Reports [3636489][source],"","",Report [7997263][doctype]
+IOSCO | Regulators' Statements on Initial Coin Offerings [3255652][source],"","",Statement [8016914][doctype]
+IRS | Criminal Investigation Press Releases [7811336][source],"","",News [7997258][doctype]; Press Release [8137141][doctype]
+IRS | Email Updates [3698404][source],"","",Email [7997270][doctype]
+IRS | Fact Sheets [4923396][source],"","",Policy [7936929][doctype]
+IRS | IRS Online Bulletins [3690095][source],"","",Bulletin [6609524][doctype]; Report [7997263][doctype]
+IRS | News Releases [4926465][source],"","",News [7997258][doctype]
+IRS | NewsRoom [3691616][source],"","",Report [7997263][doctype]
+IRS | Notices [4997888][source],"","",Notice [6609533][doctype]
+IRS | Regulations [4997871][source],"","",Regulation [7997253][doctype]
+IRS | Revenue Procedures [4997878][source],"","",Publication [7997259][doctype]
+IRS | Revenue Rulings [4997886][source],"","",Decision [8016921][doctype]; News [7997258][doctype]
+IRS | Statements and Announcements [4926518][source],"","",Statement [8016914][doctype]
+IRS | Tax Reform Guidance [4926485][source],"","",Guidance [7997267][doctype]
+IRS | Tax Reform News [4926477][source],"","",News [7997258][doctype]
+IRS | Treasury Decisions (TD) [4997876][source],"","",Decision [8016921][doctype]; Publication [7997259][doctype]
+ISDA | Events [7569993][source],"","",Event [8016915][doctype]
+ISDA | Infrastructure [7550055][source],"","",Publication [7997259][doctype]
+ISDA | Margin [7535236][source],"","",Financial Report [7997261][doctype]
+ISDA | News [7551064][source],"","",News [7997258][doctype]
+Illinois Department of Insurance [8003149][contributor],Illinois [61][state],Illinois Department of Insurance [8001359][usstateagencies],""
+Illinois Department of Insurance | Company Bulletins [8003921][source],"","",Bulletin [6609524][doctype]
+Illinois Department of Insurance | News Feed [8003150][source],"","",News [7997258][doctype]
+Illinois Department of Insurance | Public Pension Division | Recent News [8003918][source],"","",News [7997258][doctype]
+Illinois Department of Insurance | Public Pension Division | Sirens [8003919][source],"","",Publication [7997259][doctype]
+Imprensa Nacional [1520792][contributor],Brazil [201][country],"",""
+Indecopi [7788612][contributor],Peru [947][country],Indecopi (Peru) [7500000][govagency],""
+Indonesian Financial Services Authority (OJK) [6717956][contributor],Indonesia [611][country],Financial Services Authority (Indonesia) [8003405][govagency],""
+Information Commissioner's Office (ICO) [253665][contributor],United Kingdom [51][country],Information Commissioner's Office (UK) [3636864][govagency],""
+Inland Revenue Authority of Singapore (IRAS) [3671234][contributor],Singapore [223][country],Inland Revenue Authority of Singapore [3671061][govagency],""
+Insurance Europe [8002886][contributor],European Union [5004410][intergovagency],Insurance Europe [8002004][intergovagency],""
+Insurance Europe | Events [8002889][source],"","",Publication [7997259][doctype]
+Insurance Europe | News [8002887][source],"","",News [7997258][doctype]
+Insurance Europe | Position Papers [8002888][source],"","",Publication [7997259][doctype]
+Insurance Europe | Publications [8002885][source],"","",Publication [7997259][doctype]
+Intellectual Property Office of Singapore [7625606][contributor],Singapore [223][country],Intellectual Property Office of Singapore [7626731][govagency],""
+Intercontinental Exchange [267260][contributor],United Kingdom [51][country],Intercontinental Exchange Inc [7843860][finexchanges],""
+Internal Revenue Service (IRS) [3690096][contributor],United States of America [16][country],Department of the Treasury [2066][usfedagency]; Internal Revenue Service [3652516][usfedagency],""
+International Association of Insurance Supervisors (IAIS) [8004010][contributor],"",International Association of Insurance Supervisors [8001749][intergovagency],""
+International Monetary Fund (IMF) [2106249][contributor],"",International Monetary Fund [3422884][intergovagency],""
+International Monetary Fund | Podcasts [2144181][source],"","",News [7997258][doctype]
+International Swaps and Derivatives Association (ISDA) [1366294][contributor],"",International Swaps and Derivatives Association [7778109][intergovagency],""
+Investment Industry Regulator of Canada (IIROC) [158204][contributor],Canada [31][country],Investment Industry Regulatory Organization of Canada [5010021][govagency],""
+Investors Exchange (IEX) [5011055][contributor],United States of America [16][country],Investors Exchange LLC [5010048][finexchanges],""
+Investors Exchange (IEX) | FINRA Rules [6583057][source],"","",Rule [6609539][doctype]
+Investors Exchange (IEX) | Information Circulars [5011054][source],"","",Circular [6609527][doctype]
+Investors Exchange (IEX) | Rule Filings [5011135][source],"","",Rule [6609539][doctype]
+Irish Funds Industry Association [1567584][contributor],Ireland [94][country],Irish Funds Industry Association [4942163][associations],""
+Japan Exchange Group [92301][contributor],Japan [9][country],Japan Exchange Group Inc [7923059][finexchanges],""
+Japan Fair Trade Commission (JFTC) [2706075][contributor],Japan [9][country],Japan Fair Trade Commission [7923284][govagency],""
+Japan Investment Advisers Association [3670918][contributor],Japan [9][country],Japan Investment Advisers Association [3674277][associations],""
+Japan Securities Dealers Association [3670890][contributor],Japan [9][country],Japan Securities Dealers Association [3671966][associations],""
+Japanese Law Translation [7609232][contributor],Japan [9][country],Government of Japan [6674214][govagency],""
+Jetro [159962][contributor],Japan [9][country],Japan External Trade Organization [7886259][govagency],""
+Joint Money Laundering Steering Group (JMLSG) [609807][contributor],United Kingdom [51][country],Joint Money Laundering Steering Group [3655011][associations],""
+KRX KOREA EXCHANGE [2242582][contributor],South Korea [21][country],Korea Exchange Inc [3520030][finexchanges],""
+Korea Fair Trade Commission [247547][contributor],South Korea [21][country],"",""
+Korea Financial Intelligence Unit (KoFIU) [3677057][contributor],South Korea [21][country],Korea Financial Intelligence Unit [3694881][govagency],""
+Korea Financial Investment Association (KOFIA) [3675016][contributor],South Korea [21][country],Korea Financial Investment Association [3692495][associations],""
+Korea Securities Depository (KSD) [3428452][contributor],South Korea [21][country],Korea Securities Depository [3514697][govagency],""
+Korean National Law Information Center [3675606][contributor],South Korea [21][country],National Law Information Center (Korea) [4962024][govagency],""
+L'Autorité des marchés financiers (AMF) [1734638][contributor],France [7][country],Autorite des Marches Financiers (France) [6643299][govagency],""
+Landesbeauftragte für Datenschutz und Akteneinsicht (Brandenburg) [3652226][contributor],Germany [15][country],"",""
+Landesbeauftragte für Datenschutz und Informationsfreiheit Baden-Württemberg [3636323][contributor],Germany [15][country],"",""
+Landesbeauftragte für Datenschutz und Informationsfreiheit [3646045][contributor],Germany [15][country],"",""
+Laws Source Retrieving System of Taiwan [3703316][contributor],Taiwan [22][country],"",""
+Laws and Regulations Database of the Central Bank of the Republic of China (Taiwan) [3703090][contributor],Taiwan [22][country],Central Bank of the Republic of China (Taiwan) [3675518][centralbanks],""
+Laws and Regulations Retrieving System of the Banking Bureau [3702941][contributor],Taiwan [22][country],Banking Bureau (Taiwan) [3698830][govagency],""
+"Le portail de l'Économie, des Finances, de l'Action et des Comptes publics | High Council for Financial Stability | Press Releases [8002501][source]","","",News [7997258][doctype]
+"Le portail de l'Économie, des Finances, de l'Action et des Comptes publics | Presse [6638440][source]","","",News [7997258][doctype]
+"Le portail de l'Économie, des Finances, de l'Action et des Comptes publics | The Public Sector Accounting Standards Council | Latest Publications [8002407][source]","","",Publication [7997259][doctype]
+"Le portail de l'Économie, des Finances, de l'Action et des Comptes publics | Tracfin [6797804][source]","","",News [7997258][doctype]
+Legislation.gov.uk [49846][contributor],United Kingdom [51][country],Parliament of United Kingdom [7843868][govagency],""
+Legislative Council of the Hong Kong Special Administrative Region [131154][contributor],Hong Kong [254][country],"",""
+Les Publications du Québec [3690060][contributor],Quebec [71][cadprov],"",""
+London Stock Exchange [29955][contributor],United Kingdom [51][country],London Stock Exchange [3650169][finexchanges],""
+Luxembourg Chambre des Députés [2459718][contributor],Luxembourg [827][country],Chamber of Deputies (Luxembourg) [4906750][govagency],""
+Luxembourg Government [127398][contributor],Luxembourg [827][country],"",""
+Luxembourg Official Journal (Legilux) [2464264][contributor],Luxembourg [827][country],Chamber of Deputies (Luxembourg) [4906750][govagency],""
+Légifrance [3198175][contributor],France [7][country],French Parliament [6641485][govagency],""
+L’Autorité des marchés financiers (Québec) [1699493][contributor],Quebec [71][cadprov],Autorite des Marches Financiers(Quebec) [3703468][govagency],""
+MSRB | Presentations [1236595][source],"","",Presentation [7997260][doctype]
+MSRB | Requests for Comment [5011189][source],"","",Request for Comment [6609235][doctype]
+MSRB | Speeches [1126312][source],"","",Speech [7997250][doctype]
+MSRB | Upcoming Events [184609][source],"","",Event [8016915][doctype]
+Mandatory Provident Fund Schemes Authority (MPFA) [2413388][contributor],Hong Kong [254][country],Mandatory Provident Fund Schemes Authority [3703816][funds],""
+Mercado Abierto Electrónico (MAE) [3417510][contributor],Argentina [145][country],Mercado Abierto Electoronico SA [3517502][finexchanges],""
+Mercado de Valores de Buenos Aires [3699019][contributor],Argentina [145][country],Grupo Financiero Valores SA [7855143][finexchanges],""
+MexDer [3517363][contributor],Mexico [562][country],Mexican Derivatives Exchange [3516490][finexchanges],""
+Minister for Finance and the Public Service (AU) [4945851][contributor],Australia [241][country],"",""
+Ministerio de Economía y Empresa [3637713][contributor],Spain [410][country],Ministerio de Economia y Empresa de Espana [3636282][govagency],""
+Ministerio de Hacienda (Colombia) [3515674][contributor],Colombia [747][country],Ministerio de Hacienda y Credito Publico(Colombia) [3462389][govagency],""
+Ministerio de Salud y Protección Social de Colombia [7826236][contributor],Colombia [747][country],"",""
+Ministero dell'Economia e delle Finanze (MEF) [3684784][contributor],Italy [10][country],Ministry of Economy and Finance(Italy) [3439585][govagency],""
+"Ministers for the Department of Industry, Innovation and Science (AU) [4945853][contributor]",Australia [241][country],"",""
+Ministry of Economic Affairs (MOEA) (Taiwan) [3675833][contributor],Taiwan [22][country],Ministry of Economic Affairs (Taiwan) [3694787][govagency],""
+Ministry of Economy and Finance (France) [3393718][source],France [7][country],Ministry of Finance (France) [6646155][govagency],""
+Ministry of Economy and Finance (France) [3393719][contributor],France [7][country],Ministry of Finance (France) [6646155][govagency],""
+"Ministry of Economy, Trade and Industry (Japan) [6701941][contributor]",Japan [9][country],"Ministry of Economy, Trade and Industry (Japan) [7885951][govagency]",""
+Ministry of Finance (Chile) [746546][contributor],Chile [202][country],Ministerio de Hacienda (Chile) [4970103][govagency],""
+Ministry of Finance (Singapore) [6723765][contributor],Singapore [223][country],Ministry of Finance (Singapore) [7911239][govagency],""
+"Ministry of Finance, R.O.C (Taiwan) [3678356][contributor]",Taiwan [22][country],Ministry of Finance (Taiwan) [3696619][govagency],""
+Ministry of Health (Ontario) [7844111][contributor],Ontario [137][cadprov],"",""
+"Ministry of Health, Labour and Welfare [1538685][contributor]",Japan [9][country],"Ministry of Health, Labour and Welfare (Japan) [4924516][govagency]",""
+Ministry of Justice (Taiwan) [3676867][contributor],Taiwan [22][country],Ministry of Justice (Taiwan) [3698225][govagency],""
+Ministry of Law (Singapore) [6703991][contributor],Singapore [223][country],Ministry of Law (Singapore) [7911456][govagency],""
+Ministère des Affaires sociales et de la Santé [1704697][contributor],France [7][country],"",""
+Ministério Público do Trabalho (MPT) [7825215][contributor],Brazil [201][country],Ministry of Labor and Employment(Brazil) [3697244][govagency],""
+Ministério da Economia (Brasil) [6627182][contributor],Brazil [201][country],Ministry of the Economy(Brazil) [3697156][govagency],""
+Ministério da Fazenda [3681934][contributor],Brazil [201][country],Ministry of the Economy(Brazil) [3697156][govagency],""
+Ministério do Trabalho [3681198][contributor],Brazil [201][country],Ministry of Labour and Social Welfare [3697157][govagency],""
+Monetary Authority of Singapore (MAS) [2571722][contributor],Singapore [223][country],Monetary Authority of Singapore [3692254][centralbanks],""
+Monetary Authority of Singapore | Circulars [7609252][source],"","",Circular [6609527][doctype]
+Monetary Authority of Singapore | Codes [7609243][source],"","",Regulation [7997253][doctype]
+Monetary Authority of Singapore | Enforcement Actions [6675050][source],"","",Enforcement Action [6609529][doctype]
+Monetary Authority of Singapore | Publications [6675051][source],"","",Publication [7997259][doctype]
+Monetary Authority of Singapore | Regulation | Insurance [7772826][source],"","",Regulation [7997253][doctype]
+Monetary Authority of Singapore | Regulations and Guidance | AML/CFT [7806418][source],"","",Regulation [7997253][doctype]
+"Monetary Authority of Singapore | Regulations, Guidance and Licensing [3671523][source]","","",Regulation [7997253][doctype]
+Monetary Authority of Singapore | Subsidiary Legislation [7609263][source],"","",Law [7997266][doctype]
+Montreal Exchange [3687141][contributor],Canada [31][country],Montreal Exchange Inc [4907841][finexchanges],""
+Municipal Securities Rulemaking Board (MSRB) [184610][contributor],United States of America [16][country],Municipal Securities Rulemaking Board [6580638][usfedagency],""
+NAIC | Newsroom [981726][source],"","",News [7997258][doctype]
+NASDAQTrader.com [69615][contributor],United States of America [16][country],The Nasdaq Stock Market LLC [6586793][finexchanges],""
+NASDAQTrader.com | BX Disciplinary Actions [7788404][source],"","NASDAQ BX, Inc. [6582852][finexchanges]",Enforcement Action [6609529][doctype]
+NASDAQTrader.com | Disciplinary Actions [4927580][source],"","",Enforcement Action [6609529][doctype]
+NASDAQTrader.com | GEMX Disciplinary Actions [7788432][source],"","NASDAQ GEMX, LLC [6582851][finexchanges]",Enforcement Action [6609529][doctype]
+NASDAQTrader.com | ISE Disciplinary Actions [7788438][source],"","NASDAQ ISE, LLC [6584522][finexchanges]",Enforcement Action [6609529][doctype]
+NASDAQTrader.com | Options Market Disciplinary Actions [7788437][source],"","",Enforcement Action [6609529][doctype]
+NASDAQTrader.com | PHLX Disciplinary Actions [7788434][source],"",NASDAQ PHLX LLC [6586792][finexchanges],Enforcement Action [6609529][doctype]
+NSW Office of the Registrar General (AU) [4975566][contributor],Australia [241][country],New South Wales Government [3514791][govagency],""
+National Association of Insurance Commissioners [983873][contributor],United States of America [16][country],National Association of Insurance Commissioners [8002740][intergovagency],""
+National Bank of Belgium [6570112][contributor],Belgium [105][country],National Bank of Belgium [6567972][centralbanks],""
+National Bank of Belguim | Financial Oversight News [6580513][source],"","",News [7997258][doctype]
+National Bank of Belguim | News [6570113][source],"","",News [7997258][doctype]
+National Bank of Belguim | Publications [6581591][source],"","",Publication [7997259][doctype]
+National Futures Association (NFA) [421839][contributor],United States of America [16][country],National Futures Association [4927891][associations],""
+National Futures Association (NFA) | CFTC Rule Submission [4927559][source],"",U.S. Commodity Futures Trading Commission [2255658][usfedagency],""
+National Futures Association (NFA) | Comment Letters [4927561][source],"","",Letter [6609532][doctype]
+National Highway Traffic Safety Administration [903267][contributor],United States of America [16][country],National Highway Traffic Safety Administration [2091][usfedagency],""
+"National Institute for Transparency, Access to Information and Personal Data Protection (INAI) [7819672][contributor]",Mexico [562][country],"",""
+National Printing Bureau [3670509][contributor],Japan [9][country],National Printing Bureau (Japan) [3685546][govagency],""
+New Payment System Operator (NPSO) [3647141][contributor],United Kingdom [51][country],Pay.UK Ltd [7846317][govagency],""
+New South Wales Government [3524157][contributor],Australia [241][country],New South Wales Government [3514791][govagency],""
+NormasFinancieras.com [3677601][contributor],Argentina [145][country],"",""
+Northern Ireland Courts and Tribunals Service [324934][contributor],United Kingdom [51][country],"",""
+Northern Ireland Executive [141166][contributor],United Kingdom [51][country],"",""
+Nova Scotia Securities Commission [3687239][contributor],Nova Scotia [2363][cadprov],Nova Scotia Securities Commission [4914557][govagency],""
+Nunavut Securities Office [3687325][contributor],Nunavut [1422][cadprov],Nunavut Securities Office [4921574][govagency],""
+OCC | Alerts [522142][source],"","",News [7997258][doctype]
+OCC | Bulletins [45989][source],United States of America [16][country],Office of the Comptroller of the Currency [4927873][usfedagency],Bulletin [6609524][doctype]
+OCC | Community Affairs News [3694120][source],"","",News [7997258][doctype]
+OCC | Congressional Testimony [1501734][source],"","",Testimony [8016918][doctype]
+OCC | Email Updates [6553563][source],"","",Email [7997270][doctype]
+OCC | Events [1268688][source],"","",Event [8016915][doctype]
+OCC | News & Events | Bulletin [6793825][source],United States of America [16][country],Office of the Comptroller of the Currency [4927873][usfedagency],Bulletin [6609524][doctype]
+OCC | News Releases [265051][source],"","",News [7997258][doctype]
+OCC | News and Issuances [32501][source],"","",News [7997258][doctype]
+OCC | Public Service Announcements [1268676][source],"","",News [7997258][doctype]
+OCC | Publications | Annual Report [4994147][source],"","",Report [7997263][doctype]
+OCC | Publications | Comptroller's Handbook [4993260][source],"","",Publication [7997259][doctype]
+OCC | Publications | Licensing Manuals [1134082][source],"","",Manual [7997271][doctype]
+Office of the Australian Information Commissioner (OAIC) [323508][contributor],Australia [241][country],Office of the Australian Information Commissioner [7880224][govagency],""
+Office of the Comptroller of the Currency (OCC) [45990][contributor],United States of America [16][country],Department of the Treasury [2066][usfedagency]; Office of the Comptroller of the Currency [4927873][usfedagency],""
+"Office of the Privacy Commissioner for Personal Data, Hong Kong [2760861][contributor]",Hong Kong [254][country],Office of the Privacy Commissioner for Personal Data (Hong Kong) [3703813][govagency],""
+Office of the Privacy Commissioner of Canada (OPC) [224956][contributor],Canada [31][country],Office of the Privacy Commissioner(Canada) [3703448][govagency],""
+Office of the Superintendent of Financial Institutions [906585][contributor],Canada [31][country],Office of the Superintendent of Financial Institutions (CA) [4922886][govagency],""
+Office of the Superintendent of Financial Institutions | Acts and Regulations [7561194][source],"","",Regulation [7997253][doctype]
+Oficina Española de Patentes y Marcas (OEPM) [1895169][contributor],Spain [410][country],"",""
+Ontario Ministry of Energy | News [4915028][source],"",Ministry of Energy (Ontario) [7844104][govagency],""
+Ontario Ministry of Health | All News [350807][source],"",Ministry of Health (Ontario) [7843191][govagency],""
+Ontario Ministry of Labour | News Releases and Bulletins [212235][source],"","Ministry of Labour, Training and Skills Development (Ontario) [7841989][govagency]",""
+Ontario Securities Commission (OSC) [259406][contributor],Ontario [137][cadprov],Ontario Securities Commission [3703584][govagency],""
+Organisation for Economic Co-operation and Development (OECD) [330540][contributor],European Union [5004410][intergovagency],Organisation for Economic Co-operation and Development [4970067][intergovagency],""
+PRA Rulebook [3646190][contributor],United Kingdom [51][country],Prudential Regulation Authority [3650454][govagency],""
+Parliament of Canada [96624][contributor],Canada [31][country],Parliament Of Canada [4921314][govagency],""
+Pay.uk [7847954][contributor],United Kingdom [51][country],Pay.UK Ltd [7846317][govagency],""
+Payment Systems Regulator (PSR) [4906322][contributor],United Kingdom [51][country],Payment Systems Regulator [7846069][govagency],""
+Payment Systems Regulator (PSR) | Publications [4906321][source],"",Payment Systems Regulator [7846069][govagency],""
+Payment Systems Regulator (PSR) | Publications | Consultations [4972821][source],"",Payment Systems Regulator [7846069][govagency],""
+Payment Systems Regulator (PSR) | Publications | News and Announcements [4978599][source],"",Payment Systems Regulator [7846069][govagency],""
+Pennsylvania Insurance Department [8002200][contributor],Pennsylvania [65][state],Pennsylvania Insurance Department [8001834][usstateagencies],""
+Personal Data Protection Commission Singapore (PDPC) [2752684][contributor],Singapore [223][country],Personal Data Protection Commission Singapore [7911229][govagency],""
+Personal Information Protection Commission Japan [2874494][contributor],Japan [9][country],Personal Information Protection Commission (Japan) [3676228][govagency],""
+Poder Judicial [98104][contributor],Spain [410][country],"",""
+Policy [7936929][doctype],"","",Manual [7997271][doctype]
+Polish Financial Supervision Authority [4971330][contributor],Poland [719][country],Polish Financial Supervision Authority [6566195][govagency],""
+Polish Financial Supervision Authority | Latest News [6641946][source],"","",News [7997258][doctype]
+Polish Financial Supervision Authority | News [4971329][source],"","",News [7997258][doctype]
+Portal da Saúde [1697686][contributor],Brazil [201][country],"",""
+Portal de Legislacao [3680681][contributor],Brazil [201][country],"",""
+Premier of Victoria (AU) [4941995][contributor],Australia [241][country],"",""
+Presidenza del Consiglio dei ministri [32231][contributor],Italy [10][country],"",""
+Prime Minister of Australia [4943794][contributor],Australia [241][country],"",""
+Property Council of Australia [3522287][contributor],Australia [241][country],"",""
+Province of Nova Scotia [25654][contributor],Nova Scotia [2363][cadprov],"",""
+Public Health Agency of Canada [4923051][contributor],Canada [31][country],Public Health Agency of Canada [4919420][govagency],""
+Queensland Government [3522135][contributor],Australia [241][country],Queensland Government [3515233][govagency],""
+ROFEX [3699166][contributor],Argentina [145][country],Argentina Clearing SA [3488608][govagency],""
+"Research Institute of Economy, Trade and Industry (RIETI) [196449][contributor]",Japan [9][country],"",""
+SEC | ACTIONS Blog [135861][source],"","",Enforcement Action [6609529][doctype]
+SEC | Research and Analysis [1901685][source],"","",Research [7997257][doctype]
+SEC | What's New on the SEC Website [29720][source],"","",News [7997258][doctype]
+SINDCOR [3681175][contributor],Brazil [201][country],"",""
+Scottish Government [3428203][contributor],Scotland [7592836][country]; United Kingdom [51][country],"",""
+Secretaría de Hacienda y Crédito Público (Mexico) [6584928][contributor],Mexico [562][country],Secretaria de Hacienda y Credito Publico [3493134][govagency],""
+Secretaría de Salud [7825896][contributor],Mexico [562][country],Secretaria de Salud (Mexico) [7831520][govagency],""
+Securities & Futures Commission of Hong Kong [190036][contributor],Hong Kong [254][country],Securities And Futures Commission(HK) [3633915][govagency],""
+Securities Investment Trust & Consulting Association (SITCA) [4906767][contributor],Taiwan [22][country],Securities Investment Trust & Consulting Association(Taiwan) [3698835][associations],""
+Securities and Exchange Surveillance Commission (SESC) [3674539][contributor],Japan [9][country],Securities and Exchange Surveillance Commission (Japan) [3674541][govagency],""
+"Securities and Futures Bureau, Taiwan [3677104][contributor]",Taiwan [22][country],Securities and Futures Bureau (Taiwan) [3698839][govagency],""
+Senado de España [3639152][contributor],Spain [410][country],Senado de Espana [3637025][govagency],""
+Senato della Repubblica [61297][contributor],Italy [10][country],"",""
+Sepblac [3637720][contributor],Spain [410][country],Servicio Ejecutivo de la Comision de Prevencion del Blanqueo de Capitales [3637286][govagency],""
+Serious Fraud Office [2939117][contributor],United Kingdom [51][country],Serious Fraud Office(UK) [3641487][govagency],""
+Serious Fraud Office | Current Cases [3636430][source],"",Serious Fraud Office(UK) [3641487][govagency],""
+Serious Fraud Office | Current Cases | Tesco Plc [3125950][source],"",Serious Fraud Office(UK) [3641487][govagency],""
+Serious Fraud Office | Deferred Prosecution Agreements [2939116][source],"",Serious Fraud Office(UK) [3641487][govagency],""
+Serious Fraud Office | News [3636423][source],"",Serious Fraud Office(UK) [3641487][govagency],""
+Serious Fraud Office | Publications [6630456][source],"",Serious Fraud Office(UK) [3641487][govagency],""
+Serious Fraud Office | Publications | Annual reports and accounts [6630590][source],"",Serious Fraud Office(UK) [3641487][govagency],""
+Serious Fraud Office | Publications | Corporate information [6630597][source],"",Serious Fraud Office(UK) [3641487][govagency],""
+Serious Fraud Office | Publications | Freedom of information [6630595][source],"",Serious Fraud Office(UK) [3641487][govagency],""
+Serious Fraud Office | Publications | SFO Operational Handbook [6630589][source],"",Serious Fraud Office(UK) [3641487][govagency],""
+Serious Fraud Office | Publications | Transparency [6630581][source],"",Serious Fraud Office(UK) [3641487][govagency],""
+Servicio de Administracion Tributaria [6588031][contributor],Mexico [562][country],Servicio de Administracion Tributaria [4986313][govagency],""
+Servicio de Administracion y Enajenacion de Bienes (Mexico) [6585085][contributor],Mexico [562][country],Servicio de Administracion y Enajenacion de Bienes (Mexico) [6582997][govagency],""
+Servicio de Impuestos Internos (Chile) [7825279][contributor],Chile [202][country],Servicio de Impuestos Internos(Chile) [3700940][govagency],""
+Sindicato dos Agentes Autonomos do Comercio (EAA) [3681231][contributor],Brazil [201][country],"",""
+Singapore Exchange (SGX) [58052][contributor],Singapore [223][country],Singapore Exchange [6679323][finexchanges],""
+Singapore Exchange Limited [6748366][contributor],Singapore [223][country],Singapore Exchange [6679323][finexchanges],""
+Singapore Food Agency (SFA) [6703569][contributor],Singapore [223][country],Singapore Food Agency [7915837][govagency],""
+Singapore Foreign Exchange Market Committee [3671257][contributor],Singapore [223][country],Singapore Foreign Exchange Market Committee [3669768][govagency],""
+Singapore Statutes Online (SSO) [3671058][contributor],Singapore [223][country],Parliament of Singapore [6681016][govagency],""
+Single Resolution Board (SRB) [3637086][contributor],European Union [5004410][intergovagency],Single Resolution Board [6634552][intergovagency],""
+South Australian Premier (AU) [4954627][contributor],Australia [241][country],"",""
+Superintendencia Financiera de Colombia [490442][contributor],Colombia [747][country],Superintendencia Financiera de Colombia [3440717][govagency],""
+Superintendencia Nacional de Administración Tributaria (SUNAT) [3682244][contributor],Peru [947][country],Superintendencia Nacional de Aduanas y de Administracion Tributaria(Peru) [3701857][govagency],""
+"Superintendencia de Banca, Seguros y AFP [3682119][contributor]",Peru [947][country],Superintendencia de Banca y Seguros(Peru) [3444613][govagency],""
+Superintendencia de Bancos e Instituciones Financieras [184766][contributor],Chile [202][country],Superintendencia de Bancos e Instituciones Financieras(Chile) [3697284][govagency],""
+Superintendencia de Industria y Comercio de Colombia [7825751][contributor],Colombia [747][country],"",""
+Superintendencia de Notariado y Registro (Colombia) [7826116][contributor],Colombia [747][country],"",""
+Superintendencia de Valores y Seguros (SVS) [40334][contributor],Chile [202][country],Financial Market Commission (Chile) [3703345][govagency],""
+Superintendencia del Mercado de Valores (SMV) [7806063][contributor],Peru [947][country],Superintendencia del Mercado de Valores(Peru) [3491966][govagency],""
+Swiss Bankers Association [3684718][contributor],Switzerland [63][country],Swiss Bankers Association [4907140][associations],""
+Swiss Fund & Asset Management Association [1151597][contributor],Switzerland [63][country],Swiss Funds & Asset Management Association [3700754][associations],""
+Sénat (France) [3192551][contributor],France [7][country],"",""
+TLfDI | Rechtsvorschriften [4976813][source],"",Bundestag [3691149][govagency],""
+Taipei Exchange (TPEx) [3431704][contributor],Taiwan [22][country],Taipei Exchange [3487432][finexchanges],""
+Taiwan Depository & Clearing Corporation [6678696][contributor],Taiwan [22][country],"",""
+Taiwan Financial Services Roundtable [3677218][contributor],Taiwan [22][country],Taiwan Financial Services Roundtable [3698837][govagency],""
+Taiwan Futures Exchange (TAIFEX) [3677314][contributor],Taiwan [22][country],Taiwan Futures Exchange [3520009][finexchanges],""
+Taiwan Securities Association [3679481][contributor],Taiwan [22][country],Taiwan Securities Association [3698831][associations],""
+Taiwan Stock Exchange [198694][contributor],Taiwan [22][country],Taiwan Stock Exchange Corp [3486375][finexchanges],""
+Takeover Panel [3636315][contributor],United Kingdom [51][country],Panel on Takeovers and Mergers (UK) [7911042][govagency],""
+Takeovers Panel Australia [3648389][contributor],Australia [241][country],Australian Takeovers Panel [6654942][govagency],""
+Tasmanian Premier (AU) [4943820][contributor],Australia [241][country],"",""
+The Association of Banks in Singapore (ABC) [3674683][contributor],Singapore [223][country],Association of Banks in Singapore [3671236][associations],""
+The Bankers Association of the Republic of China [3677188][contributor],Taiwan [22][country],Bankers Association of the Republic of China [3698834][associations],""
+"The Bureau of Foreign Trade, MOEA [3675596][contributor]",Taiwan [22][country],Bureau of Foreign Trade (Taiwan) [3700606][govagency],""
+The Centers for Medicare & Medicaid Services (CMS) [441650][contributor],United States of America [16][country],Centers for Medicare & Medicaid Services [248][usfedagency]; Department of Health and Human Services [925][usfedagency],""
+The City of London Law Society [3633385][contributor],United Kingdom [51][country],City of London Law Society [3646934][associations],""
+The Competition and Consumer Commission of Singapore (CCCS) [3671054][contributor],Singapore [223][country],Competition and Consumer Commission of Singapore [3671052][govagency],""
+The EU Single Market | General Policy [901196][source],"","",Policy [7936929][doctype]
+The Federal Financial Supervisory Authority (BaFin) [2593789][contributor],Germany [15][country],Federal Financial Supervisory Authority(Germany) [3641088][govagency],""
+The Federal Register of Legislation (AUS) [7386266][contributor],Australia [241][country],Parliament of Australia [4961324][govagency],""
+The Federal Reserve Board [71327][contributor],United States of America [16][country],Federal Reserve System [2698][usfedagency],""
+The Financial Action Task Force (FATF) [945492][contributor],European Union [5004410][intergovagency],Financial Action Task Force [6638528][intergovagency],""
+The Financial Futures Association of Japan [3670956][contributor],Japan [9][country],Financial Futures Association of Japan [3670954][associations],""
+The Government of British Columbia [22299][contributor],British Columbia [994][cadprov],"",""
+The Hong Kong Association of Banks (HKAB) [3670841][contributor],Hong Kong [254][country],"",""
+The Hong Kong Government Gazette [6498259][contributor],Hong Kong [254][country],"",""
+The Hong Kong Monetary Authority (HKMA) [637778][contributor],Hong Kong [254][country],Hong Kong Monetary Authority [3633969][govagency],""
+The Hong Kong Monetary Authority (HKMA) | Annual Report [7877454][source],"","",Financial Report [7997261][doctype]
+The Hong Kong Monetary Authority (HKMA) | Circulars [7584976][source],"","",Circular [6609527][doctype]
+The Hong Kong Monetary Authority (HKMA) | Closed Consultations [6755615][source],"","",Consultation [7997262][doctype]
+The Hong Kong Monetary Authority (HKMA) | Code of Banking Practice [7583762][source],"","",Law [7997266][doctype]
+The Hong Kong Monetary Authority (HKMA) | Guidance Paper [7583807][source],"","",Guidance [7997267][doctype]
+The Hong Kong Monetary Authority (HKMA) | Guidelines & Circulars [4907186][source],"","",Circular [6609527][doctype]; Guideline [8016920][doctype]
+The Hong Kong Monetary Authority (HKMA) | Guidelines [4907237][source],"","",Guideline [8016920][doctype]
+The Hong Kong Monetary Authority (HKMA) | Open Consultations [7518958][source],"","",Consultation [7997262][doctype]
+The Hong Kong Monetary Authority (HKMA) | Press Releases [4907178][source],"","",News [7997258][doctype]
+The Hong Kong Monetary Authority (HKMA) | Tenders [4907240][source],"","",Tender [7997252][doctype]
+The Hong Kong Monetary Authority (HKMA) | inSight [4907199][source],"","",News [7997258][doctype]
+The Hong Kong Monetary Authority (HKMA) | 匯思 [4907198][source],"","",News [7997258][doctype]
+The Hong Kong Monetary Authority (HKMA) | 國際金融中心 | 債務工具中央結算系統 [4907229][source],"","",Manual [7997271][doctype]
+The Hong Kong Monetary Authority (HKMA) | 指引 [4905648][source],"","",Guideline [8016920][doctype]
+The Hong Kong Monetary Authority (HKMA) | 指引及通告 [4907204][source],"","",Circular [6609527][doctype]; Guideline [8016920][doctype]
+The Hong Kong Monetary Authority (HKMA) | 新聞稿 [4907206][source],"","",News [7997258][doctype]
+The Hong Kong Monetary Authority (HKMA) | 演講辭 [4907026][source],"","",Speech [7997250][doctype]
+The Hong Kong Monetary Authority (HKMA) | 監管政策手冊 [4907209][source],"","",Manual [7997271][doctype]
+The Investment Management Association of Singapore (IMAS) [3674893][contributor],Singapore [223][country],Investment Management Association of Singapore [3671247][associations],""
+"The Investment Trusts Association, Japan [3670948][contributor]",Japan [9][country],Investment Trusts Association Japan [3671277][associations],""
+The Manitoba Securities Commission [3687216][contributor],Manitoba [703][cadprov],Manitoba Securities Commission [4906487][govagency],""
+The Ministry of Economy and Finance (MEF) [3421444][contributor],Italy [10][country],Ministry of Economy and Finance(Italy) [3439585][govagency],""
+The Ministry of Manpower (MOM) [3675012][contributor],Singapore [223][country],Ministry of Manpower (Singapore) [3671088][govagency],""
+The Office of the Superintendent of Financial Institutions | All News [2592083][source],"","",News [7997258][doctype]
+The Office of the Superintendent of Financial Institutions | Industry Notices [7561203][source],"","",Notice [6609533][doctype]
+The Office of the Superintendent of Financial Institutions | Pillar Newsletters [906584][source],"","",News [7997258][doctype]
+The Office of the Superintendent of Financial Institutions | RRS Manage Corporate Returns User Guide [7554204][source],"","",Guidance [7997267][doctype]
+The Office of the Superintendent of Financial Institutions | Recently Posted [2586943][source],"","",News [7997258][doctype]
+The Office of the Superintendent of Financial Institutions | Regulatory and Legislative Advisories [7561205][source],"","",Regulation [7997253][doctype]
+The Office of the Superintendent of Financial Institutions | Table of Guidelines [7561193][source],"","",Guidance [7997267][doctype]
+The Swiss Federal Council [99919][contributor],Switzerland [63][country],Federal Council Switzerland [3700974][govagency],""
+The US Department of Transportation (DOT) [1176253][contributor],United States of America [16][country],Department of Transportation [619][usfedagency],""
+Therapeutics Goods Administration (Australia) [207660][contributor],Australia [241][country],"",""
+Thüringer Landesbeauftragte für den Datenschutz und die Informationsfreiheit (TLfDI) [3639282][contributor],Germany [15][country],"",""
+Tokyo Stock Exchange | Index News [212219][source],"",Tokyo Stock Exchange [1761972][exchange],""
+Tokyo Stock Exchange | News [365792][source],"",Tokyo Stock Exchange [1761972][exchange],""
+Toronto Stock Exchange [177096][contributor],Canada [31][country],Toronto Stock Exchange [4922870][finexchanges],""
+Transport Canada [891202][contributor],Canada [31][country],"",""
+"Treasury Markets Association (TMA), Hong Kong [3669767][contributor]",Hong Kong [254][country],Treasury Markets Association(HK) [4907179][govagency],""
+Trust Association of ROC [3679625][contributor],Taiwan [22][country],Trust Association of ROC [3698836][associations],""
+Tullett Prebon [248398][contributor],United States of America [16][country],tpSEF Inc [7827046][finexchanges],""
+Type II Financial Instruments Firms Association [3669917][contributor],Japan [9][country],Type II Financial Instruments Firms Association [3669915][associations],""
+U. S. Department of the Treasury | Featured Stories [4987488][source],"","",News [7997258][doctype]
+U. S. Department of the Treasury | Financial Stability Oversight Council | News and Events [6495249][source],"",Financial Stability Oversight Council [4998247][usfedagency],News [7997258][doctype]
+U. S. Department of the Treasury | OFAC |  Lebanon-Related Sanctions [7550799][source],"",Office of Foreign Assets Control [9987][usfedagency],""
+U. S. Department of the Treasury | OFAC |  South Sudan-related Sanctions [7550841][source],"",Office of Foreign Assets Control [9987][usfedagency],""
+U. S. Department of the Treasury | OFAC | Balkans-related Sanctions [7550681][source],"",Office of Foreign Assets Control [9987][usfedagency],""
+U. S. Department of the Treasury | OFAC | Belarus Sanctions [7550684][source],"",Office of Foreign Assets Control [9987][usfedagency],Measures [8016917][doctype]
+U. S. Department of the Treasury | OFAC | Burundi Sanctions [7550694][source],"",Office of Foreign Assets Control [9987][usfedagency],Measures [8016917][doctype]
+U. S. Department of the Treasury | OFAC | Central African Republic Sanctions [7550702][source],"",Office of Foreign Assets Control [9987][usfedagency],Measures [8016917][doctype]
+U. S. Department of the Treasury | OFAC | Counter Narcotics Trafficking Sanctions [7550707][source],"",Office of Foreign Assets Control [9987][usfedagency],""
+U. S. Department of the Treasury | OFAC | Counter Terrorism Sanctions [7550722][source],"",Office of Foreign Assets Control [9987][usfedagency],""
+U. S. Department of the Treasury | OFAC | Countering America's Adversaries Through Sanctions Act [7550698][source],"",Office of Foreign Assets Control [9987][usfedagency],Measures [8016917][doctype]
+U. S. Department of the Treasury | OFAC | Cuba Sanctions [7550733][source],"",Office of Foreign Assets Control [9987][usfedagency],Measures [8016917][doctype]
+U. S. Department of the Treasury | OFAC | Cyber-Related Sanctions [7550744][source],"",Office of Foreign Assets Control [9987][usfedagency],Measures [8016917][doctype]
+U. S. Department of the Treasury | OFAC | Democratic Republic of the Congo Sanctions [7550754][source],"",Office of Foreign Assets Control [9987][usfedagency],Measures [8016917][doctype]
+U. S. Department of the Treasury | OFAC | Foreign Interference in a United States Election Sanctions [7550771][source],"",Office of Foreign Assets Control [9987][usfedagency],""
+U. S. Department of the Treasury | OFAC | Global Magnitsky Sanctions [7550773][source],"",Office of Foreign Assets Control [9987][usfedagency],Measures [8016917][doctype]
+U. S. Department of the Treasury | OFAC | Iran Sanctions [7550788][source],"",Office of Foreign Assets Control [9987][usfedagency],Measures [8016917][doctype]
+U. S. Department of the Treasury | OFAC | Iraq-Related Sanctions [7550798][source],"",Office of Foreign Assets Control [9987][usfedagency],""
+U. S. Department of the Treasury | OFAC | Libya Sanctions [7550803][source],"",Office of Foreign Assets Control [9987][usfedagency],""
+U. S. Department of the Treasury | OFAC | Magnitsky Sanctions [7550807][source],"",Office of Foreign Assets Control [9987][usfedagency],""
+U. S. Department of the Treasury | OFAC | Mali-related Sanctions [7550809][source],"",Office of Foreign Assets Control [9987][usfedagency],""
+U. S. Department of the Treasury | OFAC | Nicaragua-related Sanctions [7550813][source],"",Office of Foreign Assets Control [9987][usfedagency],Measures [8016917][doctype]
+U. S. Department of the Treasury | OFAC | Non-Proliferation Sanctions [7550818][source],"",Office of Foreign Assets Control [9987][usfedagency],""
+U. S. Department of the Treasury | OFAC | North Korea Sanctions [7550822][source],"",Office of Foreign Assets Control [9987][usfedagency],Measures [8016917][doctype]
+U. S. Department of the Treasury | OFAC | Rough Diamond Trade Controls [7550830][source],"",Office of Foreign Assets Control [9987][usfedagency],""
+U. S. Department of the Treasury | OFAC | Sanctions Programs and Country Information [7550671][source],"",Office of Foreign Assets Control [9987][usfedagency],Measures [8016917][doctype]
+U. S. Department of the Treasury | OFAC | Somalia Sanctions [7552319][source],"",Office of Foreign Assets Control [9987][usfedagency],Measures [8016917][doctype]
+U. S. Department of the Treasury | OFAC | Sudan and Darfur Sanctions [7550833][source],"",Office of Foreign Assets Control [9987][usfedagency],""
+U. S. Department of the Treasury | OFAC | Syria Sanctions [7550842][source],"",Office of Foreign Assets Control [9987][usfedagency],Measures [8016917][doctype]
+U. S. Department of the Treasury | OFAC | Syria-Related Sanctions [7550845][source],"",Office of Foreign Assets Control [9987][usfedagency],Measures [8016917][doctype]
+U. S. Department of the Treasury | OFAC | Transnational Criminal Organizations [7550849][source],"",Office of Foreign Assets Control [9987][usfedagency],Measures [8016917][doctype]
+U. S. Department of the Treasury | OFAC | Ukraine-/Russia-related Sanctions [7550855][source],"",Office of Foreign Assets Control [9987][usfedagency],Measures [8016917][doctype]
+U. S. Department of the Treasury | OFAC | Venezuela-related Sanctions [7550861][source],"",Office of Foreign Assets Control [9987][usfedagency],Measures [8016917][doctype]
+U. S. Department of the Treasury | OFAC | Yemen-related Sanctions [7550871][source],"",Office of Foreign Assets Control [9987][usfedagency],""
+U. S. Department of the Treasury | OFAC | Zimbabwe Sanctions [7550873][source],"",Office of Foreign Assets Control [9987][usfedagency],Measures [8016917][doctype]
+U. S. Department of the Treasury | Readouts [4975576][source],"","",Statement [8016914][doctype]
+U. S. Department of the Treasury | Statements & Remarks [4979830][source],"","",Statement [8016914][doctype]
+U. S. Department of the Treasury | Testimonies [6499688][source],"","",Testimony [8016918][doctype]
+U.S. Commodity Futures Trading Commission | Opinions & Adjudicatory Orders [3531027][source],"","",Guidance [7997267][doctype]
+U.S. Department of Labor | EBSA Conflict of Interest Proposed Rule Documents [1966256][source],"",Employee Benefits Security Administration [3677472][usfedagency],""
+U.S. Department of Labor | EBSA Conflict of Interest Proposed Rule | Public Comments [929644][source],"",Employee Benefits Security Administration [3677472][usfedagency],""
+U.S. Department of Labor | EBSA Laws & Regulations Public Comments [929642][source],"",Employee Benefits Security Administration [3677472][usfedagency],""
+U.S. Department of Labor | EBSA News [288084][source],"",Employee Benefits Security Administration [3677472][usfedagency],""
+U.S. Department of Labor | Office of Disability Employment Policy (ODEP) | Business Sense [4992674][source],"",Office of Disability Employment [4985618][usfedagency],""
+U.S. Department of Labor | Office of Disability Employment Policy (ODEP) | Newsletter [4992670][source],"",Office of Disability Employment [4985618][usfedagency],Newsletter [8158304][doctype]
+U.S. Department of Labor | Office of Federal Contract Compliance Programs | Directives [4992734][source],"",Office of Federal Contract Compliance Programs [4985210][usfedagency],""
+U.S. Department of Labor | Office of Federal Contract Compliance Programs | Latest Updates [4992719][source],"",Office of Federal Contract Compliance Programs [4985210][usfedagency],""
+U.S. Department of Labor | Office of Federal Contract Compliance Programs | Memoranda of Understanding [4992736][source],"",Office of Federal Contract Compliance Programs [4985210][usfedagency],""
+U.S. Department of Labor | Office of Labor-Management Standards (OLMS) | Events [4992770][source],"",Office of Labor-Management Standards [4992768][usfedagency],Event [8016915][doctype]
+U.S. Department of Labor | Office of Labor-Management Standards (OLMS) | Press Releases [4992769][source],"",Office of Labor-Management Standards [4992768][usfedagency],""
+U.S. Department of Labor | Regulations Currently Open for Comment [5009822][source],"","",Request for Comment [6609235][doctype]
+U.S. Department of Veterans Affairs | Publications [1683949][source],"","",Publication [7997259][doctype]
+U.S. Department of Veterans Affairs | Speeches [1586482][source],"","",Speech [7997250][doctype]
+U.S. SEC | 17d-2 Plans for Allocation of Regulatory Responsibilities [6493557][source],"","",Rule [6609539][doctype]
+U.S. SEC | BATS Rulemaking [135023][source],"","",Rule [6609539][doctype]
+U.S. SEC | BSECC Rulemaking [1143598][source],"","",Rule [6609539][doctype]
+U.S. SEC | CBOT Rulemaking [6582877][source],"",Chicago Board of Trade [6587880][finexchanges],Rule [6609539][doctype]
+U.S. SEC | CFE Rulemaking [6582855][source],"",CBOE Futures Exchange [6587915][finexchanges],Rule [6609539][doctype]
+U.S. SEC | CME Rulemaking [6582897][source],"",Chicago Mercantile Exchange [6587896][finexchanges],Rule [6609539][doctype]
+"U.S. SEC | Cboe C2 Exchange, Inc. Rulemaking [6493559][source]","","CBOE C2 Exchange, Inc. [6581805][finexchanges]",Rule [6609539][doctype]
+U.S. SEC | Commission Opinions and Adjudicatory Orders [7582868][source],"","",Opinion [7997283][doctype]
+U.S. SEC | Congressional Testimony Index [557675][source],"","",Testimony [8016918][doctype]
+U.S. SEC | Division of Investment Management News [594206][source],"","",News [7997258][doctype]
+U.S. SEC | FICC Advanced Notice Rulemaking [6493556][source],"",Fixed Income Clearing Corporation [6591773][finexchanges],Notice [6609533][doctype]; Rule [6609539][doctype]
+U.S. SEC | Investor Alerts and Bulletins [546403][source],"","",Bulletin [6609524][doctype]
+U.S. SEC | Investors Exchange LLC Rulemaking [6493567][source],"",Investors Exchange LLC [5010048][finexchanges],Rule [6609539][doctype]
+U.S. SEC | NSCC Advance Notice Rulemaking [6493558][source],"","",Rule [6609539][doctype]
+U.S. SEC | NYSE Amex LLC Rulemaking [1467836][source],"","",Rule [6609539][doctype]
+"U.S. SEC | Nasdaq BX, Inc. Rulemaking [6493548][source]","","NASDAQ BX, Inc. [6582852][finexchanges]",Rule [6609539][doctype]
+"U.S. SEC | Nasdaq GEMX, LLC Rulemaking [6493565][source]","","NASDAQ GEMX, LLC [6582851][finexchanges]",Rule [6609539][doctype]
+U.S. SEC | Nasdaq ISE Rulemaking [6493550][source],"","NASDAQ ISE, LLC [6584522][finexchanges]",Rule [6609539][doctype]
+U.S. SEC | OC Rulemaking [7628052][source],"","",Rule [6609539][doctype]
+"U.S. SEC | Office of Compliance, Inspections and Examinations Announcements [7597975][source]","","",Announcement [8137139][doctype]
+U.S. SEC | Office of the Chief Accountant: Staff Letters to Industry [2990132][source],"","",Letter [6609532][doctype]
+U.S. SEC | SCCP Rulemaking [1143587][source],"","",Rule [6609539][doctype]
+U.S. SEC | SEC Interim Final Temporary Rules [522485][source],"","",Rule [6609539][doctype]
+U.S. SEC | SEC Interpretive Releases [577209][source],"","",Guidance [7997267][doctype]
+U.S. SEC | SEC Policy Statements [2188884][source],"","",Policy [7936929][doctype]
+U.S. SEC | Speeches [7592209][source],"","",Speech [7997250][doctype]
+U.S. SEC | Staff Legal Bulletins [2707636][source],"","",Bulletin [6609524][doctype]
+U.S. SEC | Testimony [7994605][source],"","",Testimony [8016918][doctype]
+U.S. SEC | Trading Suspensions [164077][source],"","",News [7997258][doctype]
+U.S. Securities and Exchange Commission | Reports and Publications [254354][source],"","",Publication [7997259][doctype]
+U.S. Securities and Exchange Commission | SEC Enforcement Actions [1332314][source],"","",Enforcement Action [6609529][doctype]
+U.S. Securities and Exchange Commission | Speeches [256068][source],"","",Speech [7997250][doctype]
+UK Courts and Tribunals Judiciary [6791109][contributor],United Kingdom [51][country],Her Majesty's Courts and Tribunals Service (UK) [7904708][govagency],""
+UK Parliament [76089][contributor],United Kingdom [51][country],Parliament of United Kingdom [7843868][govagency],""
+US Commodity Futures Trading Commission (CFTC) [185596][contributor],United States of America [16][country],U.S. Commodity Futures Trading Commission [2255658][usfedagency],""
+US DOJ |  Antitrust Division | News [4978583][source],"",Antitrust Division [4042][usfedagency],""
+US DOJ |  Antitrust Division | Public Hearings [5006962][source],"",Antitrust Division [4042][usfedagency],""
+US DOJ | Antitrust Division | Antitrust Criminal Case Filings [4972661][source],"",Antitrust Division [4042][usfedagency],""
+US DOJ | Antitrust Division | Civil Case Filings [156651][source],"",Antitrust Division [4042][usfedagency],""
+US DOJ | Antitrust Division | Press Releases [364586][source],"",Antitrust Division [4042][usfedagency],""
+US DOJ | Antitrust Division | What's New [4974313][source],"",Antitrust Division [4042][usfedagency],""
+US DOJ | Civil Division | News [94283][source],"",DOJ Civil Rights Division [7802526][usfedagency],""
+US DOJ | Civil Rights Division | Press Releases [1643884][source],"",DOJ Civil Rights Division [7802526][usfedagency],""
+US DOJ | Criminal Division | News And Noteworthy [6496499][source],"",DOJ Criminal Division [7802003][usfedagency],""
+US Department of Agriculture Rural Development [3690246][contributor],United States of America [16][country],Department of Agriculture [3223][usfedagency],""
+US Department of Defense [86456][contributor],United States of America [16][country],Department of Defense [979][usfedagency],""
+US Department of Education [524485][contributor],United States of America [16][country],Department of Education [556][usfedagency],""
+US Department of Energy [98805][contributor],United States of America [16][country],Department of Energy [645][usfedagency],""
+US Department of Health & Human Services [89308][contributor],United States of America [16][country],Department of Health and Human Services [925][usfedagency],""
+US Department of Housing and Urban Development (HUD) [66790][contributor],United States of America [16][country],Department of Housing and Urban Development [3437][usfedagency],""
+US Department of Justice (US DOJ) [1898217][contributor],United States of America [16][country],Department of Justice [1721][usfedagency],""
+US Department of Labor [123210][contributor],United States of America [16][country],Department of Labor [2130][usfedagency],""
+US Department of Labor | Employers and Advisers Guidance | Advisory Opinions [3688346][source],"",Employee Benefits Security Administration [3677472][usfedagency],Guidance [7997267][doctype]
+US Department of Labor | Employers and Advisers Guidance | Class Exemptions [3688414][source],"",Employee Benefits Security Administration [3677472][usfedagency],Bulletin [6609524][doctype]
+US Department of Labor | Employers and Advisers Guidance | EXPRO Exemptions [3688422][source],"",Employee Benefits Security Administration [3677472][usfedagency],""
+US Department of Labor | Employers and Advisers Guidance | Field Assistance Bulletins [3688300][source],"",Employee Benefits Security Administration [3677472][usfedagency],Bulletin [6609524][doctype]
+US Department of Labor | Employers and Advisers Guidance | Information Letters [3688351][source],"",Employee Benefits Security Administration [3677472][usfedagency],Letter [6609532][doctype]
+US Department of Labor | Employers and Advisers Guidance | Technical Releases [3688354][source],"",Employee Benefits Security Administration [3677472][usfedagency],""
+"US Department of Labor | Wage and Hour Division (WHD) | Administrator Interpretations, Opinion and Ruling Letters [3691290][source]","",Wage and Hour Division [3675357][usfedagency],Letter [6609532][doctype]; Opinion [7997283][doctype]
+US Department of Labor | Wage and Hour Division (WHD) | Compliance Assistance [3691285][source],"",Wage and Hour Division [3675357][usfedagency],""
+US Department of Labor | Wage and Hour Division (WHD) | Field Assistance Bulletins [3691286][source],"",Wage and Hour Division [3675357][usfedagency],Bulletin [6609524][doctype]
+US Department of Labor | Wage and Hour Division (WHD) | Industry-Specific Resources [3691284][source],"",Wage and Hour Division [3675357][usfedagency],""
+US Department of Labor | Wage and Hour Division (WHD) | Public Forms [3691287][source],"",Wage and Hour Division [3675357][usfedagency],""
+US Department of Labor | Wage and Hour Division (WHD) | Regulatory Library [3691289][source],"",Wage and Hour Division [3675357][usfedagency],""
+US Department of Labor | Wage and Hour Division (WHD) | Workplace Posters [3691288][source],"",Wage and Hour Division [3675357][usfedagency],""
+US Department of Transportation [152278][contributor],United States of America [16][country],Department of Transportation [619][usfedagency],""
+US Department of Veterans Affairs [30972][contributor],United States of America [16][country],Department of Veterans Affairs [2095][usfedagency],""
+US Department of the Treasury [37399][contributor],United States of America [16][country],Department of the Treasury [2066][usfedagency],""
+US Department of the Treasury | Office of Foreign Assets Control | Enforcement Documents [4973659][source],"",Office of Foreign Assets Control [9987][usfedagency],Enforcement Action [6609529][doctype]
+US Department of the Treasury | Office of Foreign Assets Control | Recent Actions [5011264][source],"",Office of Foreign Assets Control [9987][usfedagency],Enforcement Action [6609529][doctype]
+US Department of the Treasury | Press Releases [4972934][source],"","",News [7997258][doctype]
+US Environmental Protection Agency [74663][contributor],United States of America [16][country],Environmental Protection Agency [370][usfedagency],""
+US Equal Employment Opportunity Commission (EEOC) [294491][contributor],United States of America [16][country],Equal Employment Opportunity Commission [4002][usfedagency],""
+US Federal Trade Commission (FTC) [45371][contributor],United States of America [16][country],Federal Trade Commission [2972][usfedagency],""
+US Food & Drug Administration (FDA) [14426][contributor],United States of America [16][country],Food and Drug Administration [4][usfedagency],""
+US SEC | Administrative Proceedings [3693634][source],"","",Meeting [8016916][doctype]
+US SEC | BOX Exchange LLC (BOX) Rulemaking [6493564][source],"",BOX Exchange LLC [5010316][finexchanges],Rule [6609539][doctype]
+US SEC | CBOE Rulemaking [196154][source],"","CBOE BYX Exchange, Inc. [6581807][finexchanges]; CBOE Exchange, Inc. [5010030][finexchanges]",Rule [6609539][doctype]
+US SEC | CHX Rulemaking [407815][source],"","Chicago Stock Exchange, Inc [1761884][exchange]",Rule [6609539][doctype]
+US SEC | Cboe BYX Exchange Rulemaking [6493569][source],"","CBOE BYX Exchange, Inc. [6581807][finexchanges]",Rule [6609539][doctype]
+"US SEC | Cboe BZX Exchange, Inc (CboeBZX) Rulemaking [6493547][source]","","CBOE BZX Exchange, Inc. [6581800][finexchanges]",Rule [6609539][doctype]
+US SEC | Cboe EDGA Rulemaking [6493560][source],"","CBOE EDGA Exchange, Inc. [6581806][finexchanges]",Rule [6609539][doctype]
+US SEC | Cboe EDGX Exchange Rulemaking [6493568][source],"","CBOE EDGX Exchange, Inc. [6581808][finexchanges]",Rule [6609539][doctype]
+US SEC | Commission Opinions and Adjudicatory Orders [4927558][source],"","",Order [8016919][doctype]
+US SEC | Compliance and Disclosure Interpretations [7621924][source],"","",Regulation [7997253][doctype]; Rule [6609539][doctype]
+US SEC | DTC Rulemaking [498527][source],"","",Rule [6609539][doctype]
+US SEC | Division of Corporation Finance [339169][source],"",SEC Division of Corporation Finance [7806572][usfedagency],""
+US SEC | Division of Corporation Finance | Chronological List of No-Action Letters (Act Rule 14a-8) [6498421][source],"",SEC Division of Corporation Finance [7806572][usfedagency],Letter [6609532][doctype]; No-Action Letter [6736229][doctype]
+US SEC | Division of Corporation Finance | Chronological List of No-Action Letters [6545270][source],"",SEC Division of Corporation Finance [7806572][usfedagency],Letter [6609532][doctype]; No-Action Letter [6736229][doctype]
+US SEC | Division of Corporation Finance | Chronological List of No-Action Letters | Commission Order [6499508][source],"",SEC Division of Corporation Finance [7806572][usfedagency],Letter [6609532][doctype]; No-Action Letter [6736229][doctype]
+US SEC | Division of Investment Management News [5010011][source],"",SEC Division of Investment Management [7806659][usfedagency],News [7997258][doctype]
+US SEC | Division of Investment Management | Chronological List of No-Action Letters [6494810][source],"",SEC Division of Investment Management [7806659][usfedagency],Letter [6609532][doctype]; No-Action Letter [6736229][doctype]
+US SEC | Division of Trading and Markets | Chronological List of Exemptive Orders [6494790][source],"",SEC Division of Trading and Markets [7806658][usfedagency],Letter [6609532][doctype]; No-Action Letter [6736229][doctype]
+US SEC | Division of Trading and Markets | Chronological List of No-Action Letters [6494777][source],"",SEC Division of Trading and Markets [7806658][usfedagency],Letter [6609532][doctype]; No-Action Letter [6736229][doctype]
+US SEC | FICC Rulemaking [402090][source],"",Fixed Income Clearing Corporation [6591773][finexchanges],Rule [6609539][doctype]
+US SEC | FINRA Rulemaking [215796][source],"","Financial Industry Regulatory Authority, Inc. [4925367][usfedagency]",Rule [6609539][doctype]
+US SEC | ISE Rulemaking [198871][source],"","NASDAQ ISE, LLC [6584522][finexchanges]",Rule [6609539][doctype]
+US SEC | Investment Company Act Notices and Orders [119127][source],"","",Notice [6609533][doctype]; Notice of Filing and Order [6609538][doctype]
+US SEC | Latest Administrative Proceedings [4927557][source],"","",News [7997258][doctype]; Regulation [7997253][doctype]
+US SEC | Latest Press Releases [7584422][source],"","",News [7997258][doctype]; Press Release [8137141][doctype]
+US SEC | Litigation Releases [7582649][source],"","",Development [7997099][doctype]
+US SEC | MIAX Rulemaking [6493561][source],"","Miami International Securities Exchange, LLC [5010031][finexchanges]",Rule [6609539][doctype]
+US SEC | MSRB Rulemaking [345517][source],"",Municipal Securities Rulemaking Board [6580638][usfedagency],Rule [6609539][doctype]
+US SEC | NASDAQ OMX PHLX LLC  Rulemaking [216296][source],"",NASDAQ PHLX LLC [6586792][finexchanges],Rule [6609539][doctype]
+US SEC | NASDAQ Rulemaking [110406][source],"",NASDAQ Inc [23157][company]; The Nasdaq Stock Market LLC [6586793][finexchanges],Rule [6609539][doctype]
+US SEC | NFA Rulemaking [3517937][source],"",National Futures Association (NFA) [421839][contributor]; National Futures Association [4927891][associations],Rule [6609539][doctype]
+US SEC | NSCC Rulemaking [320618][source],"","",Rule [6609539][doctype]
+US SEC | NYSE American LLC Rulemaking [6493551][source],"","",Rule [6609539][doctype]
+US SEC | NYSE Arca Rulemaking [138421][source],"","NYSE ARCA, Inc. [6586789][finexchanges]; NYSE Arca [1761890][exchange]",Rule [6609539][doctype]
+US SEC | NYSE Rulemaking [138419][source],"",New York Stock Exchange LLC [6586696][finexchanges],Rule [6609539][doctype]
+US SEC | NYSENAT Rulemaking [6493566][source],"","",Rule [6609539][doctype]
+"US SEC | Nasdaq MRX, LLC Rulemaking [6493554][source]","","NASDAQ MRX, LLC [6586791][finexchanges]",Rule [6609539][doctype]
+US SEC | OCC Advance Notice Rulemaking [6493552][source],"",The Options Clearing Corporation [5009948][usfedagency],Rule [6609539][doctype]
+US SEC | OCC Rulemaking [298596][source],"",The Options Clearing Corporation [5009948][usfedagency],Rule [6609539][doctype]
+US SEC | Press Releases [309465][source],"","",News [7997258][doctype]; Press Release [8137141][doctype]
+US SEC | Proposed Rules [408525][source],"","",Proposed Rule [6609238][doctype]
+US SEC | Public Statements [7584315][source],"","",News [7997258][doctype]
+US SEC | SEC Final Rules [212646][source],"","",Rule [6609539][doctype]
+US SEC | SEC Interim Final Rules [6493555][source],"","",Rule [6609539][doctype]
+US SEC | Speeches and Public Statements [301634][source],"","",Speech [7997250][doctype]
+US SEC | What's New Today [1990597][source],"","",News [7997258][doctype]
+US SEC | What's New [29631][source],"","",News [7997258][doctype]
+US Securities and Exchange Commission [25033][contributor],United States of America [16][country],Securities and Exchange Commission [50][usfedagency],""
+USDOJ | Criminal Division Cybercrime Press Releases [1176543][source],"",DOJ Criminal Division [7802003][usfedagency],""
+USDOJ | Criminal Division | News [1579644][source],"",DOJ Criminal Division [7802003][usfedagency],""
+USDOJ | Criminal Division | Press Releases [29924][source],"",DOJ Criminal Division [7802003][usfedagency],""
+USPS [59326][contributor],United States of America [16][country],Postal Service [3863][usfedagency],""
+Unidad de Analisis Financiero (UAF) [3682427][contributor],Chile [202][country],Unidad de Analisis Financiero(Chile) [3704085][govagency],""
+Unidad de Información y Análisis Financiero (UIAF) [3682536][contributor],Colombia [747][country],"",""
+Victorian Government [4938595][contributor],Australia [241][country],"",""
+Western Australian Government [4939042][contributor],Australia [241][country],Western Australian Government [6655002][govagency],""
+Western Australian Premier (AU) [4951472][contributor],Australia [241][country],"",""
+electronic Irish Statute Book (eISB) [3638965][contributor],Ireland [94][country],Houses of the Oireachtas [3639730][govagency],""
+iMFdirect | Blog [220815][source],"","",News [7997258][doctype]
+korea.net [38831][contributor],South Korea [21][country],Ministry of Culture Sports and Tourism (South Korea) [7917172][govagency],""

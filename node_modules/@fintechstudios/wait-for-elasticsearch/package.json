@@ -1,0 +1,25 @@
+{
+  "name": "@fintechstudios/wait-for-elasticsearch",
+  "version": "1.0.0",
+  "description": "Wait for Elasticsearch to be ready to use",
+  "main": "index.js",
+  "bin": {
+    "waitForES": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fintechstudios/wait-for-elasticsearch.git"
+  },
+  "engines": {
+    "node": ">=6.14"
+  },
+  "author": "Dylan Praul",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fintechstudios/wait-for-elasticsearch/issues"
+  },
+  "homepage": "https://github.com/fintechstudios/wait-for-elasticsearch#readme"
+}

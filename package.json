@@ -1,0 +1,76 @@
+{
+  "name": "ner-batch-backfill",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "None",
+  "private": true,
+  "engines": {
+    "node": ">=10"
+  },
+  "bin": {
+    "ner-batch-backfill": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint --color ./src",
+    "docker:build": "docker build --tag ner/batch-tagger:latest .",
+    "docker-compose:test:up": "docker-compose -f docker-compose.test.yml up",
+    "test": "yarn run test:unit && npm run test:integration",
+    "test:integration": "nyc mocha src/**/*/*.int.test.js",
+    "test:integration:setup": "node ./test/integration/setup",
+    "test:unit": "nyc mocha src/**/*/*.unit.test.js"
+  },
+  "dependencies": {
+    "array.prototype.flatmap": "^1.2.1",
+    "aws-sdk": "^2.422.0",
+    "dotenv": "^7.0.0",
+    "elasticsearch": "^15.4.1",
+    "http-aws-es": "^6.0.0",
+    "ioredis": "^4.6.2",
+    "lodash.chunk": "^4.2.0",
+    "lodash.find": "^4.6.0",
+    "lodash.partition": "^4.6.0",
+    "lodash.uniq": "^4.5.0",
+    "lodash.uniqby": "^4.7.0",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.25",
+    "node-fetch": "^2.3.0",
+    "pg-promise": "^8.6.3",
+    "request": "^2.88.0",
+    "sax": "^1.2.4",
+    "yargs": "^13.2.2"
+  },
+  "devDependencies": {
+    "@fintechstudios/eslint-plugin-chai-as-promised": "^1.0.0",
+    "@fintechstudios/wait-for-elasticsearch": "github:fintechstudios/wait-for-elasticsearch",
+    "@types/chai-as-promised": "^7.1.0",
+    "@types/elasticsearch": "^5.0.32",
+    "@types/ioredis": "^4.0.10",
+    "@types/lodash.partition": "^4.6.6",
+    "@types/lodash.uniq": "^4.5.6",
+    "@types/mocha": "^5.2.6",
+    "@types/moment-timezone": "^0.5.12",
+    "@types/node": "^12.11.7",
+    "@types/node-fetch": "^2.1.7",
+    "@types/pg-promise": "^5.4.3",
+    "@types/sax": "^1.0.1",
+    "@types/sinon": "^7.0.10",
+    "@types/sinon-chai": "^3.2.2",
+    "@types/yargs": "^12.0.10",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-chai-friendly": "^0.4.1",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-mocha": "^5.3.0",
+    "mocha": "^6.0.2",
+    "nyc": "^15.0.0",
+    "sinon": "^7.3.0",
+    "sinon-chai": "^3.3.0"
+  },
+  "volta": {
+    "node": "12.13.0",
+    "yarn": "1.19.1"
+  }
+}
