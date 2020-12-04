@@ -23,17 +23,16 @@ class FtsApiEntitiesService extends Singleton {
    */
   async resolveEntities(unresolvedEntities) {
     const response = await this.ftsApiService.makeAuthenticatedRequest(
-        `${this.baseUrl}`,
-        {
-          method: 'POST', // instead of PUT, does not update existing entities
-          body: JSON.stringify({
-            entities: unresolvedEntities,
-          })
-        }
+      `${this.baseUrl}`,
+      {
+        method: 'POST', // instead of PUT, does not update existing entities
+        body: JSON.stringify({
+          entities: unresolvedEntities,
+        }),
+      }
     );
     return response.entities;
   }
-
 }
 
 module.exports = FtsApiEntitiesService;

@@ -1,0 +1,85 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "airbnb-base"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "rules": {
+    "no-undef": "warn",
+    "no-console": "off",
+    "no-unused-vars": "off",
+    "no-underscore-dangle": "off",
+    "prefer-promise-reject-errors": "off",
+    "max-len": [
+      "warn",
+      120
+    ],
+    "no-param-reassign": "off",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "ignore"
+      }
+    ],
+    // https://github.com/airbnb/javascript/blob/32a674de0b9459ee1e3220db3a7f41b197ac61ab/packages/eslint-config-airbnb-base/rules/style.js#L334-L352
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "ForInStatement",
+        "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array."
+      },
+      {
+        "selector": "LabeledStatement",
+        "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
+      },
+      {
+        "selector": "WithStatement",
+        "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+      }
+    ]
+  },
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "overrides": [
+    {
+      "files": [
+        "test/**/*.js",
+        "src/**/*.test.js"
+      ],
+      "plugins": [
+        "mocha",
+        "chai-friendly",
+        "@fintechstudios/eslint-plugin-chai-as-promised"
+      ],
+      "env": {
+        "mocha": true,
+        "node": true
+      },
+      "globals": {
+        "expect": true,
+        "sinon": true,
+        "chai": true,
+        "httpMocks": true
+      },
+      "rules": {
+        "no-unused-expressions": 0,
+        "chai-friendly/no-unused-expressions": 2,
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": true
+          }
+        ],
+        "@fintechstudios/chai-as-promised/no-unhandled-promises": "error"
+      }
+    }
+  ]
+}

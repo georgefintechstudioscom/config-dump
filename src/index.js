@@ -1,6 +1,6 @@
 require('dotenv/config');
 const fs = require('fs');
-const assert = require('assert');
+const PipelineValidation = require('./pipelineValidation');
 const FtsApiEntitiesService = require('./core-services/fts-api/FtsApiEntitiesService');
 
 const FTS_TYPE_REGEX = /^fts_(?<type>[a-z]+)_/;
@@ -34,30 +34,6 @@ const metadataSortOrder = new Map([
  */
 
 /**
- * The main execution of the program.
- * @param {string[]} opts.filename
- * @param {string[]} opts.pipeline
- * @param {string} opts.outfile
- * @param {string} opts.xlsxfile
- * @returns {Promise<void>}
- */
-async function run({ opts }) {
-  const pipelines = [];
-  await readPipelinesFromFiles(opts.filename, pipelines);
-  await readPipelinesFromControlPlane(opts.pipeline, pipelines);
-  if (validatePipelines(pipelines)) {
-    const entities = await resolveEntities(pipelines);
-    const agg = aggregate(pipelines, entities);
-    if (opts.outfile) {
-      await writeCsv(opts.outfile, agg);
-    }
-    if (opts.xlsxfile) {
-      await writeXlsx(opts.xlsxfile, agg);
-    }
-  }
-}
-
-/**
  * Read pipeline configurations from files and store them in a list of pipelines.
  * @param {string[]} filenames
  * @param {Object[]} pipelines
@@ -69,6 +45,7 @@ async function readPipelinesFromFiles(filenames, pipelines) {
       const pipeline = JSON.parse(fs.readFileSync(filename));
       arr.push(pipeline);
       pipeline.filename = filename;
+      return arr;
     }, pipelines);
   }
 }
@@ -84,16 +61,6 @@ async function readPipelinesFromControlPlane(pipelineIds, pipelines) {
   if (pipelineIds && pipelineIds.size > 0) {
     throw new Error('Not implemented yet.');
   }
-}
-
-/**
- * Given a list of pipelines, extract all the entities that need to be resolved and resolve them.
- * @param pipelines
- * @returns {Promise<Map<string, Entity>>}
- */
-async function resolveEntities(pipelines) {
-  const unresolvedEntities = extractEntitiesFromPipelines(pipelines);
-  return await resolveEntitiesWithApi(unresolvedEntities);
 }
 
 /**
@@ -125,8 +92,8 @@ function makeEntity(item) {
     external_id: item.externalId,
     name: item.name || item.externalId,
     type,
-    type_display: type.charAt(0).toUpperCase() + type.slice(1)
-  }
+    type_display: type.charAt(0).toUpperCase() + type.slice(1),
+  };
 }
 
 /**
@@ -138,20 +105,21 @@ function getEntitiesFromMatches(match) {
   if (!match) {
     return [];
   }
-  if (match.type === 'multi-source') {
-    return match.value.items.map((item) => makeEntity(item));
+  switch (match.type) {
+    case 'multi-source':
+      return match.value.items.map(item => makeEntity(item));
 
-  } else if (match.type === 'source') {
-    return [makeEntity(match.value)];
+    case 'source':
+      return [makeEntity(match.value)];
 
-  } else if (match.type === 'multi-annotation') {
-    return [];
+    case 'multi-annotation':
+      return [];
 
-  } else if (match.type === 'annotation') {
-    return [];
+    case 'annotation':
+      return [];
 
-  } else {
-    return null;
+    default:
+      return null;
   }
 }
 
@@ -161,34 +129,44 @@ function getEntitiesFromMatches(match) {
  * @returns {Entity[]}
  */
 function getEntitiesFromActions(rule) {
-  if (rule.name === 'assign-static-entity-metadata') {
-    return rule.config.metadata.reduce((entities, metadata) => {
-      metadata.items.forEach((item) => {
-        entities.push(makeEntity(item));
-      });
-      return entities;
-    }, []);
+  switch (rule.name) {
+    case 'assign-static-entity-metadata':
+      return rule.config.metadata.reduce((entities, metadata) => {
+        metadata.items.forEach((item) => {
+          entities.push(makeEntity(item));
+        });
+        return entities;
+      }, []);
 
-  } else if (rule.name === 'modify-static-entity-tags') {
-    return rule.config.entityTags.map((item) => (makeEntity(item)));
+    case 'modify-static-entity-tags':
+      return rule.config.entityTags.map(item => (makeEntity(item)));
 
-  } else if (rule.name === 'modify-derived-metadata') {
-    if (!rule.config.maps) {
+    case 'modify-derived-metadata':
+      if (!rule.config.maps) {
+        return [];
+      }
+      return rule.config.maps.reduce((entities, map) => {
+        map.map.forEach((item) => {
+          entities.push(makeEntity(item));
+        });
+        return entities;
+      }, []);
+
+    case 'uncluster':
       return [];
-    }
-    return rule.config.maps.reduce((entities, map) => {
-      map.map.forEach((item) => {
-        entities.push(makeEntity(item));
-      });
-      return entities;
-    }, []);
 
-  } else if (rule.name === 'uncluster') {
-    return [];
-
-  } else {
-    return null;
+    default:
+      return null;
   }
+}
+
+/**
+ * Return a string that is a key for looking up an entity given an unresolved entity item.
+ * @param {Object} item
+ * @returns {string} A standard key for looking up an unresolved entity
+ */
+function entityKey(item) {
+  return `${item.external_id || item.externalId}/${item.provider}`;
 }
 
 /**
@@ -209,10 +187,10 @@ function extractEntitiesFromPipelines(pipelines) {
     if (!entities) {
       throw new Error(`Bad default match type ${pipeline.match.type} in ${pipelineName}`);
     }
-    entities.forEach((entity) => { entityMap.set(entityKey(entity), entity) });
+    entities.forEach((entity) => { entityMap.set(entityKey(entity), entity); });
 
     pipeline.rules.forEach((rule) => {
-      let entities = getEntitiesFromMatches(rule.match);
+      entities = getEntitiesFromMatches(rule.match);
       if (!entities) {
         throw new Error(`Bad default match type ${rule.match.type} in ${pipelineName}, rule ${rule.description}`);
       }
@@ -242,12 +220,45 @@ async function resolveEntitiesWithApi(unresolvedEntities) {
 }
 
 /**
- * Return a string that is a key for looking up an entity given an unresolved entity item.
- * @param {Object} item
- * @returns {string} A standard key for looking up an unresolved entity
+ * Given a list of pipelines, extract all the entities that need to be resolved and resolve them.
+ * @param pipelines
+ * @returns {Promise<Map<string, Entity>>}
  */
-function entityKey(item) {
-  return (item.external_id || item.externalId) + '/' + item.provider;
+async function resolveEntities(pipelines) {
+  const unresolvedEntities = extractEntitiesFromPipelines(pipelines);
+  return resolveEntitiesWithApi(unresolvedEntities);
+}
+
+/**
+ *
+ * @param {string} aString
+ * @param {string} bString
+ * @returns {number}
+ */
+function compare(aString, bString) {
+  const a = metadataSortOrder.get(aString);
+  const b = metadataSortOrder.get(bString);
+  if (a && b) return a - b;
+  if (!a && b) return 1;
+  if (!b && a) return -1;
+  if (aString > bString) return 1;
+  if (aString < bString) return -1;
+  return 0;
+}
+
+/**
+ *
+ * @param {Map<string,Map<string,Set<string>>>} matchMap
+ * @returns {Map<string,Map<string,Set<string>>>}
+ */
+function sortMatchMap(matchMap) {
+  matchMap.forEach((actionMap, match) => {
+    actionMap.forEach((actionSet, metadataType) => {
+      actionMap.set(metadataType, new Set([...actionSet].sort()));
+    });
+    matchMap.set(match, new Map([...actionMap.entries()].sort((a, b) => compare(a.key, b.key))));
+  });
+  return new Map([...matchMap.entries()].sort());
 }
 
 /**
@@ -281,6 +292,7 @@ function unresolvedEntityToStaticMetadataActionName(item, entities) {
  */
 function unresolvedEntityToStaticEntityTagActionName(item, entities) {
   const action = (item.action) ? item.action : 'add';
+  // eslint-disable-next-line no-nested-ternary
   const relevance = (action !== 'add') ? '' : ((item.relevance) ? item.relevance : 'high');
   return `${unresolvedEntityToMatchName(item, entities)}[${action}][${relevance}]`;
 }
@@ -315,16 +327,17 @@ function getMatches(match, entities) {
   if (!match) {
     return new Set();
   }
-  if (match.type === 'multi-source') {
-    return new Set(match.value.items.map((item) => unresolvedEntityToMatchName(item, entities)));
-  } else if (match.type=== 'source') {
-    return new Set([unresolvedEntityToMatchName(match.value, entities)]);
-  } else if (match.type === 'multi-annotation') {
-    return new Set(match.value.items.map((item) => annotationDescriptionToMatchName(item)));
-  } else if (match.type === 'annotation') {
-    return new Set([annotationDescriptionToMatchName(match.value)]);
-  } else {
-    return null;
+  switch (match.type) {
+    case 'multi-source':
+      return new Set(match.value.items.map(item => unresolvedEntityToMatchName(item, entities)));
+    case 'source':
+      return new Set([unresolvedEntityToMatchName(match.value, entities)]);
+    case 'multi-annotation':
+      return new Set(match.value.items.map(item => annotationDescriptionToMatchName(item)));
+    case 'annotation':
+      return new Set([annotationDescriptionToMatchName(match.value)]);
+    default:
+      return null;
   }
 }
 
@@ -340,9 +353,11 @@ function getActions(rule, entities) {
     rule.config.metadata.forEach((metadata) => {
       const targetType = metadata.metadataType;
       // create a set of entity names under this metadata type
-      const targets = new Set(metadata.items.map((item) => unresolvedEntityToStaticMetadataActionName(item, entities)));
+      const targets = new Set(metadata
+        .items
+        .map(item => unresolvedEntityToStaticMetadataActionName(item, entities)));
       // find the metadata type in the result map
-      let targetTypeValue = map.get(targetType);
+      const targetTypeValue = map.get(targetType);
       // if not found, add the target type as key, and set of entities as value to the map
       if (!targetTypeValue) {
         map.set(targetType, targets);
@@ -353,11 +368,13 @@ function getActions(rule, entities) {
         });
       }
     });
-
   } else if (rule.name === 'modify-static-entity-tags') {
     const targetType = 'entityTags';
-    const targets = new Set(rule.config.entityTags.map((item) => unresolvedEntityToStaticEntityTagActionName(item, entities)));
-    let targetTypeValue = map.get(targetType);
+    const targets = new Set(rule
+      .config
+      .entityTags
+      .map(item => unresolvedEntityToStaticEntityTagActionName(item, entities)));
+    const targetTypeValue = map.get(targetType);
     if (!targetTypeValue) {
       map.set(targetType, targets);
     } else {
@@ -365,29 +382,26 @@ function getActions(rule, entities) {
         targetTypeValue.add(target);
       });
     }
-
   } else if (rule.name === 'modify-derived-metadata') {
     rule.config.metadata.forEach((metadata) => {
-      const metadataType = metadata.metadataType;
+      const { metadataType } = metadata;
       const value = derivedMetadataActionName(metadata);
-      let metadataTypeSet = map.get(metadataType);
+      const metadataTypeSet = map.get(metadataType);
       if (!metadataTypeSet) {
         map.set(metadataType, new Set([value]));
       } else {
         metadataTypeSet.add(value);
       }
     });
-
   } else if (rule.name === 'uncluster') {
     const metadataType = 'uncluster';
     const value = 'uncluster';
-    let metadataTypeSet = map.get(metadataType);
+    const metadataTypeSet = map.get(metadataType);
     if (!metadataTypeSet) {
       map.set(metadataType, new Set([value]));
     } else {
       metadataTypeSet.add(value);
     }
-
   } else {
     return null;
   }
@@ -437,7 +451,7 @@ function aggregate(pipelines, entities) {
                 actionSet = new Set();
                 actionMap.set(actionKey, actionSet);
               }
-              [...actionValue.values()].forEach((value) => actionSet.add(value));
+              [...actionValue.values()].forEach(value => actionSet.add(value));
             });
           });
         }
@@ -449,46 +463,13 @@ function aggregate(pipelines, entities) {
 }
 
 /**
- *
- * @param {string} aString
- * @param {string} bString
- * @returns {number}
- */
-function compare(aString, bString) {
-  const a = metadataSortOrder.get(aString);
-  const b = metadataSortOrder.get(bString);
-  if (a && b) return a - b;
-  if (!a && b) return 1;
-  if (!b && a) return -1;
-  if (aString > bString) return 1;
-  if (aString < bString) return -1;
-  return 0;
-}
-/**
- *
- * @param {Map<string,Map<string,Set<string>>>} matchMap
- * @returns {Map<string,Map<string,Set<string>>>}
- */
-function sortMatchMap(matchMap) {
-
-  matchMap.forEach((actionMap, match) => {
-    actionMap.forEach((actionSet,  metadataType) => {
-      actionMap.set(metadataType, new Set([...actionSet].sort()));
-    });
-    matchMap.set(match, new Map([...actionMap.entries()].sort((a, b) => compare(a.key, b.key))));
-  });
-  return new Map([...matchMap.entries()].sort());
-}
-
-
-/**
  * Make a string compliant with simple CSV.
  * @param str
  * @returns {string}
  */
 function makeFieldCsv(str) {
   if (str.includes('"') || str.includes(',')) {
-    return '"' + str.replace(/"/g, '""') + '"';
+    return `"${str.replace(/"/g, '""')}"`;
   }
   return str;
 }
@@ -508,25 +489,26 @@ async function writeCsv(outfile, agg) {
   });
   const columns = new Map([...types.entries()].sort((a, b) => a[1] - b[1]));
   let columnNumber = 1;
+  // eslint-disable-next-line no-plusplus
   columns.forEach((value, key) => columns.set(key, columnNumber++));
 
-  let writeStream = fs.createWriteStream(outfile);
+  const writeStream = fs.createWriteStream(outfile);
   let record = 'Match';
-  columns.forEach((columnNumber, metadataType) => {
-    record += ',' + metadataType;
+  columns.forEach((columnNo, metadataType) => {
+    record += `,${metadataType}`;
   });
-  writeStream.write(record + '\n');
+  writeStream.write(`${record}\n`);
 
-  agg.forEach((value, key) => {  // map, match string
-    let record = makeFieldCsv(key);
-    columns.forEach((columnNumber, metadataType) => {
+  agg.forEach((value, key) => { // map, match string
+    let row = makeFieldCsv(key);
+    columns.forEach((columnNo, metadataType) => {
       if (value.has(metadataType)) {
-        record += ',' + makeFieldCsv([...value.get(metadataType).values()].join('; '));
+        row += `,${makeFieldCsv([...value.get(metadataType).values()].join('; '))}`;
       } else {
-        record += ',""';
+        row += ',""';
       }
     });
-    writeStream.write(record + '\n');
+    writeStream.write(`${row}\n`);
   });
 
   await writeStream.end();
@@ -543,429 +525,27 @@ async function writeXlsx(outfile, agg) {
 }
 
 /**
- * Check the pipelines for correct format and data.
- * @param {Object[]} pipelines
- * @return {boolean} Success or failure
+ * The main execution of the program.
+ * @param {string[]} opts.filename
+ * @param {string[]} opts.pipeline
+ * @param {string} opts.outfile
+ * @param {string} opts.xlsxfile
+ * @returns {Promise<void>}
  */
-function validatePipelines(pipelines) {
-  const errors = [];
-  pipelines.forEach((pipeline) => {
-      tagAndAddErrors(validateMatch(pipeline.match), `validation error: pipeline #${pipeline.id}, file ${pipeline.filename}.Default Match`, errors);
-      tagAndAddErrors(validateRules(pipeline.rules), `validation error: pipeline #${pipeline.id}, file ${pipeline.filename}`, errors);
-  });
-  errors.forEach((error) => console.error(error));
-  return errors.length === 0;
-}
-
-const annotationMatchMembers = [
-  'matched.document-ingestion.fintechstudios.com/channel-id',
-  'matched.document-ingestion.fintechstudios.com/document-id',
-  'matched.document-ingestion.fintechstudios.com/source-id',
-];
-
-const metadataTypes = [
-  'cik',
-  'docCitations',
-  'docNumber',
-  'docSummary',
-  'docTypes',
-  'filedAs',
-  'filingDate',
-  'filingType',
-  'issuingAgencies',
-  'jurisdictions',
-  'publicationDate',
-  'volumeNumber',
-  'volumes',
-];
-
-function reassertOrThrow(ex, item, message) {
-  if (ex.name === 'AssertionError') {
-    assert(false, `${message}${item.description || item.name ? `(${item.description || item.name})` : ''}.${ex.message}`);
-  }
-  else {
-    throw ex;
-  }
-}
-
-const _parent = '_parent';
-
-function condition(value, message, errors) {
-  if (!value) errors.push(message);
-  return value;
-}
-
-function getThing(thing, defItem, configItem) {
-  const keyProperty = `${thing}Key`;
-  if (defItem[keyProperty]) {
-    let key = null;
-    while (configItem && !key) {
-      key = configItem[defItem[keyProperty]];
-      configItem = configItem[_parent];
+async function run({ opts }) {
+  const pipelines = [];
+  await readPipelinesFromFiles(opts.filename, pipelines);
+  await readPipelinesFromControlPlane(opts.pipeline, pipelines);
+  if (PipelineValidation.validatePipelines(pipelines)) {
+    const entities = await resolveEntities(pipelines);
+    const agg = aggregate(pipelines, entities);
+    if (opts.outfile) {
+      await writeCsv(opts.outfile, agg);
     }
-    return defItem[`${thing}Map`].get(key);
-  } else {
-    return defItem[thing];
-  }
-}
-
-function tagAndAddErrors(subErrors, tag, errors) {
-  subErrors.forEach((subError) => {
-    errors.push(`${tag}.${subError}`);
-  });
-}
-
-/**
- *
- * @param {Object} configItem
- * @param {Object} definition
- * @param {Object} parentConfigItem
- * @param {Object} parentDefinition
- */
-function check(configItem, definition, parentConfigItem, parentDefinition) {
-  const errors = [];
-  if (!configItem && !definition) {
-    return errors;
-  }
-  // link to the parent
-  configItem[_parent] = parentConfigItem;
-  definition[_parent] = parentDefinition;
-  // check each property in the config item
-  for (const [key, value] of Object.entries(configItem)) {
-    // don't process the link to parent
-    if (key === _parent) continue;
-    // get the definition for the property
-    const defItem = definition[key];
-    if (!condition(defItem, `${key}: Unexpected property "${key}".`, errors)) continue;
-    if (defItem.type === 'object' || defItem.type === 'array') {
-      const isObject = defItem.type === 'object';
-      (isObject ? [value] : value).forEach((item, index) => {
-          tagAndAddErrors(check(item, getThing('def', defItem, configItem), configItem, definition), `${key}${!isObject ? `[${index}]` : ''}`, errors);
-      });
-    } else if (defItem.type === 'string-array') {
-      value.forEach((item, index) => {
-        condition(typeof (item) === 'string', `${key}: Invalid value type "${typeof (item)}" for property "${key}[${index}]".  Must be "string".`, errors);
-      });
-    } else {
-      condition(typeof (value) === defItem.type, `${key}: Invalid value type "${typeof (value)}" for property "${key}".  Must be "${defItem.type}".`, errors);
-      const oneOfSet = getThing('oneOf', defItem, configItem);
-      condition(!oneOfSet || oneOfSet.has(value), `${key}: Value of "${value}" is invalid.`, errors);
+    if (opts.xlsxfile) {
+      await writeXlsx(opts.xlsxfile, agg);
     }
   }
-  // now check to make sure all required items in this definition are present
-  for (const [key, defItem] of Object.entries(definition)) {
-    if (key === _parent) continue;
-    const requiredFlag = getThing('required', defItem, configItem);
-    condition(Object.keys(configItem).includes(key) || !requiredFlag, `${key}: Missing required property "${key}".`, errors);
-  }
-  return errors;
 }
-
-const entityDefinition = {
-  provider: {
-    required: true,
-    type: 'string',
-  },
-  externalId: {
-    required: true,
-    type: 'string',
-  },
-  name: {
-    required: false,
-    type: 'string',
-  },
-};
-
-const matchTypes = [
-  'multi-source',
-  'source',
-  'multi-annotation',
-  'annotation',
-];
-
-const multiSourceMatch = {
-    items: {
-      required: true,
-      type: 'array',
-      def: entityDefinition,
-    }
-};
-
-const annotationDefinition = {
-    name: {
-      required: true,
-      type: 'string',
-      oneOf: new Set(annotationMatchMembers),
-    },
-    value: {
-      required: true,
-      type: 'string',
-    },
-    description: {
-      required: false,
-      type: 'string',
-    },
-};
-
-const multiAnnotationMatch = {
-    items: {
-      required: true,
-      type: 'array',
-      def: annotationDefinition,
-    }
-};
-
-const matchMap = new Map([
-  ['multi-source', multiSourceMatch],
-  ['source', entityDefinition],
-  ['multi-annotation', multiAnnotationMatch],
-  ['annotation', annotationDefinition],
-]);
-
-const matchDef = {
-    type: {
-      required: true,
-      type: 'string',
-      oneOf: new Set(matchTypes),
-    },
-    description: {
-      required: false,
-      type: 'string',
-    },
-    value: {
-      required: true,
-      type: 'object',
-      defKey: 'type',
-      defMap: matchMap,
-    },
-};
-
-const assignStaticEntityMetadataRule = {
-    metadata: {
-      required: true,
-      type: 'array',
-      def: {
-        metadataType: {
-          required: true,
-          type: 'string',
-        },
-        items: {
-          required: true,
-          type: 'array',
-          def: entityDefinition
-        }
-      }
-    }
-};
-
-const functions = [
-    'createEntity',
-    'federalRegisterIssuingAgencies',
-    'federalRegisterNoticesIssuingAgencies',
-    'federalRegisterDocTypes',
-    'federalRegisterExecutiveOfficeDocTypes',
-    'federalRegisterNoticesDocTypes',
-    'findEntities',
-    'format',
-    'regex',
-    'setVariable',
-    'source',
-    'split',
-    'sublist',
-    'textToEntityMap',
-    'trim',
-];
-
-const actions = [ 'add', 'remove' ];
-
-const assignmentTypes = [ 'formatted', 'result' ];
-
-const argsRequiredMap = new Map([
-    functions.map((func) => ([func, !(func === 'trim' || func.startsWith('federalRegister'))]))
-]);
-
-const functionArgsMap = new Map([
-  ['createEntity', new Set(['type', 'typeDisplay','name','externalId','provider','allowMissingVariables','keepPartial'])],
-  ['federalRegisterIssuingAgencies', new Set()],
-  ['federalRegisterNoticesIssuingAgencies', new Set()],
-  ['federalRegisterDocTypes', new Set()],
-  ['federalRegisterExecutiveOfficeDocTypes', new Set()],
-  ['federalRegisterNoticesDocTypes', new Set()],
-  ['findEntities', new Set(['entityTypes'])],
-  ['format', new Set(['template','allowMissingVariables','keepPartial'])],
-  ['regex', new Set(['command','regex','replacement'])],
-  ['setVariable', new Set(['name','value'])],
-  ['source', new Set(['sourceName'])],
-  ['split', new Set(['delimiter'])],
-  ['sublist', new Set(['start','end'])],
-  ['textToEntityMap', new Set(['mapName','entityTypes'])],
-  ['trim', new Set()],
-]);
-
-const nameValueMap = new Map([
-  ['command', new Set(['match','replace','removeOnNoMatch','removeOnMatch'])],
-  ['sourceName', new Set(['url','title','fullText','summary'])],
-]);
-
-const modifyDerivedMetadataRule = {
-  derive: {
-    required: true,
-    type: 'array',
-    def: {
-      function: {
-        required: true,
-        type: 'string',
-        oneOf: new Set(functions),
-      },
-      args: {
-        requiredParentKey: 'function',
-        requiredMap: argsRequiredMap,
-        type: 'array',
-        def: {
-          name: {
-            required: true,
-            type: 'string',
-            oneOfKey: 'function',
-            oneOfMap: functionArgsMap,
-          },
-          value: {
-            required: true,
-            type: 'string',
-            oneOfKey: 'name',
-            oneOfMap: nameValueMap,
-          },
-        },
-      },
-    },
-  },
-  metadata: {
-    required: true,
-    type: 'array',
-    def: {
-      metadataType: {
-        required: true,
-        type: 'string',
-        oneOf: new Set(metadataTypes),
-      },
-      action: {
-        required: false,
-        type: 'string',
-        oneOf: new Set(actions),
-      },
-      assignmentType: {
-        required: false,
-        type: 'string',
-        oneOf: new Set(assignmentTypes),
-      },
-      offset: {
-        required: false,
-        type: 'number',
-        oneOf: new Set([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
-      },
-      formats: {
-        required: false,
-        type: 'string-array',
-      }
-    }
-  },
-  maps: {
-    required: false,
-    type: 'array',
-    def: {
-      name: {
-        required: true,
-        type: 'string',
-      },
-      map: {
-        required: true,
-        type: 'array',
-        def: {
-          ...entityDefinition,
-          text: {
-            required: true,
-            type: 'string-array',
-          },
-        }
-      }
-    }
-  },
-};
-
-const modifyStaticEntityTagsRule = {
-  entityTags: {
-    required: true,
-    type: 'array',
-    def: {
-      ...entityDefinition,
-      action: {
-        required: false,
-        type: 'string',
-        oneOf: new Set(['add', 'remove']),
-      },
-      relevance: {
-        required: false,
-        type: 'string',
-        oneOf: new Set(['high', 'medium', 'low']),
-      },
-    },
-  },
-};
-
-const unclusterRule = null;
-
-const ruleTypes = new Set([
-  'assign-static-entity-metadata',
-  'modify-derived-metadata',
-  'modify-static-entity-tags',
-  'uncluster',
-]);
-
-const ruleMap = new Map([
-  ['assign-static-entity-metadata', assignStaticEntityMetadataRule],
-  ['modify-derived-metadata', modifyDerivedMetadataRule],
-  ['modify-static-entity-tags', modifyStaticEntityTagsRule],
-  ['uncluster', unclusterRule],
-]);
-
-const ruleDef = {
-    name: {
-      required: true,
-      type: 'string',
-      oneOf: ruleTypes,
-    },
-    description: {
-      required: false,
-      type: 'string',
-    },
-    config: {
-      required: true,
-      type: 'object',
-      defKey: 'name',
-      defMap: ruleMap,
-    },
-    match: {
-      required: false,
-      type: 'object',
-      def: matchDef,
-    },
-};
-
-function validateMatch(match, what) {
-  const errors = [];
-  if (!match) {
-    return errors;
-  }
-  tagAndAddErrors(check(match, matchDef, null, null), what, errors);
-  return errors;
-}
-
-function validateRules(rules) {
-  const errors = [];
-  rules.forEach((rule, index) => {
-    tagAndAddErrors(check(rule, ruleDef, null, null), `rules[${index}]`, errors);
-  });
-  return errors;
-}
-
 
 module.exports = run;
