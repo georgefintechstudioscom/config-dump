@@ -1,25 +1,27 @@
 require('dotenv/config');
 const fs = require('fs');
+const assert = require('assert');
 const FtsApiEntitiesService = require('./core-services/fts-api/FtsApiEntitiesService');
 
 const FTS_TYPE_REGEX = /^fts_(?<type>[a-z]+)_/;
 const TYPE_REGEX = /^(?<type>[a-z]+)_/;
 
-const metadataSortOrder = new Map();
-metadataSortOrder.set('jurisdictions', 10);
-metadataSortOrder.set('issuingAgencies', 20);
-metadataSortOrder.set('docTypes', 30);
-metadataSortOrder.set('publicationDate', 40);
-metadataSortOrder.set('volumeNumber', 50);
-metadataSortOrder.set('volumes', 60);
-metadataSortOrder.set('docNumber', 70);
-metadataSortOrder.set('cik', 80);
-metadataSortOrder.set('filedAs', 90);
-metadataSortOrder.set('filingType', 100);
-metadataSortOrder.set('filingDate', 110);
-metadataSortOrder.set('celex', 120);
-metadataSortOrder.set('uncluster', 1000);
-metadataSortOrder.set('entityTags', 2000);
+const metadataSortOrder = new Map([
+  ['jurisdictions', 10],
+  ['issuingAgencies', 20],
+  ['docTypes', 30],
+  ['publicationDate', 40],
+  ['volumeNumber', 50],
+  ['volumes', 60],
+  ['docNumber', 70],
+  ['cik', 80],
+  ['filedAs', 90],
+  ['filingType', 100],
+  ['filingDate', 110],
+  ['celex', 120],
+  ['uncluster', 1000],
+  ['entityTags', 2000],
+]);
 
 /**
  * @typedef {Object} Entity
@@ -43,13 +45,15 @@ async function run({ opts }) {
   const pipelines = [];
   await readPipelinesFromFiles(opts.filename, pipelines);
   await readPipelinesFromControlPlane(opts.pipeline, pipelines);
-  const entities = await resolveEntities(pipelines);
-  const agg = aggregate(pipelines, entities);
-  if (opts.outfile) {
-    await writeCsv(opts.outfile, agg);
-  }
-  if (opts.xlsxfile) {
-    await writeXlsx(opts.xlsxfile, agg);
+  if (validatePipelines(pipelines)) {
+    const entities = await resolveEntities(pipelines);
+    const agg = aggregate(pipelines, entities);
+    if (opts.outfile) {
+      await writeCsv(opts.outfile, agg);
+    }
+    if (opts.xlsxfile) {
+      await writeXlsx(opts.xlsxfile, agg);
+    }
   }
 }
 
@@ -62,7 +66,9 @@ async function run({ opts }) {
 async function readPipelinesFromFiles(filenames, pipelines) {
   if (filenames) {
     filenames.reduce((arr, filename) => {
-      arr.push(JSON.parse(fs.readFileSync(filename)));
+      const pipeline = JSON.parse(fs.readFileSync(filename));
+      arr.push(pipeline);
+      pipeline.filename = filename;
     }, pipelines);
   }
 }
@@ -137,8 +143,13 @@ function getEntitiesFromMatches(match) {
 
   } else if (match.type === 'source') {
     return [makeEntity(match.value)];
-  } else if (match.type === 'multi-annotation' || match.type === 'annotation') {
+
+  } else if (match.type === 'multi-annotation') {
     return [];
+
+  } else if (match.type === 'annotation') {
+    return [];
+
   } else {
     return null;
   }
@@ -503,7 +514,7 @@ async function writeCsv(outfile, agg) {
   let record = 'Match';
   columns.forEach((columnNumber, metadataType) => {
     record += ',' + metadataType;
-  })
+  });
   writeStream.write(record + '\n');
 
   agg.forEach((value, key) => {  // map, match string
@@ -521,7 +532,6 @@ async function writeCsv(outfile, agg) {
   await writeStream.end();
 }
 
-
 /**
  * Write the aggregated output to a CSV file named in the argument.
  * @param {string} outfile - The name of the output file
@@ -531,5 +541,431 @@ async function writeCsv(outfile, agg) {
 async function writeXlsx(outfile, agg) {
   // TODO!
 }
+
+/**
+ * Check the pipelines for correct format and data.
+ * @param {Object[]} pipelines
+ * @return {boolean} Success or failure
+ */
+function validatePipelines(pipelines) {
+  const errors = [];
+  pipelines.forEach((pipeline) => {
+      tagAndAddErrors(validateMatch(pipeline.match), `validation error: pipeline #${pipeline.id}, file ${pipeline.filename}.Default Match`, errors);
+      tagAndAddErrors(validateRules(pipeline.rules), `validation error: pipeline #${pipeline.id}, file ${pipeline.filename}`, errors);
+  });
+  errors.forEach((error) => console.error(error));
+  return errors.length === 0;
+}
+
+const annotationMatchMembers = [
+  'matched.document-ingestion.fintechstudios.com/channel-id',
+  'matched.document-ingestion.fintechstudios.com/document-id',
+  'matched.document-ingestion.fintechstudios.com/source-id',
+];
+
+const metadataTypes = [
+  'cik',
+  'docCitations',
+  'docNumber',
+  'docSummary',
+  'docTypes',
+  'filedAs',
+  'filingDate',
+  'filingType',
+  'issuingAgencies',
+  'jurisdictions',
+  'publicationDate',
+  'volumeNumber',
+  'volumes',
+];
+
+function reassertOrThrow(ex, item, message) {
+  if (ex.name === 'AssertionError') {
+    assert(false, `${message}${item.description || item.name ? `(${item.description || item.name})` : ''}.${ex.message}`);
+  }
+  else {
+    throw ex;
+  }
+}
+
+const _parent = '_parent';
+
+function condition(value, message, errors) {
+  if (!value) errors.push(message);
+  return value;
+}
+
+function getThing(thing, defItem, configItem) {
+  const keyProperty = `${thing}Key`;
+  if (defItem[keyProperty]) {
+    let key = null;
+    while (configItem && !key) {
+      key = configItem[defItem[keyProperty]];
+      configItem = configItem[_parent];
+    }
+    return defItem[`${thing}Map`].get(key);
+  } else {
+    return defItem[thing];
+  }
+}
+
+function tagAndAddErrors(subErrors, tag, errors) {
+  subErrors.forEach((subError) => {
+    errors.push(`${tag}.${subError}`);
+  });
+}
+
+/**
+ *
+ * @param {Object} configItem
+ * @param {Object} definition
+ * @param {Object} parentConfigItem
+ * @param {Object} parentDefinition
+ */
+function check(configItem, definition, parentConfigItem, parentDefinition) {
+  const errors = [];
+  if (!configItem && !definition) {
+    return errors;
+  }
+  // link to the parent
+  configItem[_parent] = parentConfigItem;
+  definition[_parent] = parentDefinition;
+  // check each property in the config item
+  for (const [key, value] of Object.entries(configItem)) {
+    // don't process the link to parent
+    if (key === _parent) continue;
+    // get the definition for the property
+    const defItem = definition[key];
+    if (!condition(defItem, `${key}: Unexpected property "${key}".`, errors)) continue;
+    if (defItem.type === 'object' || defItem.type === 'array') {
+      const isObject = defItem.type === 'object';
+      (isObject ? [value] : value).forEach((item, index) => {
+          tagAndAddErrors(check(item, getThing('def', defItem, configItem), configItem, definition), `${key}${!isObject ? `[${index}]` : ''}`, errors);
+      });
+    } else if (defItem.type === 'string-array') {
+      value.forEach((item, index) => {
+        condition(typeof (item) === 'string', `${key}: Invalid value type "${typeof (item)}" for property "${key}[${index}]".  Must be "string".`, errors);
+      });
+    } else {
+      condition(typeof (value) === defItem.type, `${key}: Invalid value type "${typeof (value)}" for property "${key}".  Must be "${defItem.type}".`, errors);
+      const oneOfSet = getThing('oneOf', defItem, configItem);
+      condition(!oneOfSet || oneOfSet.has(value), `${key}: Value of "${value}" is invalid.`, errors);
+    }
+  }
+  // now check to make sure all required items in this definition are present
+  for (const [key, defItem] of Object.entries(definition)) {
+    if (key === _parent) continue;
+    const requiredFlag = getThing('required', defItem, configItem);
+    condition(Object.keys(configItem).includes(key) || !requiredFlag, `${key}: Missing required property "${key}".`, errors);
+  }
+  return errors;
+}
+
+const entityDefinition = {
+  provider: {
+    required: true,
+    type: 'string',
+  },
+  externalId: {
+    required: true,
+    type: 'string',
+  },
+  name: {
+    required: false,
+    type: 'string',
+  },
+};
+
+const matchTypes = [
+  'multi-source',
+  'source',
+  'multi-annotation',
+  'annotation',
+];
+
+const multiSourceMatch = {
+    items: {
+      required: true,
+      type: 'array',
+      def: entityDefinition,
+    }
+};
+
+const annotationDefinition = {
+    name: {
+      required: true,
+      type: 'string',
+      oneOf: new Set(annotationMatchMembers),
+    },
+    value: {
+      required: true,
+      type: 'string',
+    },
+    description: {
+      required: false,
+      type: 'string',
+    },
+};
+
+const multiAnnotationMatch = {
+    items: {
+      required: true,
+      type: 'array',
+      def: annotationDefinition,
+    }
+};
+
+const matchMap = new Map([
+  ['multi-source', multiSourceMatch],
+  ['source', entityDefinition],
+  ['multi-annotation', multiAnnotationMatch],
+  ['annotation', annotationDefinition],
+]);
+
+const matchDef = {
+    type: {
+      required: true,
+      type: 'string',
+      oneOf: new Set(matchTypes),
+    },
+    description: {
+      required: false,
+      type: 'string',
+    },
+    value: {
+      required: true,
+      type: 'object',
+      defKey: 'type',
+      defMap: matchMap,
+    },
+};
+
+const assignStaticEntityMetadataRule = {
+    metadata: {
+      required: true,
+      type: 'array',
+      def: {
+        metadataType: {
+          required: true,
+          type: 'string',
+        },
+        items: {
+          required: true,
+          type: 'array',
+          def: entityDefinition
+        }
+      }
+    }
+};
+
+const functions = [
+    'createEntity',
+    'federalRegisterIssuingAgencies',
+    'federalRegisterNoticesIssuingAgencies',
+    'federalRegisterDocTypes',
+    'federalRegisterExecutiveOfficeDocTypes',
+    'federalRegisterNoticesDocTypes',
+    'findEntities',
+    'format',
+    'regex',
+    'setVariable',
+    'source',
+    'split',
+    'sublist',
+    'textToEntityMap',
+    'trim',
+];
+
+const actions = [ 'add', 'remove' ];
+
+const assignmentTypes = [ 'formatted', 'result' ];
+
+const argsRequiredMap = new Map([
+    functions.map((func) => ([func, !(func === 'trim' || func.startsWith('federalRegister'))]))
+]);
+
+const functionArgsMap = new Map([
+  ['createEntity', new Set(['type', 'typeDisplay','name','externalId','provider','allowMissingVariables','keepPartial'])],
+  ['federalRegisterIssuingAgencies', new Set()],
+  ['federalRegisterNoticesIssuingAgencies', new Set()],
+  ['federalRegisterDocTypes', new Set()],
+  ['federalRegisterExecutiveOfficeDocTypes', new Set()],
+  ['federalRegisterNoticesDocTypes', new Set()],
+  ['findEntities', new Set(['entityTypes'])],
+  ['format', new Set(['template','allowMissingVariables','keepPartial'])],
+  ['regex', new Set(['command','regex','replacement'])],
+  ['setVariable', new Set(['name','value'])],
+  ['source', new Set(['sourceName'])],
+  ['split', new Set(['delimiter'])],
+  ['sublist', new Set(['start','end'])],
+  ['textToEntityMap', new Set(['mapName','entityTypes'])],
+  ['trim', new Set()],
+]);
+
+const nameValueMap = new Map([
+  ['command', new Set(['match','replace','removeOnNoMatch','removeOnMatch'])],
+  ['sourceName', new Set(['url','title','fullText','summary'])],
+]);
+
+const modifyDerivedMetadataRule = {
+  derive: {
+    required: true,
+    type: 'array',
+    def: {
+      function: {
+        required: true,
+        type: 'string',
+        oneOf: new Set(functions),
+      },
+      args: {
+        requiredParentKey: 'function',
+        requiredMap: argsRequiredMap,
+        type: 'array',
+        def: {
+          name: {
+            required: true,
+            type: 'string',
+            oneOfKey: 'function',
+            oneOfMap: functionArgsMap,
+          },
+          value: {
+            required: true,
+            type: 'string',
+            oneOfKey: 'name',
+            oneOfMap: nameValueMap,
+          },
+        },
+      },
+    },
+  },
+  metadata: {
+    required: true,
+    type: 'array',
+    def: {
+      metadataType: {
+        required: true,
+        type: 'string',
+        oneOf: new Set(metadataTypes),
+      },
+      action: {
+        required: false,
+        type: 'string',
+        oneOf: new Set(actions),
+      },
+      assignmentType: {
+        required: false,
+        type: 'string',
+        oneOf: new Set(assignmentTypes),
+      },
+      offset: {
+        required: false,
+        type: 'number',
+        oneOf: new Set([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
+      },
+      formats: {
+        required: false,
+        type: 'string-array',
+      }
+    }
+  },
+  maps: {
+    required: false,
+    type: 'array',
+    def: {
+      name: {
+        required: true,
+        type: 'string',
+      },
+      map: {
+        required: true,
+        type: 'array',
+        def: {
+          ...entityDefinition,
+          text: {
+            required: true,
+            type: 'string-array',
+          },
+        }
+      }
+    }
+  },
+};
+
+const modifyStaticEntityTagsRule = {
+  entityTags: {
+    required: true,
+    type: 'array',
+    def: {
+      ...entityDefinition,
+      action: {
+        required: false,
+        type: 'string',
+        oneOf: new Set(['add', 'remove']),
+      },
+      relevance: {
+        required: false,
+        type: 'string',
+        oneOf: new Set(['high', 'medium', 'low']),
+      },
+    },
+  },
+};
+
+const unclusterRule = null;
+
+const ruleTypes = new Set([
+  'assign-static-entity-metadata',
+  'modify-derived-metadata',
+  'modify-static-entity-tags',
+  'uncluster',
+]);
+
+const ruleMap = new Map([
+  ['assign-static-entity-metadata', assignStaticEntityMetadataRule],
+  ['modify-derived-metadata', modifyDerivedMetadataRule],
+  ['modify-static-entity-tags', modifyStaticEntityTagsRule],
+  ['uncluster', unclusterRule],
+]);
+
+const ruleDef = {
+    name: {
+      required: true,
+      type: 'string',
+      oneOf: ruleTypes,
+    },
+    description: {
+      required: false,
+      type: 'string',
+    },
+    config: {
+      required: true,
+      type: 'object',
+      defKey: 'name',
+      defMap: ruleMap,
+    },
+    match: {
+      required: false,
+      type: 'object',
+      def: matchDef,
+    },
+};
+
+function validateMatch(match, what) {
+  const errors = [];
+  if (!match) {
+    return errors;
+  }
+  tagAndAddErrors(check(match, matchDef, null, null), what, errors);
+  return errors;
+}
+
+function validateRules(rules) {
+  const errors = [];
+  rules.forEach((rule, index) => {
+    tagAndAddErrors(check(rule, ruleDef, null, null), `rules[${index}]`, errors);
+  });
+  return errors;
+}
+
 
 module.exports = run;
