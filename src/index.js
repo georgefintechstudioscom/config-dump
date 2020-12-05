@@ -44,6 +44,16 @@ function makeEntityKey(provider, externalId) {
 }
 
 /**
+ * Break an entity key into provider and external ID.
+ * @param {string} key
+ * @returns {{provider: {string}, external_iId: {string}}}
+ */
+function unEntityKey(key) {
+  const arr = key.split('/');
+  return { provider: arr[1], external_id: arr[0] };
+}
+
+/**
  * Return a string that is a key for looking up an entity given an unresolved entity item.
  * @param {Object} item
  * @returns {string} A standard key for looking up an unresolved entity
@@ -68,6 +78,7 @@ function readSourceToContributorMapFromFile(filename) {
       return map;
     }, new Map());
   }
+  return new Map();
 }
 
 /**
@@ -234,13 +245,26 @@ function extractEntitiesFromPipelines(pipelines) {
 }
 
 /**
+ * Add unresolved entities to the list of them from the sourceToContributorsMap
+ * @param {Map<string, string>} sourceToContributorsMap
+ * @param {Map<string, Entity>} unresolvedEntities
+ */
+function extractEntitiesFromSourceToContributorsMap(sourceToContributorsMap, unresolvedEntities) {
+  sourceToContributorsMap.forEach((value, key) => {
+    if (!unresolvedEntities.has(key)) unresolvedEntities.set(key, unEntityKey(key));
+    if (!unresolvedEntities.has(value)) unresolvedEntities.set(value, unEntityKey(value));
+  });
+}
+
+/**
  *
  * @param {Map<string,Entity>} unresolvedEntities
  * @returns {Promise<Map<string,Entity>>}
  */
 async function resolveEntitiesWithApi(unresolvedEntities) {
   const entityService = FtsApiEntitiesService.getInstance();
-  const resolved = await entityService.resolveEntities([...unresolvedEntities.values()]);
+  const resolved = await entityService.resolveEntities([...unresolvedEntities.values()]
+    .filter(entity => (entity.name && entity.type && entity.type_display)));
   return resolved.reduce((map, entity) => {
     map.set(entityKey(entity), entity);
     return map;
@@ -252,8 +276,9 @@ async function resolveEntitiesWithApi(unresolvedEntities) {
  * @param pipelines
  * @returns {Promise<Map<string, Entity>>}
  */
-async function resolveEntities(pipelines) {
+async function resolveEntities(pipelines, sourceToContributorsMap) {
   const unresolvedEntities = extractEntitiesFromPipelines(pipelines);
+  extractEntitiesFromSourceToContributorsMap(sourceToContributorsMap, unresolvedEntities);
   return resolveEntitiesWithApi(unresolvedEntities);
 }
 
@@ -291,6 +316,17 @@ function sortMatchMap(matchMap) {
 
 /**
  * Return a string that describes an entity match item.
+ * @param {Entity} entity - a resolved entity
+ * @param {Map<string,Entity>} entities - A map of external_id/provider entity strings to Entity objects
+ * @returns {string}
+ */
+function resolvedEntityToMatchName(entity, entities) {
+  if (!entity) return '';
+  return `${entity.name} [${entity.id}][${entity.type}]`;
+}
+
+/**
+ * Return a string that describes an entity match item.
  * @param {Object} item - a match.value item for match-type 'source' or a single match.value.item
  * for match-type 'multi-source'
  * @param {Map<string,Entity>} entities - A map of external_id/provider entity strings to Entity objects
@@ -298,7 +334,29 @@ function sortMatchMap(matchMap) {
  */
 function unresolvedEntityToMatchName(item, entities) {
   const entity = entities.get(entityKey(item));
-  return `${entity.name} [${entity.id}][${entity.type}]`;
+  return resolvedEntityToMatchName(entity, entities);
+}
+
+/**
+ * Return a string that describes an entity match item.
+ * @param {Object} item - a match.value item for match-type 'source' or a single match.value.item
+ * for match-type 'multi-source'
+ * @param {Map<string,Entity>} entities - A map of external_id/provider entity strings to Entity objects
+ * @returns {string}
+ */
+function unresolvedEntityToEntityKey(item) {
+  return entityKey(item);
+}
+
+/**
+ * Return a string that describes an entity match item.
+ * @param {string} entityKeyString - an entityKey string
+ * @param {Map<string,Entity>} entities - A map of external_id/provider entity strings to Entity objects
+ * @returns {string}
+ */
+function entityKeyToMatchName(entityKeyString, entities) {
+  const entity = entities.get(entityKeyString);
+  return resolvedEntityToMatchName(entity, entities);
 }
 
 /**
@@ -357,9 +415,9 @@ function getMatches(match, entities) {
   }
   switch (match.type) {
     case 'multi-source':
-      return new Set(match.value.items.map(item => unresolvedEntityToMatchName(item, entities)));
+      return new Set(match.value.items.map(item => unresolvedEntityToEntityKey(item)));
     case 'source':
-      return new Set([unresolvedEntityToMatchName(match.value, entities)]);
+      return new Set([unresolvedEntityToEntityKey(match.value)]);
     case 'multi-annotation':
       return new Set(match.value.items.map(item => annotationDescriptionToMatchName(item)));
     case 'annotation':
@@ -506,40 +564,73 @@ function makeFieldCsv(str) {
  * Write the aggregated output to a CSV file named in the argument.
  * @param {string} outfile - The name of the output file
  * @param {Map<string,Map<string,Set<string>>>} agg (match name, map<metadatatypename, values>)
+ * @param {Map<string, Entity>} entities - entityKey to Entity
+ * @param {Map<string, string>} sourceToContributorMap - entityKey to entityKey
  * @returns {Promise<void>}
  */
-async function writeCsv(outfile, agg) {
-  const types = new Map();
+async function writeCsv(outfile, agg, entities, sourceToContributorMap) {
+  const CONTRIBUTOR = 0;
+  const SOURCE = 1;
+  const OTHER = 2;
+  const display = [CONTRIBUTOR, SOURCE, OTHER];
+  const headers = ['Contributor', 'Source', 'Other'];
+  const types = [new Map(), new Map(), new Map()];
   agg.forEach((value, matchName) => {
     value.forEach((data, metadataType) => {
-      let order = metadataSortOrder.get(metadataType);
-      if (matchName.includes('[source]')) order += 1000;
-      else if (!matchName.includes('[contributor]')) order += 2000;
-      types.set(metadataType, order);
+      let type = OTHER;
+      if (matchName.startsWith('contributor_')) type = CONTRIBUTOR;
+      else if (matchName.startsWith('source_')) type = SOURCE;
+      types[type].set(metadataType, metadataSortOrder.get(metadataType));
     });
   });
-  const columns = new Map([...types.entries()].sort((a, b) => a[1] - b[1]));
-  let columnNumber = 1;
-  // eslint-disable-next-line no-plusplus
-  columns.forEach((value, key) => columns.set(key, columnNumber++));
 
+  const columns = [];
   const writeStream = fs.createWriteStream(outfile);
-  let record = 'Match';
-  columns.forEach((columnNo, metadataType) => {
-    record += `,${metadataType}`;
+  let record = '';
+  display.forEach((i) => {
+    columns.push(new Map([...types[i].entries()].sort((a, b) => a[1] - b[1])));
+    let columnNumber = 1;
+    // eslint-disable-next-line no-plusplus
+    columns[i].forEach((value, key) => columns[i].set(key, columnNumber++));
+    if (columns[i].size > 0) {
+      if (record.length > 0) record += ',';
+      record += headers[i];
+      columns[i].forEach((columnNo, metadataType) => {
+        record += `,${metadataType}`;
+      });
+    }
   });
   writeStream.write(`${record}\n`);
 
-  agg.forEach((value, key) => { // map, match string
-    let row = makeFieldCsv(key);
-    columns.forEach((columnNo, metadataType) => {
-      if (value.has(metadataType)) {
-        row += `,${makeFieldCsv([...value.get(metadataType).values()].join('; '))}`;
-      } else {
-        row += ',""';
-      }
-    });
-    writeStream.write(`${row}\n`);
+  agg.forEach((value, key) => { // map, matched entityKey
+    let keys;
+    let values;
+    let matches;
+
+    if (key.startsWith('source_')) {
+      keys = [sourceToContributorMap.get(key), key, ''];
+      values = [agg.get(keys[CONTRIBUTOR]) || new Map(), value, new Map()];
+      matches = [entityKeyToMatchName(keys[CONTRIBUTOR], entities) || '', entityKeyToMatchName(key, entities) || '', ''];
+    } else if (!key.startsWith('contributor_')) {
+      keys = ['', '', key];
+      values = [new Map(), new Map(), value];
+      matches = ['', '', key];
+    }
+    if (keys) {
+      let row = '';
+      display.forEach((i) => {
+        if (row.length > 0) row += ',';
+        row += makeFieldCsv(matches[i]);
+        columns[i].forEach((columnNo, metadataType) => {
+          if (values[i].has(metadataType)) {
+            row += `,${makeFieldCsv([...values[i].get(metadataType).values()].join('; '))}`;
+          } else {
+            row += ',""';
+          }
+        });
+      });
+      writeStream.write(`${row}\n`);
+    }
   });
 
   await writeStream.end();
@@ -559,6 +650,7 @@ async function writeXlsx(outfile, agg) {
  * The main execution of the program.
  * @param {string[]} opts.filename
  * @param {string[]} opts.pipeline
+ * @param {string} opts.sourcemap
  * @param {string} opts.outfile
  * @param {string} opts.xlsxfile
  * @returns {Promise<void>}
@@ -569,10 +661,10 @@ async function run({ opts }) {
   await readPipelinesFromControlPlane(opts.pipeline, pipelines);
   if (PipelineValidation.validatePipelines(pipelines)) {
     const sourceToContributorMap = readSourceToContributorMapFromFile(opts.sourcemap);
-    const entities = await resolveEntities(pipelines);
+    const entities = await resolveEntities(pipelines, sourceToContributorMap);
     const agg = aggregate(pipelines, entities);
     if (opts.outfile) {
-      await writeCsv(opts.outfile, agg);
+      await writeCsv(opts.outfile, agg, entities, sourceToContributorMap);
     }
     if (opts.xlsxfile) {
       await writeXlsx(opts.xlsxfile, agg);
