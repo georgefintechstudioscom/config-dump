@@ -11,7 +11,7 @@ if (require.main === module) {
     .argv;
 
   const {
-    filename, pipeline, outfile, xlsxfile
+    filename, pipeline, outfile, xlsxfile, sourcemap,
   } = args;
 
   if (!(filename || pipeline)) {
@@ -28,12 +28,13 @@ if (require.main === module) {
       pipeline,
       outfile,
       xlsxfile,
-    }
+      sourcemap,
+    },
   }).then(() => {
     console.log('Done!');
     // process.exit(0);
   }).catch((e) => {
-    console.log('Errrror');
+    console.log('Error');
     console.log(e);
     process.exit(1);
   });

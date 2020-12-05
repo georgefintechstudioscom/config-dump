@@ -19,8 +19,8 @@ const metadataSortOrder = new Map([
   ['filingType', 100],
   ['filingDate', 110],
   ['celex', 120],
-  ['uncluster', 1000],
-  ['entityTags', 2000],
+  ['uncluster', 130],
+  ['entityTags', 140],
 ]);
 
 /**
@@ -32,6 +32,43 @@ const metadataSortOrder = new Map([
  * @property {string} type
  * @property {string} type_display
  */
+
+/**
+ * Return a string that is a key for looking up an entity a provider and an external ID.
+ * @param {string} provider
+ * @param {string} externalId
+ * @returns {string} A standard key for looking up an entity
+ */
+function makeEntityKey(provider, externalId) {
+  return `${externalId}/${provider}`;
+}
+
+/**
+ * Return a string that is a key for looking up an entity given an unresolved entity item.
+ * @param {Object} item
+ * @returns {string} A standard key for looking up an unresolved entity
+ */
+function entityKey(item) {
+  return makeEntityKey(item.provider, item.external_id || item.externalId);
+}
+
+/**
+ * Read an external file with a mapping of source entities to contributor entities.
+ * @param {string} filename - JSON file containing the mapping of sources to contributors
+ * @returns {Map<string, string>}
+ */
+function readSourceToContributorMapFromFile(filename) {
+  if (filename) {
+    const data = JSON.parse(fs.readFileSync(filename));
+    return data.map.reduce((map, item) => {
+      map.set(
+        makeEntityKey(item.sourceProvider, item.sourceExternalId),
+        makeEntityKey(item.contributorProvider, item.contributorExternalId)
+      );
+      return map;
+    }, new Map());
+  }
+}
 
 /**
  * Read pipeline configurations from files and store them in a list of pipelines.
@@ -158,15 +195,6 @@ function getEntitiesFromActions(rule) {
     default:
       return null;
   }
-}
-
-/**
- * Return a string that is a key for looking up an entity given an unresolved entity item.
- * @param {Object} item
- * @returns {string} A standard key for looking up an unresolved entity
- */
-function entityKey(item) {
-  return `${item.external_id || item.externalId}/${item.provider}`;
 }
 
 /**
@@ -477,14 +505,17 @@ function makeFieldCsv(str) {
 /**
  * Write the aggregated output to a CSV file named in the argument.
  * @param {string} outfile - The name of the output file
- * @param {Map<string,Map<string,Set<string>>>} agg
+ * @param {Map<string,Map<string,Set<string>>>} agg (match name, map<metadatatypename, values>)
  * @returns {Promise<void>}
  */
 async function writeCsv(outfile, agg) {
   const types = new Map();
-  agg.forEach((value) => {
+  agg.forEach((value, matchName) => {
     value.forEach((data, metadataType) => {
-      types.set(metadataType, metadataSortOrder.get(metadataType));
+      let order = metadataSortOrder.get(metadataType);
+      if (matchName.includes('[source]')) order += 1000;
+      else if (!matchName.includes('[contributor]')) order += 2000;
+      types.set(metadataType, order);
     });
   });
   const columns = new Map([...types.entries()].sort((a, b) => a[1] - b[1]));
@@ -537,6 +568,7 @@ async function run({ opts }) {
   await readPipelinesFromFiles(opts.filename, pipelines);
   await readPipelinesFromControlPlane(opts.pipeline, pipelines);
   if (PipelineValidation.validatePipelines(pipelines)) {
+    const sourceToContributorMap = readSourceToContributorMapFromFile(opts.sourcemap);
     const entities = await resolveEntities(pipelines);
     const agg = aggregate(pipelines, entities);
     if (opts.outfile) {

@@ -27,8 +27,12 @@ const cli = yargs
     description: 'Name of the XLSX output file',
     requiresArg: true,
   })
+  .option('sourcemap', {
+    alias: 'm',
+    description: 'Source-to-contributor mapping file',
+    requiresArg: true,
+  })
   .help()
   .showHidden();
-
 
 module.exports = cli;
