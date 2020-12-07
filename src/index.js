@@ -400,7 +400,7 @@ function derivedMetadataActionName(item) {
  * @returns {string}
  */
 function annotationDescriptionToMatchName(item) {
-  return `${item.description} [${item.value}][${item.name.substring(item.name.lastIndexOf('/') + 1)}`;
+  return `${item.description} [${item.value}][${item.name.substring(item.name.lastIndexOf('/') + 1)}]`;
 }
 
 /**
