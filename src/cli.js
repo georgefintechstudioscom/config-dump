@@ -27,9 +27,21 @@ const cli = yargs
     description: 'Name of the XLSX output file',
     requiresArg: true,
   })
+  .option('jsonfile', {
+    alias: 'j',
+    conflict: 'jsonfile',
+    description: 'Name of the JSON output file',
+    requiresArg: true,
+  })
   .option('sourcemap', {
     alias: 'm',
     description: 'Source-to-contributor mapping file',
+    requiresArg: true,
+  })
+  .option('staticmetadatafile', {
+    alias: 's',
+    array: true,
+    description: 'Static metadata file',
     requiresArg: true,
   })
   .help()

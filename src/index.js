@@ -23,6 +23,36 @@ const metadataSortOrder = new Map([
   ['entityTags', 140],
 ]);
 
+const ISSUING_AGENCIES = 'issuingAgencies';
+const JURISDICTIONS = 'jurisdictions';
+const DOC_TYPES = 'docTypes';
+const VOLUMES = 'volumes';
+const DOC_CITATIONS = 'docCitations';
+const CIK = 'cik';
+const FILED_AS = 'filedAs';
+const FILING_TYPE = 'filingType';
+
+const entityTypeToMetadataType = new Map([
+  ['usfedagency', ISSUING_AGENCIES],
+  ['usstateagencies', ISSUING_AGENCIES],
+  ['intergovagency', ISSUING_AGENCIES],
+  ['govagency', ISSUING_AGENCIES],
+  ['centralbanks', ISSUING_AGENCIES],
+  ['finexchanges', ISSUING_AGENCIES],
+  ['city', JURISDICTIONS],
+  ['state', JURISDICTIONS],
+  ['country', JURISDICTIONS],
+  ['cadprov', JURISDICTIONS],
+  ['region', JURISDICTIONS],
+  ['intergovagency', JURISDICTIONS],
+  ['doctype', DOC_TYPES],
+  ['legalvolume', VOLUMES],
+  ['legalrefdoc', DOC_CITATIONS],
+  ['cik', CIK],
+  ['filedas', FILED_AS],
+  ['filingtype', FILING_TYPE],
+]);
+
 /**
  * @typedef {Object} Entity
  * @property {number} id
@@ -69,7 +99,7 @@ function entityKey(item) {
  */
 function readSourceToContributorMapFromFile(filename) {
   if (filename) {
-    const data = JSON.parse(fs.readFileSync(filename));
+    const data = JSON.parse(fs.readFileSync(filename).toString());
     return data.map.reduce((map, item) => {
       map.set(
         makeEntityKey(item.sourceProvider, item.sourceExternalId),
@@ -85,12 +115,12 @@ function readSourceToContributorMapFromFile(filename) {
  * Read pipeline configurations from files and store them in a list of pipelines.
  * @param {string[]} filenames
  * @param {Object[]} pipelines
- * @returns {Promise<void>}
+ * @returns {void}
  */
-async function readPipelinesFromFiles(filenames, pipelines) {
+function readPipelinesFromFiles(filenames, pipelines) {
   if (filenames) {
     filenames.reduce((arr, filename) => {
-      const pipeline = JSON.parse(fs.readFileSync(filename));
+      const pipeline = JSON.parse(fs.readFileSync(filename).toString());
       arr.push(pipeline);
       pipeline.filename = filename;
       return arr;
@@ -106,8 +136,91 @@ async function readPipelinesFromFiles(filenames, pipelines) {
  */
 async function readPipelinesFromControlPlane(pipelineIds, pipelines) {
   // TODO
-  if (pipelineIds && pipelineIds.size > 0) {
+  if (pipelineIds && pipelineIds.length > 0) {
     throw new Error('Not implemented yet.');
+  }
+}
+
+/**
+ * Convert a list of entity data into a pipeline for assigning static entity metadata.
+ * @param staticMetadata
+ * @returns {Promise<{apiVersion: number, active: boolean, description: string, rules: [], id: number}>}
+ */
+async function convertStaticMetadataToPipeline(staticMetadata) {
+  const entityIds = staticMetadata.reduce((set, item) => {
+    item.from.concat(item.to).forEach(x => set.add(x));
+    return set;
+  }, new Set());
+  const entityService = FtsApiEntitiesService.getInstance();
+  const entities = await entityService.getEntities(entityIds);
+  const entityMap = entities.reduce((map, entity) => {
+    map.set(entity.id, entity);
+    return map;
+  }, new Map());
+  const pipeline = {
+    apiVersion: 1,
+    id: 0,
+    active: true,
+    description: 'Static Entity Metadata Pipeline',
+    rules: [],
+  };
+  staticMetadata.forEach((def) => {
+    def.to.forEach((toId) => {
+      const to = entityMap.get(toId);
+      const metadataTypeV = entityTypeToMetadataType.get(to.type);
+      const rule = {
+        name: 'assign-static-entity-metadata',
+        description: `Common rule for setting ${metadataTypeV}:${to.provider}/${to.external_id}`,
+        config: {
+          metadata: [
+            {
+              metadataType: metadataTypeV,
+              items: [
+                {
+                  provider: to.provider,
+                  externalId: to.external_id,
+                },
+              ],
+            },
+          ],
+        },
+        match: {
+          type: 'multi-source',
+          value: {
+            items: [],
+          },
+        },
+      };
+      def.from.forEach((fromId) => {
+        const from = entityMap.get(fromId);
+        const matchItem = {
+          provider: from.provider,
+          externalId: from.external_id,
+          name: from.name,
+        };
+        rule.match.value.items.push(matchItem);
+      });
+      pipeline.rules.push(rule);
+    });
+  });
+  return pipeline;
+}
+
+/**
+ * Read pipeline configurations from partial static metadata files and store them in a list of pipelines.
+ * @param {string[]} staticmetadatafilenames
+ * @param {Object[]} pipelines
+ * @returns {Promise<void>}
+ */
+async function readPipelinesFromStaticMetadataFiles(staticmetadatafilenames, pipelines) {
+  if (staticmetadatafilenames) {
+    for (const staticmetadatafilename of staticmetadatafilenames) {
+      const staticMetadata = JSON.parse(fs.readFileSync(staticmetadatafilename).toString());
+      // eslint-disable-next-line no-await-in-loop
+      const pipeline = await convertStaticMetadataToPipeline(staticMetadata);
+      pipeline.filename = staticmetadatafilename;
+      pipelines.push(pipeline);
+    }
   }
 }
 
@@ -274,6 +387,7 @@ async function resolveEntitiesWithApi(unresolvedEntities) {
 /**
  * Given a list of pipelines, extract all the entities that need to be resolved and resolve them.
  * @param pipelines
+ * @param sourceToContributorsMap
  * @returns {Promise<Map<string, Entity>>}
  */
 async function resolveEntities(pipelines, sourceToContributorsMap) {
@@ -283,7 +397,7 @@ async function resolveEntities(pipelines, sourceToContributorsMap) {
 }
 
 /**
- *
+ * Comparison method for metadata types, to get desired order for output.
  * @param {string} aString
  * @param {string} bString
  * @returns {number}
@@ -371,7 +485,6 @@ function unresolvedEntityToStaticMetadataActionName(item, entities) {
 
 /**
  * Return a string that describes a static entity tag action item.
- *
  * @param {Object} item - a config.entityTags item for rule action-type 'modify-static-entity-tag'
  * @param {Map<string,Entity>} entities - A map of external_id/provider entity strings to Entity objects
  * @returns {string}
@@ -404,12 +517,11 @@ function annotationDescriptionToMatchName(item) {
 }
 
 /**
- * Get a list of the strings that describe each match from match configuration.
+ * Get a set of the strings that describe each match from match configuration.
  * @param {Object} match
- * @param {Map<string,Entity>} entities
  * @returns {Set<string>}
  */
-function getMatches(match, entities) {
+function getMatches(match) {
   if (!match) {
     return new Set();
   }
@@ -495,24 +607,24 @@ function getActions(rule, entities) {
 }
 
 /**
- *
+ * Aggregate the data by matches for spreadsheet output.
  * @param {Object[]} pipelines
  * @param {Map<string,Entity>} entities
  * @returns {Map<string, Map<string, Set<string>>>}
  */
-function aggregate(pipelines, entities) {
+function aggregateByMatches(pipelines, entities) {
   /**
    * @type {Map<string, Map<string, Set<string>>>}
    */
   const matchMap = new Map();
   pipelines.forEach((pipeline) => {
     const pipelineName = `Pipeline ID#${pipeline.id}`;
-    const defaultMatches = getMatches(pipeline.match, entities);
+    const defaultMatches = getMatches(pipeline.match);
     if (!defaultMatches) {
       throw new Error(`Bad default match type ${pipeline.match.type} in ${pipelineName}`);
     }
     pipeline.rules.forEach((rule) => {
-      let matches = getMatches(rule.match, entities);
+      let matches = getMatches(rule.match);
       if (!matches) {
         throw new Error(`Bad rule match type ${rule.match.type} in ${pipelineName}`);
       }
@@ -548,13 +660,120 @@ function aggregate(pipelines, entities) {
   return sortMatchMap(matchMap);
 }
 
+function normalizeMatchesForMerging(match) {
+  switch (match.type) {
+    case 'source':
+      match.type = 'multi-source';
+      match.value = { items: [match.value] };
+      break;
+    case 'annotation':
+      match.type = 'multi-annotation';
+      match.value = { items: [match.value] };
+      break;
+    default:
+      break;
+  }
+}
+
+function mergeMatches(match1, match2) {
+  if (!match2) {
+    return;
+  }
+  normalizeMatchesForMerging(match1);
+  normalizeMatchesForMerging(match2);
+
+  if (match1.type !== match2.type) {
+    throw new Error('Match types must be the same to merge matches.');
+  }
+
+  const matches = getMatches(match1);
+  let newItems;
+  switch (match2.type) {
+    case 'multi-source':
+      newItems = match2.value.items.filter(item => !matches.has(unresolvedEntityToEntityKey(item)));
+      break;
+    case 'multi-annotation':
+      newItems = match2.value.items.filter(item => !matches.has(annotationDescriptionToMatchName(item)));
+      break;
+    default:
+      throw new Error(`Invalid match type ${match2.type}.`);
+  }
+  if (newItems) {
+    match1.value.items = match1.value.items.concat(newItems);
+  }
+}
+
+/**
+ * Return a Map of rule definitions to the rule.  De-dupes rule definitions and merges matches as needed.
+ * @param {Map<string, Object>} existing
+ * @param {Object[]} rules
+ * @returns {Map<string, Object>}
+ */
+function getRulesMap(existing, rules) {
+  const ret = existing || new Map();
+  rules.forEach((rule) => {
+    const key = `${JSON.stringify(rule.config)}|${(rule.match || { type: 'default' }).type}`;
+    if (ret.has(key) && !key.endsWith('|default')) {
+      mergeMatches(ret.get(key).match, rule.match);
+    } else {
+      ret.set(key, rule);
+    }
+  });
+  return ret;
+}
+
+/**
+ * Aggregate by actions for JSON output.
+ * @param {Object[]} pipelines
+ * @param {Map<string,Entity>} entities
+ * @returns {Map<string, Map<string, Set<string>>>}
+ */
+function aggregateByActions(pipelines, entities) {
+  const agg = {
+    apiVersion: undefined,
+    id: undefined,
+    active: true,
+    description: undefined,
+    match: {
+      type: undefined,
+      description: undefined,
+      value: undefined,
+    },
+    rules: [],
+  };
+
+  let rulesMap = null;
+  pipelines.forEach((pipeline) => {
+    if (!agg.apiVersion) {
+      agg.apiVersion = pipeline.apiVersion;
+      agg.id = pipeline.id;
+      agg.description = pipeline.description;
+    }
+    if (!agg.match.value) {
+      agg.match = pipeline.match;
+    }
+
+    if (pipeline.match) {
+      if (pipeline.match.type !== agg.match.type) {
+        throw new Error('Default match types in different pipelines must all be the same.');
+      }
+      mergeMatches(agg.match, pipeline.match);
+    }
+
+    rulesMap = getRulesMap(rulesMap, pipeline.rules);
+    rulesMap.forEach(rule => agg.rules.push(rule));
+  });
+
+  return agg;
+}
+
 /**
  * Make a string compliant with simple CSV.
  * @param str
  * @returns {string}
  */
 function makeFieldCsv(str) {
-  if (str.includes('"') || str.includes(',')) {
+  if (str.length === 0 || str.includes('"') || str.includes(',')) {
     return `"${str.replace(/"/g, '""')}"`;
   }
   return str;
@@ -585,7 +804,7 @@ async function writeCsv(outfile, agg, entities, sourceToContributorMap) {
   });
 
   const columns = [];
-  const writeStream = fs.createWriteStream(outfile);
+  const writeStream = await fs.createWriteStream(outfile);
   let record = '';
   display.forEach((i) => {
     columns.push(new Map([...types[i].entries()].sort((a, b) => a[1] - b[1])));
@@ -600,38 +819,57 @@ async function writeCsv(outfile, agg, entities, sourceToContributorMap) {
       });
     }
   });
-  writeStream.write(`${record}\n`);
+  await writeStream.write(`${record}\n`);
 
-  agg.forEach((value, key) => { // map, matched entityKey
-    let keys;
-    let values;
-    let matches;
+  const done = new Set();
+  for (let iteration = 0; iteration < 2; iteration += 1) {
+    for (const something of agg.entries()) {
+      const key = something[0];
+      const value = something[1];
+      let keys;
+      let values;
+      let matches;
 
-    if (key.startsWith('source_')) {
-      keys = [sourceToContributorMap.get(key), key, ''];
-      values = [agg.get(keys[CONTRIBUTOR]) || new Map(), value, new Map()];
-      matches = [entityKeyToMatchName(keys[CONTRIBUTOR], entities) || '', entityKeyToMatchName(key, entities) || '', ''];
-    } else if (!key.startsWith('contributor_')) {
-      keys = ['', '', key];
-      values = [new Map(), new Map(), value];
-      matches = ['', '', key];
-    }
-    if (keys) {
-      let row = '';
-      display.forEach((i) => {
-        if (row.length > 0) row += ',';
-        row += makeFieldCsv(matches[i]);
-        columns[i].forEach((columnNo, metadataType) => {
-          if (values[i].has(metadataType)) {
-            row += `,${makeFieldCsv([...values[i].get(metadataType).values()].join('; '))}`;
-          } else {
-            row += ',""';
-          }
+      if (iteration === 0) {
+        if (key.startsWith('source_')) {
+          keys = [sourceToContributorMap.get(key), key, ''];
+          values = [agg.get(keys[CONTRIBUTOR]) || new Map(), value, new Map()];
+          matches = [
+            entityKeyToMatchName(keys[CONTRIBUTOR], entities) || keys[CONTRIBUTOR] || '',
+            entityKeyToMatchName(key, entities) || key || '',
+            '',
+          ];
+          done.add(keys[CONTRIBUTOR]);
+        } else if (!key.startsWith('contributor_')) {
+          keys = ['', '', key];
+          values = [new Map(), new Map(), value];
+          matches = ['', '', key];
+        }
+      } else if (iteration === 1) {
+        if (key.startsWith('contributor_') && !done.has(key)) {
+          keys = [key, '', ''];
+          values = [value, new Map(), new Map()];
+          matches = [entityKeyToMatchName(key, entities) || key, '', ''];
+        }
+      }
+      if (keys) {
+        let row = '';
+        display.filter(i => columns[i].size > 0).forEach((i) => {
+          if (row.length > 0) row += ',';
+          row += makeFieldCsv(matches[i]);
+          columns[i].forEach((columnNo, metadataType) => {
+            if (values[i].has(metadataType)) {
+              row += `,${makeFieldCsv([...values[i].get(metadataType).values()].join('; '))}`;
+            } else {
+              row += ',""';
+            }
+          });
         });
-      });
-      writeStream.write(`${row}\n`);
+        // eslint-disable-next-line no-await-in-loop
+        await writeStream.write(`${row}\n`);
+      }
     }
-  });
+  }
 
   await writeStream.end();
 }
@@ -646,6 +884,12 @@ async function writeXlsx(outfile, agg) {
   // TODO!
 }
 
+async function writeJson(jsonfile, agg) {
+  const writeStream = fs.createWriteStream(jsonfile);
+  await writeStream.write(`${JSON.stringify(agg)}`);
+  await writeStream.end();
+}
+
 /**
  * The main execution of the program.
  * @param {string[]} opts.filename
@@ -653,21 +897,30 @@ async function writeXlsx(outfile, agg) {
  * @param {string} opts.sourcemap
  * @param {string} opts.outfile
  * @param {string} opts.xlsxfile
+ * @param {string} opts.jsonfile
+ * @param {string[]} opts.staticmetadatafile
  * @returns {Promise<void>}
  */
 async function run({ opts }) {
   const pipelines = [];
-  await readPipelinesFromFiles(opts.filename, pipelines);
+  readPipelinesFromFiles(opts.filename, pipelines);
   await readPipelinesFromControlPlane(opts.pipeline, pipelines);
+  await readPipelinesFromStaticMetadataFiles(opts.staticmetadatafile, pipelines);
   if (PipelineValidation.validatePipelines(pipelines)) {
     const sourceToContributorMap = readSourceToContributorMapFromFile(opts.sourcemap);
     const entities = await resolveEntities(pipelines, sourceToContributorMap);
-    const agg = aggregate(pipelines, entities);
-    if (opts.outfile) {
-      await writeCsv(opts.outfile, agg, entities, sourceToContributorMap);
+    if (opts.outfile || opts.xlsxfile) {
+      const agg = aggregateByMatches(pipelines, entities);
+      if (opts.outfile) {
+        await writeCsv(opts.outfile, agg, entities, sourceToContributorMap);
+      }
+      if (opts.xlsxfile) {
+        await writeXlsx(opts.xlsxfile, agg);
+      }
     }
-    if (opts.xlsxfile) {
-      await writeXlsx(opts.xlsxfile, agg);
+    if (opts.jsonfile) {
+      const agg = aggregateByActions(pipelines, entities);
+      await writeJson(opts.jsonfile, agg);
     }
   }
 }

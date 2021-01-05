@@ -342,7 +342,7 @@ const
      * Based on a condition, add a message to the list of errors.  Return the condition.
      * @param {boolean} value - the value of the condition
      * @param {string} message - the message to put in errors if value is false
-     * @param [{string}] errors - the consolidated list of errors
+     * @param {string[]} errors - the consolidated list of errors
      * @returns {boolean} - equal to 'value'
      */
 function condition(value, message, errors) {
@@ -376,10 +376,10 @@ function getThing(thing, defItem, configItem) {
 
 /**
  * Tag new errors with additional information from parent configItem, and consolidate errors.
- * @param [{string}] subErrors - errors from the sub-configItem
+ * @param {string[]} subErrors - errors from the sub-configItem
  * @param {string} tag - A string to prepend the subErrors with that helps identify where the error happened
- * @param [{string}] errors - Array of error strings to consolidate to
- * @returns [{string}] Consolidated error list
+ * @param {string[]} errors - Array of error strings to consolidate to
+ * @returns {string[]} Consolidated error list
  */
 function tagAndAddErrors(subErrors, tag, errors) {
   subErrors.forEach((subError) => {
@@ -393,7 +393,7 @@ function tagAndAddErrors(subErrors, tag, errors) {
  * @param {Object} definition - Definition of expected format defined in this code
  * @param {Object} parentConfigItem, null for top-level
  * @param {Object} parentDefinition, null for top-level
- * @returns [{string}] List of errors
+ * @returns {string[]} List of errors
  */
 function check(configItem, definition, parentConfigItem, parentDefinition) {
   const errors = [];
@@ -446,6 +446,10 @@ function check(configItem, definition, parentConfigItem, parentDefinition) {
       );
     }
   }
+
+  delete configItem._parent;
+  delete definition._parent;
+
   return errors;
 }
 
@@ -478,6 +482,7 @@ function validatePipelines(pipelines) {
     const tag = `validation error: pipeline #${pipeline.id}, file ${pipeline.filename}`;
     tagAndAddErrors(validateMatch(pipeline.match), `${tag}.Default Match`, errors);
     tagAndAddErrors(validateRules(pipeline.rules), tag, errors);
+    delete pipeline.filename;
   });
   errors.forEach(error => console.error(error));
   return errors.length === 0;

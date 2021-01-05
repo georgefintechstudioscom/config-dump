@@ -33,6 +33,20 @@ class FtsApiEntitiesService extends Singleton {
     );
     return response.entities;
   }
+
+  /**
+   * @param {number[]} entityIds
+   * @returns {Promise<Object[]>}
+   */
+  async getEntities(entityIds) {
+    const response = await this.ftsApiService.makeAuthenticatedRequest(
+      `${this.baseUrl}/ids/${[...entityIds].join(',')}`,
+      {
+        method: 'GET', // instead of PUT, does not update existing entities
+      }
+    );
+    return response.entities;
+  }
 }
 
 module.exports = FtsApiEntitiesService;

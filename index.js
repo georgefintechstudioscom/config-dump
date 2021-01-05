@@ -11,15 +11,15 @@ if (require.main === module) {
     .argv;
 
   const {
-    filename, pipeline, outfile, xlsxfile, sourcemap,
+    filename, pipeline, outfile, xlsxfile, jsonfile, sourcemap, staticmetadatafile
   } = args;
 
-  if (!(filename || pipeline)) {
-    throw new TypeError('Must supply one or more -filename(s) and/or -pipeline(s).');
+  if (!(filename || pipeline || staticmetadatafile)) {
+    throw new TypeError('Must supply one or more -filename(s) and/or -pipeline(s) and/or -staticmetadatafile(s).');
   }
 
-  if (!(outfile || xlsxfile)) {
-    throw new TypeError('Must supply either -outfile or -xlsxfile for output.');
+  if (!(outfile || xlsxfile || jsonfile)) {
+    throw new TypeError('Must supply -outfile and/or -xlsxfile and/or -jsonfile for output.');
   }
 
   run({
@@ -28,7 +28,9 @@ if (require.main === module) {
       pipeline,
       outfile,
       xlsxfile,
+      jsonfile,
       sourcemap,
+      staticmetadatafile,
     },
   }).then(() => {
     console.log('Done!');
