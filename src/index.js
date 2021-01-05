@@ -749,20 +749,20 @@ function aggregateByActions(pipelines, entities) {
       agg.id = pipeline.id;
       agg.description = pipeline.description;
     }
-    if (!agg.match.value) {
-      agg.match = pipeline.match;
-    }
-
     if (pipeline.match) {
-      if (pipeline.match.type !== agg.match.type) {
-        throw new Error('Default match types in different pipelines must all be the same.');
+      if (!agg.match.value) {
+        agg.match = pipeline.match;
+      } else {
+        if (pipeline.match.type !== agg.match.type) {
+          throw new Error('Default match types in different pipelines must all be the same.');
+        }
+        mergeMatches(agg.match, pipeline.match);
       }
-      mergeMatches(agg.match, pipeline.match);
     }
 
     rulesMap = getRulesMap(rulesMap, pipeline.rules);
-    rulesMap.forEach(rule => agg.rules.push(rule));
   });
+  rulesMap.forEach(rule => agg.rules.push(rule));
 
   return agg;
 }
